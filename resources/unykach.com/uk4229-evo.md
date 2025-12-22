@@ -85,7 +85,8 @@
 
 | Type | Quantity | Hot-Swap |
 |------|----------|----------|
-| 3.5" | 6 internal + 1 external | No |
+| 3.5" | 6 internal | No |
+| 3.5" | 1 external | No |
 | 2.5" | 0 | No |
 | 5.25" | 3 | No |
 
