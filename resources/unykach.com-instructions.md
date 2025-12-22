@@ -12,7 +12,7 @@ This document contains the technical details and methodology for gathering produ
 
 The following 9 products have been documented:
 
-1. UK1029 (1U): `https://unykach.com/en/professional/rack19/rack-case-1u19-uk-1029-51916/` (Note: Listed as discontinued)
+1. UK1029 (1U): `https://unykach.com/en/discontinued-products/discontinued-professional-range-racks-hot-swap-redundant-psus-coolers-and-pos-systems/rack-case-1u19-uk-1029-51916/` (Note: Listed as discontinued)
 2. UK2129 (2U): `https://unykach.com/en/professional/rack19/rack-case-2u19-uk-2129-52095/`
 3. UK2130 (2U600): `https://unykach.com/en/professional/rack19/rack-case-19-uk2130-2u600-uk51922/`
 4. UK4129 (4U): `https://unykach.com/en/professional/rack19/rack-case-4u19-uk-4129-51912/`

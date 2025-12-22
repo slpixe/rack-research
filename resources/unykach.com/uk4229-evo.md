@@ -30,7 +30,7 @@
 
 - [ ] E-ATX
 - [x] ATX (305 x 244 mm)
-- [x] Micro-ATX (344 x 244 mm)
+- [x] Micro-ATX (244 x 244 mm)
 - [x] Mini-ITX (170 x 170 mm)
 
 ### CPU Cooler
