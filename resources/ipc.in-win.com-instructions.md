@@ -140,31 +140,39 @@ Based on InWin rackmount chassis products, look for:
 
 ### 4U Rackmount Chassis (7 products)
 
-- [ ] **IW-RL400** - 4U Liquid-Cooled Rackmount Chassis
+- [x] **IW-RL400** - 4U Liquid-Cooled Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rl400
+  - STATUS: Specifications documented in _REMAINING_PRODUCTS_SPECS.md
   
-- [ ] **IW-R400N** - 4U Open-Bay Rackmount Chassis
+- [x] **IW-R400N** - 4U Open-Bay Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-r400n
+  - STATUS: Specifications documented in _REMAINING_PRODUCTS_SPECS.md
   
-- [ ] **IW-R400-01N** - 4U Open-Bay Rackmount Chassis
+- [x] **IW-R400-01N** - 4U Open-Bay Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-r400-01n
+  - STATUS: Specifications documented in _REMAINING_PRODUCTS_SPECS.md
   
-- [ ] **IW-R400-03N** - 4U Open-Bay Rackmount Chassis
+- [x] **IW-R400-03N** - 4U Open-Bay Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-r400-03n
+  - STATUS: Specifications documented in _REMAINING_PRODUCTS_SPECS.md
   
-- [ ] **IW-RN424-04** - 4U Dual Node Rackmount Chassis
+- [x] **IW-RN424-04** - 4U Dual Node Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rn424-04
+  - STATUS: Specifications documented in _REMAINING_PRODUCTS_SPECS.md
   
-- [ ] **IW-RS424-07** - 4U NVMe Hybrid Rackmount Chassis
+- [x] **IW-RS424-07** - 4U NVMe Hybrid Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rs424-07
+  - STATUS: Specifications documented in _REMAINING_PRODUCTS_SPECS.md
   
-- [ ] **IW-RS436-07** - 4U NVMe Hybrid Rackmount Chassis
+- [x] **IW-RS436-07** - 4U NVMe Hybrid Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rs436-07
+  - STATUS: Specifications documented in _REMAINING_PRODUCTS_SPECS.md
 
 ### Other Form Factors
 
-- [ ] **IW-RG650A** - 6.5U Rackmount Chassis (Dual Chamber GPU Server)
+- [x] **IW-RG650A** - 6.5U Rackmount Chassis (Dual Chamber GPU Server)
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rg650a
+  - STATUS: Specifications documented in _REMAINING_PRODUCTS_SPECS.md
 
 ## Extraction Script Example (JavaScript/Playwright)
 
