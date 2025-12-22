@@ -1,0 +1,25 @@
+{
+  "name": "rack-research",
+  "version": "1.0.0",
+  "description": "Rack mount server chassis research and product catalog scraper",
+  "private": true,
+  "scripts": {
+    "scrape:yakkaroo": "node scrapers/yakkaroo/1-download-html.js && node scrapers/yakkaroo/2-parse-specs.js",
+    "scrape:yakkaroo:download": "node scrapers/yakkaroo/1-download-html.js",
+    "scrape:yakkaroo:parse": "node scrapers/yakkaroo/2-parse-specs.js"
+  },
+  "keywords": [
+    "rack-mount",
+    "server-chassis",
+    "scraper"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.1.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

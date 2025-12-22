@@ -1,6 +1,6 @@
 # Rack Research
 
-A research project for documenting server rack cases, their specifications, and availability.
+A research project for documenting server rack mount chassis, their specifications, and availability across multiple vendors.
 
 ## Project Structure
 
@@ -8,39 +8,103 @@ A research project for documenting server rack cases, their specifications, and 
 rack-research/
 ├── README.md
 ├── initial-question.md
-├── resources/                    # Saved web pages and extracted data
-│   └── {domain}/                 # Organized by source domain
-│       ├── {product-name}.html   # Raw HTML scrape
-│       └── {product-name}.md     # Extracted specifications
-└── templates/
-    └── case-template.md          # Template for documenting cases
+├── scrapers/                     # Custom scraping implementations
+│   ├── common/                   # Shared utilities
+│   │   └── utils.js
+│   ├── yakkaroo/                 # Yakkaroo.de scraper
+│   │   ├── 1-download-html.js
+│   │   ├── 2-parse-specs.js
+│   │   └── README.md
+│   └── README.md                 # Scraper documentation
+├── resources/                    # Scraped data organized by domain
+│   ├── yakkaroo.de/             # 52 products with full specs
+│   ├── inter-tech.de/           # ~80 products
+│   ├── ipc.in-win.com/          # ~20 products
+│   ├── silverstonetek.com/
+│   └── {domain}/
+│       ├── {product}.html       # Raw HTML (optional)
+│       └── {product}.md         # Extracted specifications
+├── templates/
+│   └── case-template.md         # Markdown template for products
+├── package.json
+└── .gitignore
 ```
+
+## Quick Start
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Scrapers
+
+```bash
+# Yakkaroo.de (52 products)
+npm run scrape:yakkaroo
+
+# Or run stages separately
+npm run scrape:yakkaroo:download  # Download HTML
+npm run scrape:yakkaroo:parse     # Parse and generate markdown
+```
+
+## Scrapers
+
+### Available Scrapers
+
+| Vendor | Products | Method | Status |
+|--------|----------|--------|--------|
+| yakkaroo.de | 52 | Scripted (Cheerio) | ✅ Complete |
+| inter-tech.de | ~80 | AI + Playwright | ✅ Complete |
+| ipc.in-win.com | ~20 | AI + Playwright | ✅ Complete |
+| silverstonetek.com | ~15 | Manual | 🔄 In Progress |
+| sliger.com | ~10 | Manual | 📋 Planned |
+| unykach.com | ~30 | Scripted | 📋 Planned |
+
+### Scraping Approaches
+
+See [SCRAPING-APPROACH-COMPARISON.md](SCRAPING-APPROACH-COMPARISON.md) for detailed comparison.
+
+**Scripted Parsing (Cheerio):**
+- ⚡ Fast (< 1 minute for 50 products)
+- 💰 Free (no API costs)
+- 🔄 Repeatable and automated
+- 📦 Best for: Large catalogs with consistent structure
+
+**AI + Playwright:**
+- 🤖 Flexible (handles any structure)
+- 🧠 Context-aware extraction
+- 💵 Costs tokens (~$5-10 per 50 products)
+- 📦 Best for: Complex sites or small catalogs
+
+For details on creating new scrapers, see [scrapers/README.md](scrapers/README.md).
 
 ## Resources Folder
 
-The `resources/` folder contains research materials organized by domain:
+The `resources/` folder contains scraped data organized by vendor domain.
 
-- **HTML files**: Direct downloads/scrapes of product pages for archival
-- **Markdown files**: Extracted and structured specification data
-
-### Example Structure
+### Example: yakkaroo.de
 
 ```
-resources/
-├── silverstonetek.com/
-│   ├── rm43-320-rs.html
-│   └── rm43-320-rs.md
-├── inter-tech.de/
-│   ├── 4u-4129-l.html
-│   └── 4u-4129-l.md
-└── supermicro.com/
-    ├── cse-846.html
-    └── cse-846.md
+resources/yakkaroo.de/
+├── 19-inch-4u-server-chassis-ipc-c430b-gpu-30cm-short.html
+├── 19-inch-4u-server-chassis-ipc-c430b-gpu-30cm-short.md
+├── 19-inch-2u-server-chassis-ipc-c238-38cm-short.html
+├── 19-inch-2u-server-chassis-ipc-c238-38cm-short.md
+└── ... (52 products total)
 ```
+
+Each markdown file contains:
+- Product title and URL
+- Pricing information
+- **11+ detailed specifications**
+- Availability status
+- SKU number
 
 ## Data Fields
 
-Each case is documented with the following specifications (when available):
+Each product is documented with the following specifications (when available):
 
 | Field | Description | Example |
 |-------|-------------|---------|
@@ -59,17 +123,68 @@ Each case is documented with the following specifications (when available):
 | **Rack Rails** | Included rails | Yes / Optional / No |
 | **Warranty** | Warranty period | 2 years |
 
+## Statistics
+
+| Vendor | Products | Rack Units | Status |
+|--------|----------|------------|--------|
+| yakkaroo.de | 52 | 1U, 1U+, 2U, 3U, 4U | ✅ Complete with specs |
+| inter-tech.de | ~80 | 1U, 2U, 3U, 4U | ✅ Complete |
+| ipc.in-win.com | ~20 | 1U, 2U, 4U, 6.5U | ✅ Complete |
+| silverstonetek.com | ~15 | Various | 🔄 In Progress |
+
+**Total Products Documented: ~167**
+
+## Development
+
+### Adding a New Vendor
+
+1. **Choose scraping approach** (see comparison doc)
+2. **Create scraper directory**:
+   ```bash
+   mkdir scrapers/{vendor-name}
+   ```
+3. **Implement scraper** following [scrapers/README.md](scrapers/README.md)
+4. **Add npm script** to package.json
+5. **Document** in vendor's README.md
+
+### File Organization
+
+- **HTML files**: Keep for reference and re-parsing (gitignored by default)
+- **Markdown files**: Committed to git
+- **Scrapers**: Reusable, documented scripts
+- **Common utilities**: Shared code in `scrapers/common/`
+
+### Dependencies
+
+```json
+{
+  "cheerio": "^1.1.2",     // HTML parsing
+  "playwright": "optional"  // Browser automation (if needed)
+}
+```
+
 ## Tools & Methods
 
-This project uses browser-based tools to research and scrape product pages:
+**Automated Scraping:**
+- Node.js with Cheerio for HTML parsing
+- Playwright MCP for browser automation
+- Custom utilities for markdown generation
 
-- **Playwright MCP**: For automated browsing and page scraping
-- **Web fetch**: For downloading page content
-- **Manual research**: Supplemented by direct browser research
+**AI-Assisted:**
+- GPT-4 for complex data extraction
+- Context-aware specification mapping
+- Intelligent field normalization
 
-## Usage
+## Contributing
 
-1. Find a server case to research
-2. Use browser tools to navigate to the product page
-3. Save the HTML to `resources/{domain}/{product-name}.html`
-4. Extract specifications to `resources/{domain}/{product-name}.md` using the template
+When adding new product data:
+
+1. Follow the template structure
+2. Include all available specifications
+3. Preserve original HTML for reference
+4. Use consistent formatting in markdown
+5. Document the scraping process
+
+## License
+
+This is a research project. Product information and specifications belong to their respective manufacturers.
