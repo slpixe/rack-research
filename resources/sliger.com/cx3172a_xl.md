@@ -1,0 +1,30 @@
+# Sliger CX3172a XL
+
+3U 17" Deep Rackmount Case with ATX PSU Support and XL-ATX Motherboard Support
+
+[Sliger CX3172a XL](https://sliger.com/products/cx3172a_xl)
+
+## Specifications
+
+| Feature | Specification |
+| --- | --- |
+| **Case Type** | 3U Rackmount |
+| **Dimensions (DxWxH)** | 431.80 x 431.80 x 132.59 mm (17" x 17" x 5.22") |
+| **Motherboard Support** | Mini-ITX, Mini-DTX, Deep Mini-ITX, FlexATX, MicroATX, Deep MicroATX, ATX, EATX, SSI-CEB, SSI-EEB, XL-ATX/EATX (up to 13" deep) |
+| **CPU Cooler Support** | Max Height: 110mm |
+| **Liquid Cooling Support** | 120mm, 240mm, 360mm (Max radiator length: 395mm) |
+| **GPU Support** | 5x Full Height PCIe Slots |
+| **GPU Max Height** | 115mm (including power connectors) |
+| **GPU Max Length** | 375mm (with 25mm fans), 374mm (with 360mm AIO + 25mm fans) |
+| **Drive Bays** | 2x 2.5" Internal |
+| **Power Supply** | 1x ATX (Max length: 268mm) |
+| **Front I/O** | 1x USB 3.1 Type-C (10Gbps), 1x USB 3.0 Type-A |
+| **Weight** | 6.92 kg (15.25 lbs) |
+| **Base Price** | $269.00 |
+
+## Notes
+- ATX power supply overlaps the edge of all ATX and larger motherboards.
+- This overlap limits all ATX and larger motherboards to 5x PCIe slots.
+- Low profile adapters for USB headers may be required due to PSU overlap.
+- Designed around Asetek OEM AIO coolers.
+- Supports XL-ATX and SSI-EEB motherboards up to 13" deep.

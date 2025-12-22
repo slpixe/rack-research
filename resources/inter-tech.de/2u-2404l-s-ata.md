@@ -1,0 +1,31 @@
+# 2U-2404L S-ATA
+
+The IPC 2U-2404L S-ATA is the perfect rack for a low-priced storage system.
+
+The excellent quality of the materials combined with superb workmanship establishes the basis for a very variable case.
+
+The IPC 2U-2404L S-ATA offers the possibility to mount maximal four 2.5" or 3.5" Hot-Swap HDDs and one internal 2.5" or 3.5" HDD (by using a 2.5" with 9.5mm height also a 3.5" HDD simultaneously). The IPC 2U-2404L S-ATA is equipped with three serial 40mm fans. At the rear of the chassis you can mount an ATX PSU with 80mm fan or a Mini-Redundant PS/2 PSU.
+
+Both serial USB 3.0 front connectors round off the whole package.
+
+## Specifications
+
+| Feature | Details |
+| :--- | :--- |
+| **Motherboard** | Mini ITX, µATX |
+| **Max. Motherboard Size** | 244mm x 244mm (9.6" x 9.6") |
+| **Drive Bays** | 4x 3.5" or 2.5" Hot-Swap |
+| | 1x 3.5" or 2.5" internal² |
+| **Front Connectors** | 2x USB 3.0 |
+| **Cooling System** | Internal: 3x 40mm (serial, 3pin (4pin connector)) |
+| **Controls & LED** | Controls: Power-Switch, Reset-Button |
+| | LED: Power, HDD Activity, 3x Network Activity, Alert |
+| **Power Supply** | PS2/mini redundant PSU or ATX PSU with 80mm fan |
+| **Dimensions (H/W/D)** | 89 x 482 x 518mm |
+| **Material** | 1.0-1.2mm Steel |
+| **Backplane** | S-ATA/SAS-Backplane + SFF-8087 (max. 12Gbit/s) |
+| **Features** | 1x Hot-Swap backplane with S-ATA socket (max. 6G) |
+| | 4x perforated Low-Profile slot bracket (Rear) |
+| | Mesh-Grid-Front with dust filter |
+
+² simultaneously only if 2.5" drive with max. 9.5 mm height

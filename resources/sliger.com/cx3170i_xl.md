@@ -1,0 +1,23 @@
+# CX3170i XL
+
+- **Price:** $269.00
+- **Motherboard Support:** Mini-ITX, Mini-DTX, FlexATX, MicroATX, ATX, EATX, SSI-CEB, SSI-EEB, XL-ATX/EATX (up to 12.8" x 13")
+- **Dimensions (DxWxH):** 17" x 17" x 5.22" (431.80mm x 431.80mm x 132.59mm)
+- **PSU Support:** SFX / SFX-L
+- **Cooling:**
+  - **Air:** Max Height 110mm
+  - **Liquid:** 120mm, 240mm (max 277mm)
+- **Fans:**
+  - **Front:** 2x 120mm (up to 38mm thick)
+  - **Rear:** 1x 120mm
+- **GPU Support:**
+  - **Slots:** 8x Full Height
+  - **Max Height:** 115mm
+  - **Max Length:** 375mm (with 25mm fans), 347mm (with 240mm AIO + 2x 25mm fans), 322mm (with 240mm AIO + 4x 25mm fans)
+  - **Total Internal Depth:** 395mm
+- **Storage:**
+  - 1x 2.5" under 5.25" bay
+  - 1x 2.5" (up to 15mm) between IO shield and PSU
+  - 1x 5.25" External Bay (removable filler blank supports 2x 2.5" + 1x 3.5")
+- **Front I/O:** 1x Power Button/LED, 2x USB 3.0 Type A, 1x USB 3.2 Type C (10Gbps)
+- **Weight:** 16.25 lbs (7.37 kg)

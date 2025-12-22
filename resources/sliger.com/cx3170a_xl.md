@@ -1,0 +1,22 @@
+# CX3170a XL
+
+- **Price:** $259.00
+- **Motherboard Support:** Mini-ITX, Mini-DTX, FlexATX, MicroATX, ATX, SSI-CEB, SSI-EEB, XL-ATX/EATX (up to 12.8" x 13")
+- **Dimensions (DxWxH):** 17" x 17" x 5.22" (431.80mm x 431.80mm x 132.59mm)
+- **PSU Support:** SFX / SFX-L
+- **Cooling:**
+  - **Air:** Max Height 110mm
+  - **Liquid:** 120mm, 240mm (max 277mm), 360mm (max 395mm)
+- **Fans:**
+  - **Front:** 3x 120mm (up to 38mm thick)
+  - **Rear:** 1x 120mm
+- **GPU Support:**
+  - **Slots:** 8x Full Height
+  - **Max Height:** 115mm
+  - **Max Length:** 375mm (with 25mm fans), 347mm (with 360mm AIO + 25mm fans)
+  - **Total Internal Depth:** 395mm
+- **Storage:**
+  - Up to 8x 2.5" (7mm) or 2x 3.5" + 3x 2.5" or 1x 3.5" + 5x 2.5"
+  - Internal bracket supports 3x 3.5" (no 2.5")
+- **Front I/O:** 1x Power Button/LED, 2x USB 3.0 Type A, 1x USB 3.2 Type C (10Gbps)
+- **Weight:** 15.25 lbs (6.92 kg)
