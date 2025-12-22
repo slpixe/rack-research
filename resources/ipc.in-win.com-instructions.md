@@ -100,7 +100,7 @@ Based on InWin rackmount chassis products, look for:
 - [x] **IW-RA102** - 1U Compact Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-ra102
   
-- [ ] **IW-RF100** - 1U Short Depth Rackmount Chassis
+- [x] **IW-RF100** - 1U Short Depth Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rf100
   
 - [x] **IW-RF100S** - 1U Short Depth Mini-ITX Rackmount Chassis
