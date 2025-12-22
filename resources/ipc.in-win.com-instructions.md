@@ -91,7 +91,7 @@ Based on InWin rackmount chassis products, look for:
 
 ### 1U Rackmount Chassis (10 products)
 
-- [ ] **IW-RL100** - 1U Liquid-Cooled Rackmount Chassis
+- [x] **IW-RL100** - 1U Liquid-Cooled Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rl100
   
 - [x] **IW-RA100** - 1U Compact Rackmount Chassis
@@ -106,19 +106,19 @@ Based on InWin rackmount chassis products, look for:
 - [x] **IW-RF100S** - 1U Short Depth Mini-ITX Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rf100s
   
-- [ ] **IW-RS104-07** - 1U NVMe Hybrid Rackmount Chassis
+- [x] **IW-RS104-07** - 1U NVMe Hybrid Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rs104-07
   
-- [ ] **IW-RS108-07** - 1U NVMe Hybrid Rackmount Chassis
+- [x] **IW-RS108-07** - 1U NVMe Hybrid Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rs108-07
   
-- [ ] **IW-RS110-07** - 1U NVMe Hybrid Rackmount Chassis
+- [x] **IW-RS110-07** - 1U NVMe Hybrid Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rs110-07
   
-- [ ] **IW-RS112-08** - 1U PCIe Gen5 NVMe Hybrid Rackmount Chassis
+- [x] **IW-RS112-08** - 1U PCIe Gen5 NVMe Hybrid Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rs112-08
   
-- [ ] **IW-RS116-E1** - 1U PCIe Gen5 NVMe E1.S Rackmount Chassis
+- [x] **IW-RS116-E1** - 1U PCIe Gen5 NVMe E1.S Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rs116-e1
 
 ### 2U Rackmount Chassis (5 products)
