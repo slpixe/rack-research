@@ -152,9 +152,9 @@ InWin IW-RA102 is a compact 1U rackmount chassis designed for space-sensitive se
 
 | Container Type | Quantity per Container |
 |----------------|------------------------|
-| 20' | Information not available |
-| 40' | Information not available |
-| 40' HQ | Information not available |
+| 20' | 440 pcs |
+| 40' | 968 pcs |
+| 40' HQ | 1056 pcs |
 
 ## Images
 

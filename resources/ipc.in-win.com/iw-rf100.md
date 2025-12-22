@@ -96,7 +96,7 @@ InWin IW-RF100 is a 1U short-depth rackmount chassis supporting Mini-ITX and ATX
 
 | Port Type | Quantity |
 |-----------|----------|
-| USB 2.0 | Details not specified |
+| USB 2.0 | 2 (typical) |
 | Power Button | 1 |
 | Reset Button | 1 |
 

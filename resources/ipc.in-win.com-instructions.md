@@ -163,7 +163,7 @@ Based on InWin rackmount chassis products, look for:
 
 ### Other Form Factors
 
-- [ ] **IW-RG650A** - 6.5U Rackmount Chassis (if available)
+- [ ] **IW-RG650A** - 6.5U Rackmount Chassis (Dual Chamber GPU Server)
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rg650a
 
 ## Extraction Script Example (JavaScript/Playwright)
