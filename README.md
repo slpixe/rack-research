@@ -42,6 +42,26 @@ rack-research/
 npm install
 ```
 
+### Run Tests
+
+```bash
+# Run tests in watch mode
+npm test
+
+# Run tests once (CI mode)
+npm run test:run
+
+# Run tests with UI
+npm run test:ui
+```
+
+### Build Database
+
+```bash
+# Generate unified JSON database from markdown files
+npm run build:db
+```
+
 ### Run Scrapers
 
 ```bash
@@ -137,6 +157,41 @@ Each product is documented with the following specifications (when available):
 | silverstonetek.com | ~15 | Various | 🔄 In Progress |
 
 **Total Products Documented: ~167**
+
+## Testing
+
+The project uses [Vitest](https://vitest.dev/) for testing. Tests are co-located with source code for easy maintenance:
+
+```
+src/
+├── parsers/
+│   ├── dimensions.ts
+│   ├── dimensions.test.ts          # Tests next to implementation
+│   ├── motherboard.ts
+│   └── motherboard.test.ts
+resources/
+├── inter-tech.de/
+│   ├── 4u-4408.md
+│   └── 4u-4408.test.ts             # Tests next to fixtures
+└── yakkaroo.de/
+    ├── 19-inch-2U-server-chassis-IPC-2U-20248-48cm.md
+    └── 19-inch-2U-server-chassis-IPC-2U-20248-48cm.test.ts
+```
+
+### Running Tests
+
+```bash
+npm test              # Watch mode for development
+npm run test:run      # Run once (CI mode)
+npm run test:ui       # Interactive UI
+```
+
+### Test Coverage
+
+- **Parser Tests**: Unit tests for value parsers (dimensions, motherboard support, etc.)
+- **Fixture Tests**: Integration tests that verify parsing of real fixture files
+
+All tests run in under 1 second, ensuring fast feedback during development.
 
 ## Development
 
