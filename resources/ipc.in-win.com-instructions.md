@@ -94,16 +94,16 @@ Based on InWin rackmount chassis products, look for:
 - [ ] **IW-RL100** - 1U Liquid-Cooled Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rl100
   
-- [ ] **IW-RA100** - 1U Compact Rackmount Chassis
+- [x] **IW-RA100** - 1U Compact Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-ra100
   
-- [ ] **IW-RA102** - 1U Compact Rackmount Chassis
+- [x] **IW-RA102** - 1U Compact Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-ra102
   
 - [ ] **IW-RF100** - 1U Short Depth Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rf100
   
-- [ ] **IW-RF100S** - 1U Short Depth Mini-ITX Rackmount Chassis
+- [x] **IW-RF100S** - 1U Short Depth Mini-ITX Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rf100s
   
 - [ ] **IW-RS104-07** - 1U NVMe Hybrid Rackmount Chassis
