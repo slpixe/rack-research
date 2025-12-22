@@ -7,7 +7,13 @@ A research project for documenting server rack mount chassis, their specificatio
 ```
 rack-research/
 ├── README.md
-├── initial-question.md
+├── package.json
+├── .gitignore
+├── docs/                         # Documentation
+│   ├── initial-question.md      # Original research question
+│   ├── scraping-approach-comparison.md
+│   ├── project-reorganization.md
+│   └── yakkaroo-completion-report.md
 ├── scrapers/                     # Custom scraping implementations
 │   ├── common/                   # Shared utilities
 │   │   └── utils.js
@@ -24,10 +30,8 @@ rack-research/
 │   └── {domain}/
 │       ├── {product}.html       # Raw HTML (optional)
 │       └── {product}.md         # Extracted specifications
-├── templates/
-│   └── case-template.md         # Markdown template for products
-├── package.json
-└── .gitignore
+└── templates/
+    └── case-template.md         # Markdown template for products
 ```
 
 ## Quick Start
@@ -64,7 +68,7 @@ npm run scrape:yakkaroo:parse     # Parse and generate markdown
 
 ### Scraping Approaches
 
-See [SCRAPING-APPROACH-COMPARISON.md](SCRAPING-APPROACH-COMPARISON.md) for detailed comparison.
+See [docs/scraping-approach-comparison.md](docs/scraping-approach-comparison.md) for detailed comparison.
 
 **Scripted Parsing (Cheerio):**
 - ⚡ Fast (< 1 minute for 50 products)
