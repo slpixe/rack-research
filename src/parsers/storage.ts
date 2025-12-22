@@ -14,7 +14,9 @@ export function parseDriveBays(value: string): DriveBay[] {
 
   while ((match = regex.exec(value)) !== null) {
     const quantity = parseInt(match[1], 10);
-    const size = (match[2] + '"') as DriveBay['size'];
+    const sizeMatch = match[2];
+    // E1.S doesn't need quotes, but 2.5, 3.5, 5.25 do
+    const size = (sizeMatch === 'E1.S' ? sizeMatch : sizeMatch + '"') as DriveBay['size'];
     const location = match[4]?.toLowerCase() || '';
 
     bays.push({

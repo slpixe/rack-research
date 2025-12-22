@@ -17,7 +17,7 @@ export function parsePrice(value: string, defaultCurrency: Currency = 'USD'): Pa
   if (value.includes('$') || value.includes('USD')) currency = 'USD';
   if (value.includes('£') || value.includes('GBP')) currency = 'GBP';
 
-  const numMatch = value.match(/([\d,]+\.?\d*)/);
+  const numMatch = value.match(/([\d,]*\.?\d+)/);
   if (numMatch) {
     let numStr = numMatch[1];
     if (numStr.includes(',') && !numStr.includes('.')) {
