@@ -9,7 +9,14 @@
     "scrape:yakkaroo:download": "node scrapers/yakkaroo/1-download-html.js",
     "scrape:yakkaroo:parse": "node scrapers/yakkaroo/2-parse-specs.js",
     "build:db": "tsx src/build-db.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/ scrapers/",
+    "lint:fix": "eslint src/ scrapers/ --fix",
+    "format": "prettier --write 'src/**/*.ts'",
+    "format:check": "prettier --check 'src/**/*.ts'",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui"
   },
   "keywords": [
     "rack-mount",
@@ -24,8 +31,14 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.50.1",
+    "@typescript-eslint/parser": "^8.50.1",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.7.4",
     "tsx": "^4.7.0",
-    "typescript": "^5.3.0"
+    "typescript": "^5.3.0",
+    "vitest": "^4.0.16"
   },
   "engines": {
     "node": ">=18.0.0"
