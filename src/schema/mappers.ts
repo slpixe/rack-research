@@ -1,6 +1,6 @@
 /**
  * Source-Specific Field Mappers
- * 
+ *
  * Each source has different field names and formats.
  * These mappers transform source-specific data to the universal schema.
  */
@@ -38,37 +38,37 @@ export const interTechKeyMap: KeyMapping = {
     'Form Factor': 'rack_units',
     'Dimensions (H x W x D)': 'dimensions',
     'Dimensions (H/W/D)': 'dimensions',
-    
+
     // Motherboard
     'Motherboard Support': 'motherboard_support',
-    'Motherboard': 'motherboard_support',
-    
+    Motherboard: 'motherboard_support',
+
     // Storage
     'Drive Bays': 'drive_bays',
     'External Drive Bays': 'drive_bays_external',
-    
+
     // Cooling
     'Cooling System': 'fan_mounts',
     'Fan Mounting Options': 'fan_mounts',
     'Max CPU Cooler Height': 'cpu_cooler_max_height',
     'CPU Cooler Height (max.)': 'cpu_cooler_max_height',
-    
+
     // GPU
     'Max Graphic Card Length': 'gpu_max_length',
     'Graphics Card Length (max.)': 'gpu_max_length',
-    
+
     // PSU
     'Power Supply Support': 'psu_support',
     'PSU Support': 'psu_support',
-    
+
     // I/O
     'Front Connectors': 'front_io',
-    
+
     // Expansion
     'Expansion Slots': 'expansion_slots',
-    
+
     // Materials
-    'Material': 'material',
+    Material: 'material',
     'Weight (Net)': 'weight_kg',
   },
 };
@@ -79,38 +79,38 @@ export const sligerKeyMap: KeyMapping = {
   mappings: {
     // Dimensions
     'Rack Units': 'rack_units',
-    'Width': 'width_mm',
-    'Height': 'height_mm',
-    'Depth': 'depth_mm',
-    'Weight': 'weight_kg',
-    
+    Width: 'width_mm',
+    Height: 'height_mm',
+    Depth: 'depth_mm',
+    Weight: 'weight_kg',
+
     // Motherboard
     'Motherboard Support': 'motherboard_support',
     'Motherboard Form Factors': 'motherboard_support',
-    
+
     // Storage
-    'Storage': 'drive_bays',
-    
+    Storage: 'drive_bays',
+
     // Cooling
     'Air Cooling': 'cpu_cooler_max_height',
     'Liquid Cooling': 'radiator_support',
     'Max Height': 'cpu_cooler_max_height',
     'Included Fans': 'fans_included',
     'Fan Mounts (Optional)': 'fan_mounts',
-    
+
     // GPU
     'GPU Support': 'gpu_support',
     'Max Length': 'gpu_max_length',
-    
+
     // PSU
     'Power Supply': 'psu_support',
     'PSU Support': 'psu_support',
-    
+
     // I/O
     'Front I/O': 'front_io',
-    
+
     // Price
-    'Price': 'price',
+    Price: 'price',
   },
 };
 
@@ -120,39 +120,39 @@ export const silverStoneKeyMap: KeyMapping = {
   mappings: {
     // Identification
     'Model No.': 'model',
-    
+
     // Dimensions
     'Chassis form factor': 'rack_units',
-    'Dimension': 'dimensions',
+    Dimension: 'dimensions',
     'Net Weight': 'weight_kg',
     'Main metal thickness': 'material_thickness',
-    
+
     // Motherboard
-    'Motherboard': 'motherboard_support',
-    
+    Motherboard: 'motherboard_support',
+
     // Storage
     'Drive Support': 'drive_bays',
-    
+
     // Cooling
     'Cooling system': 'fan_mounts',
     'Limitation of CPU cooler': 'cpu_cooler_max_height',
-    
+
     // GPU
     'Limitation of expansion card': 'gpu_max_length',
-    
+
     // PSU
     'Power Supply': 'psu_support',
-    
+
     // I/O
     'Front I/O Port': 'front_io',
     'Front buttons': 'front_buttons',
     'LED Indicators': 'led_indicators',
-    
+
     // Expansion
     'Expansion Slot': 'expansion_slots',
-    
+
     // Materials
-    'Material': 'material',
+    Material: 'material',
   },
 };
 
@@ -162,29 +162,29 @@ export const inWinKeyMap: KeyMapping = {
   mappings: {
     // Dimensions
     'Rack Units': 'rack_units',
-    'Width': 'width_mm',
-    'Height': 'height_mm',
-    'Depth': 'depth_mm',
+    Width: 'width_mm',
+    Height: 'height_mm',
+    Depth: 'depth_mm',
     'Operating Temperature': 'operating_temp',
-    
+
     // Motherboard
     'Motherboard Form Factors': 'motherboard_support',
-    
+
     // Storage
     'Drive Bays': 'drive_bays',
     'Storage Configuration': 'storage_config',
-    
+
     // Cooling
     'Included Fans': 'fans_included',
     'Additional Cooling Features': 'cooling_notes',
-    
+
     // PSU
     'PSU Support': 'psu_support',
     'Max Wattage': 'psu_max_wattage',
-    
+
     // I/O
     'Front I/O': 'front_io',
-    
+
     // Expansion
     'PCIe Slots': 'expansion_slots',
   },
@@ -195,27 +195,27 @@ export const yakkarooKeyMap: KeyMapping = {
   source: 'yakkaroo.de',
   mappings: {
     // Dimensions
-    'Length': 'depth_category',
-    'Model': 'model',
-    'Dimensions': 'dimensions',
-    
+    Length: 'depth_category',
+    Model: 'model',
+    Dimensions: 'dimensions',
+
     // Motherboard
     'Form factor': 'motherboard_support',
-    
+
     // Storage
     'Drive bays': 'drive_bays',
-    
+
     // Cooling
-    'Cooling': 'fan_mounts',
-    
+    Cooling: 'fan_mounts',
+
     // PSU
     'Power supply': 'psu_support',
-    
+
     // I/O
-    'Connectors': 'front_io',
-    
+    Connectors: 'front_io',
+
     // Other
-    'Colour': 'color',
+    Colour: 'color',
     'Box contents': 'included_accessories',
     'More info': 'features',
   },
@@ -255,53 +255,63 @@ export function parseRackUnits(value: string): RackUnits | null {
 export function parseMotherboardSupport(value: string): MotherboardFormFactor[] {
   const result: MotherboardFormFactor[] = [];
   const lowered = value.toLowerCase();
-  
+
   // Mini-ITX variants
   if (lowered.includes('mini-itx') || lowered.includes('mini itx')) {
     result.push('Mini-ITX');
   }
-  
+
   // Mini-DTX
   if (lowered.includes('mini-dtx') || lowered.includes('mini dtx')) {
     result.push('Mini-DTX');
   }
-  
+
   // FlexATX
   if (lowered.includes('flexatx') || lowered.includes('flex atx')) {
     result.push('FlexATX');
   }
-  
+
   // Micro-ATX variants
-  if (lowered.includes('micro-atx') || lowered.includes('micro atx') || 
-      lowered.includes('matx') || lowered.includes('μatx')) {
+  if (
+    lowered.includes('micro-atx') ||
+    lowered.includes('micro atx') ||
+    lowered.includes('matx') ||
+    lowered.includes('μatx')
+  ) {
     result.push('Micro-ATX');
   }
-  
+
   // Standard ATX (but not E-ATX or Micro-ATX)
-  if ((lowered.includes('atx') && !lowered.includes('eatx') && !lowered.includes('e-atx')) ||
-      lowered.includes('standard-atx') || lowered.includes('standard atx')) {
+  if (
+    (lowered.includes('atx') && !lowered.includes('eatx') && !lowered.includes('e-atx')) ||
+    lowered.includes('standard-atx') ||
+    lowered.includes('standard atx')
+  ) {
     if (!result.includes('ATX')) {
       // Avoid double-adding from "micro-atx" match
-      const hasOnlyAtx = /\batx\b/i.test(value) && 
-                         !lowered.includes('micro') && 
-                         !lowered.includes('μ');
+      const hasOnlyAtx =
+        /\batx\b/i.test(value) && !lowered.includes('micro') && !lowered.includes('μ');
       if (hasOnlyAtx || lowered.includes('standard')) {
         result.push('ATX');
       }
     }
   }
-  
+
   // E-ATX / Extended ATX
-  if (lowered.includes('e-atx') || lowered.includes('eatx') || 
-      lowered.includes('extended-atx') || lowered.includes('extended atx')) {
+  if (
+    lowered.includes('e-atx') ||
+    lowered.includes('eatx') ||
+    lowered.includes('extended-atx') ||
+    lowered.includes('extended atx')
+  ) {
     result.push('E-ATX');
   }
-  
+
   // SSI-CEB
   if (lowered.includes('ssi-ceb') || lowered.includes('ceb')) {
     result.push('SSI-CEB');
   }
-  
+
   // SSI-EEB / EEB
   if (lowered.includes('ssi-eeb') || lowered.includes('ssi eeb')) {
     result.push('SSI-EEB');
@@ -309,7 +319,7 @@ export function parseMotherboardSupport(value: string): MotherboardFormFactor[] 
   if (lowered.includes('eeb') && !lowered.includes('ssi')) {
     result.push('EEB');
   }
-  
+
   return [...new Set(result)]; // Remove duplicates
 }
 
@@ -321,27 +331,39 @@ export function parseMotherboardSupport(value: string): MotherboardFormFactor[] 
  * - "635mm x 431.8mm x 176.78mm (25" x 17" x 6.96")"
  * - "width: 483mm / depth: 450mm / height: 177mm"
  */
-export function parseDimensions(value: string): { width_mm: number | null; height_mm: number | null; depth_mm: number | null } {
-  const result = { width_mm: null as number | null, height_mm: null as number | null, depth_mm: null as number | null };
-  
+export function parseDimensions(value: string): {
+  width_mm: number | null;
+  height_mm: number | null;
+  depth_mm: number | null;
+} {
+  const result = {
+    width_mm: null as number | null,
+    height_mm: null as number | null,
+    depth_mm: null as number | null,
+  };
+
   // Format: "width: 483mm / depth: 450mm / height: 177mm"
-  const labeledMatch = value.match(/width:\s*([\d.]+)\s*mm.*depth:\s*([\d.]+)\s*mm.*height:\s*([\d.]+)\s*mm/i);
+  const labeledMatch = value.match(
+    /width:\s*([\d.]+)\s*mm.*depth:\s*([\d.]+)\s*mm.*height:\s*([\d.]+)\s*mm/i
+  );
   if (labeledMatch) {
     result.width_mm = parseFloat(labeledMatch[1]);
     result.depth_mm = parseFloat(labeledMatch[2]);
     result.height_mm = parseFloat(labeledMatch[3]);
     return result;
   }
-  
+
   // Format: "430mm (W) x 88.5mm (H) x 580mm (D)"
-  const wxhxdMatch = value.match(/([\d.]+)\s*mm\s*\(W\)\s*x\s*([\d.]+)\s*mm\s*\(H\)\s*x\s*([\d.]+)\s*mm\s*\(D\)/i);
+  const wxhxdMatch = value.match(
+    /([\d.]+)\s*mm\s*\(W\)\s*x\s*([\d.]+)\s*mm\s*\(H\)\s*x\s*([\d.]+)\s*mm\s*\(D\)/i
+  );
   if (wxhxdMatch) {
     result.width_mm = parseFloat(wxhxdMatch[1]);
     result.height_mm = parseFloat(wxhxdMatch[2]);
     result.depth_mm = parseFloat(wxhxdMatch[3]);
     return result;
   }
-  
+
   // Format: "H x W x D: 44.5 x 482 x 428mm" (Inter-Tech style)
   const hxwxdMatch = value.match(/([\d.]+)\s*x\s*([\d.]+)\s*x\s*([\d.]+)\s*mm/i);
   if (hxwxdMatch) {
@@ -351,7 +373,7 @@ export function parseDimensions(value: string): { width_mm: number | null; heigh
     result.depth_mm = parseFloat(hxwxdMatch[3]);
     return result;
   }
-  
+
   return result;
 }
 
@@ -364,16 +386,17 @@ export function parseDimensions(value: string): { width_mm: number | null; heigh
  */
 export function parseDriveBays(value: string): DriveBay[] {
   const bays: DriveBay[] = [];
-  
+
   // Match patterns like "8x 2.5"", "2x 3.5"", "6 x 2.5""
-  const regex = /(\d+)\s*x?\s*(2\.5|3\.5|5\.25|E1\.S)["\u201D]?\s*(inch)?\s*(internal|external|hot[- ]?swap)?/gi;
+  const regex =
+    /(\d+)\s*x?\s*(2\.5|3\.5|5\.25|E1\.S)["\u201D]?\s*(inch)?\s*(internal|external|hot[- ]?swap)?/gi;
   let match;
-  
+
   while ((match = regex.exec(value)) !== null) {
     const quantity = parseInt(match[1], 10);
     const size = match[2] + '"';
     const location = match[4]?.toLowerCase() || '';
-    
+
     bays.push({
       size: size as DriveBay['size'],
       quantity,
@@ -381,7 +404,7 @@ export function parseDriveBays(value: string): DriveBay[] {
       internal: !location.includes('external'),
     });
   }
-  
+
   return bays;
 }
 
@@ -392,13 +415,16 @@ export function parseDriveBays(value: string): DriveBay[] {
  * - "€ 159,90"
  * - "199.00"
  */
-export function parsePrice(value: string, defaultCurrency: Currency = 'USD'): { amount: number | null; currency: Currency } {
+export function parsePrice(
+  value: string,
+  defaultCurrency: Currency = 'USD'
+): { amount: number | null; currency: Currency } {
   // Determine currency
   let currency: Currency = defaultCurrency;
   if (value.includes('€') || value.includes('EUR')) currency = 'EUR';
   if (value.includes('$') || value.includes('USD')) currency = 'USD';
   if (value.includes('£') || value.includes('GBP')) currency = 'GBP';
-  
+
   // Extract number (handle both 159,90 and 159.90 formats)
   const numMatch = value.match(/([\d,]+\.?\d*)/);
   if (numMatch) {
@@ -411,7 +437,7 @@ export function parsePrice(value: string, defaultCurrency: Currency = 'USD'): { 
     }
     return { amount: parseFloat(numStr), currency };
   }
-  
+
   return { amount: null, currency };
 }
 
@@ -445,7 +471,7 @@ export function parseGPULength(value: string): number | null {
 export function parsePSUTypes(value: string): PSUType[] {
   const result: PSUType[] = [];
   const lowered = value.toLowerCase();
-  
+
   if (lowered.includes('atx') && !lowered.includes('flex')) result.push('ATX');
   if (lowered.includes('sfx-l')) result.push('SFX-L');
   else if (lowered.includes('sfx')) result.push('SFX');
@@ -456,7 +482,7 @@ export function parsePSUTypes(value: string): PSUType[] {
   if (lowered.includes('mini') && lowered.includes('redundant')) result.push('Mini Redundant');
   if (lowered.includes('crps')) result.push('CRPS');
   if (lowered.includes('ps2') || lowered.includes('ps/2')) result.push('PS2');
-  
+
   return [...new Set(result)];
 }
 
@@ -465,15 +491,15 @@ export function parsePSUTypes(value: string): PSUType[] {
  */
 export function parseFanMounts(value: string): FanMount[] {
   const fans: FanMount[] = [];
-  
+
   // Match patterns like "2x 40mm", "3x 120mm", "80mm x 3"
   const regex = /(\d+)\s*x\s*(\d+)\s*mm|(\d+)\s*mm\s*x\s*(\d+)/gi;
   let match;
-  
+
   while ((match = regex.exec(value)) !== null) {
     const quantity = parseInt(match[1] || match[4], 10);
     const size = parseInt(match[2] || match[3], 10);
-    
+
     // Determine position from context
     let position = 'unknown';
     const context = value.toLowerCase();
@@ -481,7 +507,7 @@ export function parseFanMounts(value: string): FanMount[] {
     else if (context.includes('rear') || context.includes('back')) position = 'rear';
     else if (context.includes('top')) position = 'top';
     else if (context.includes('inside') || context.includes('internal')) position = 'internal';
-    
+
     fans.push({
       size_mm: size,
       quantity,
@@ -489,7 +515,7 @@ export function parseFanMounts(value: string): FanMount[] {
       included: context.includes('included') || context.includes('incl'),
     });
   }
-  
+
   return fans;
 }
 
@@ -499,13 +525,20 @@ export function parseFanMounts(value: string): FanMount[] {
 
 export function parseAvailability(value: string): AvailabilityStatus {
   const lowered = value.toLowerCase();
-  
-  if (lowered.includes('in stock') || lowered.includes('available immediately') || 
-      lowered.includes('in-stock') || lowered.includes('available')) {
+
+  if (
+    lowered.includes('in stock') ||
+    lowered.includes('available immediately') ||
+    lowered.includes('in-stock') ||
+    lowered.includes('available')
+  ) {
     return 'in-stock';
   }
-  if (lowered.includes('out of stock') || lowered.includes('out-of-stock') ||
-      lowered.includes('sold out')) {
+  if (
+    lowered.includes('out of stock') ||
+    lowered.includes('out-of-stock') ||
+    lowered.includes('sold out')
+  ) {
     return 'out-of-stock';
   }
   if (lowered.includes('pre-order') || lowered.includes('preorder')) {
@@ -517,6 +550,6 @@ export function parseAvailability(value: string): AvailabilityStatus {
   if (lowered.includes('contact') || lowered.includes('quote')) {
     return 'contact-for-quote';
   }
-  
+
   return 'unknown';
 }
