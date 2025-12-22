@@ -123,19 +123,19 @@ Based on InWin rackmount chassis products, look for:
 
 ### 2U Rackmount Chassis (5 products)
 
-- [ ] **IW-RL200** - 2U Liquid-Cooled Rackmount Chassis
+- [x] **IW-RL200** - 2U Liquid-Cooled Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rl200
   
-- [ ] **IW-R200N** - 2U Open-Bay Middle Depth Server Chassis
+- [x] **IW-R200N** - 2U Open-Bay Middle Depth Server Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-r200n
   
-- [ ] **IW-R200-01N** - 2U Open-Bay Long Depth Server Chassis
+- [x] **IW-R200-01N** - 2U Open-Bay Long Depth Server Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-r200-01n
   
-- [ ] **IW-R200-02N** - 2U Open-Bay Short Depth Rackmount Chassis
+- [x] **IW-R200-02N** - 2U Open-Bay Short Depth Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-r200-02n
   
-- [ ] **IW-RS208-07** - 2U NVMe Hybrid Rackmount Chassis
+- [x] **IW-RS208-07** - 2U NVMe Hybrid Rackmount Chassis
   - URL: https://ipc.in-win.com/rackmount-chassis-iw-rs208-07
 
 ### 4U Rackmount Chassis (7 products)
