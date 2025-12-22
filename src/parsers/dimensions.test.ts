@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseDimensions } from './dimensions';
+import { parseDimensions } from './dimensions.js';
 
 describe('parseDimensions', () => {
   it('parses Inter-Tech format: "44.5 x 482 x 428mm" (H x W x D)', () => {

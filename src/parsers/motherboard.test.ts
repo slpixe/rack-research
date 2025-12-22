@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseMotherboardSupport } from './motherboard';
+import { parseMotherboardSupport } from './motherboard.js';
 
 describe('parseMotherboardSupport', () => {
   it('parses Mini-ITX', () => {
