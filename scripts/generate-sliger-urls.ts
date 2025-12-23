@@ -16,7 +16,8 @@ const baseUrl = 'https://sliger.com/products';
 // Get all markdown files
 const mdFiles = fs
   .readdirSync(resourcesDir)
-  .filter((f) => f.endsWith('.md'));
+  .filter((f) => f.endsWith('.md'))
+  .filter((f) => !f.includes('instructions') && !f.includes('SUMMARY'));
 
 const urlMappings: Record<string, string> = {};
 
