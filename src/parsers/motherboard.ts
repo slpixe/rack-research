@@ -1,19 +1,10 @@
 /**
- * Motherboard Support Parser
+ * Motherboard Parser
  * 
- * Parses motherboard form factor strings into a normalized list.
+ * Parses motherboard form factor support from various formats
  */
 
-export type MotherboardFormFactor = 
-  | 'Mini-ITX'
-  | 'Mini-DTX'
-  | 'FlexATX'
-  | 'Micro-ATX'
-  | 'ATX'
-  | 'E-ATX'
-  | 'SSI-CEB'
-  | 'SSI-EEB'
-  | 'EEB';
+import type { MotherboardFormFactor } from '../schema/types.js';
 
 export function parseMotherboardSupport(value: string): MotherboardFormFactor[] {
   const result: MotherboardFormFactor[] = [];
@@ -35,8 +26,6 @@ export function parseMotherboardSupport(value: string): MotherboardFormFactor[] 
     !lowered.includes('μ') &&
     !lowered.includes('e-atx') &&
     !lowered.includes('eatx') &&
-    !lowered.includes('extended-atx') &&
-    !lowered.includes('extended atx') &&
     !lowered.includes('flex')
   ) {
     result.push('ATX');

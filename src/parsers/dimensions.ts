@@ -1,17 +1,17 @@
 /**
- * Dimension Parser
+ * Dimensions Parser
  * 
- * Parses dimension strings from various formats into a normalized structure.
+ * Parses physical dimensions from various formats
  */
 
-export interface Dimensions {
+export interface ParsedDimensions {
   width_mm: number | null;
   height_mm: number | null;
   depth_mm: number | null;
 }
 
-export function parseDimensions(value: string): Dimensions {
-  const result: Dimensions = { width_mm: null, height_mm: null, depth_mm: null };
+export function parseDimensions(value: string): ParsedDimensions {
+  const result: ParsedDimensions = { width_mm: null, height_mm: null, depth_mm: null };
 
   // Format: "width: 483mm / depth: 450mm / height: 177mm"
   const labeledMatch = value.match(
@@ -45,4 +45,14 @@ export function parseDimensions(value: string): Dimensions {
   }
 
   return result;
+}
+
+export function parseMillimeters(value: string): number | null {
+  const match = value.match(/(\d+)\s*mm/);
+  return match ? parseInt(match[1], 10) : null;
+}
+
+export function parseWeight(value: string): number | null {
+  const match = value.match(/([\d.]+)\s*kg/);
+  return match ? parseFloat(match[1]) : null;
 }
