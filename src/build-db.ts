@@ -111,7 +111,25 @@ if (result.invalid.length > 0) {
 
 if (result.warnings.length > 0) {
   console.log(`\n⚠️  Products with warnings: ${result.warnings.length}`);
+  
+  // Aggregate warning types
+  const warningCounts: Record<string, number> = {};
+  result.warnings.forEach(({ warnings }) => {
+    warnings.forEach((warn) => {
+      warningCounts[warn] = (warningCounts[warn] || 0) + 1;
+    });
+  });
+
+  console.log('\n📋 Data Quality Summary:');
+  Object.entries(warningCounts)
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([warning, count]) => {
+      const percentage = ((count / result.valid.length) * 100).toFixed(1);
+      console.warn(`   ${warning}: ${count} products (${percentage}%)`);
+    });
+
   // Only show first few warnings to avoid clutter
+  console.log('\n📝 Sample warnings:');
   const warningsToShow = result.warnings.slice(0, 5);
   warningsToShow.forEach(({ file, warnings }) => {
     console.warn(`   ${file}:`);
