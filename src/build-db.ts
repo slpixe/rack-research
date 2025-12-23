@@ -342,7 +342,11 @@ function transformToUniversal(
 
   // Determine rack units from various sources
   const rackUnitsRaw =
-    specs['Form Factor'] || specs['Rack Units'] || specs['Chassis form factor'] || parsed.title || '';
+    specs['Form Factor'] ||
+    specs['Rack Units'] ||
+    specs['Chassis form factor'] ||
+    parsed.title ||
+    '';
   const rackUnits = (parseRackUnits(rackUnitsRaw) || '4U') as RackCase['rack_units'];
 
   // Parse dimensions from various formats
@@ -381,15 +385,15 @@ function transformToUniversal(
 
   // Calculate totals
   const total_25_bays = driveBays
-    .filter((b) => b.size === '2.5"')
+    .filter(b => b.size === '2.5"')
     .reduce((sum, b) => sum + b.quantity, 0);
   const total_35_bays = driveBays
-    .filter((b) => b.size === '3.5"')
+    .filter(b => b.size === '3.5"')
     .reduce((sum, b) => sum + b.quantity, 0);
   const total_525_bays = driveBays
-    .filter((b) => b.size === '5.25"')
+    .filter(b => b.size === '5.25"')
     .reduce((sum, b) => sum + b.quantity, 0);
-  const has_hot_swap = driveBays.some((b) => b.hot_swap);
+  const has_hot_swap = driveBays.some(b => b.hot_swap);
 
   // Parse GPU support
   const gpuRaw =
@@ -563,7 +567,7 @@ function saveDatabase(products: RackCase[], outputPath: string): void {
   const output: ProductDatabase = {
     generated_at: new Date().toISOString(),
     total_products: products.length,
-    sources: [...new Set(products.map((p) => p.source))] as DataSource[],
+    sources: [...new Set(products.map(p => p.source))] as DataSource[],
     products,
   };
 
