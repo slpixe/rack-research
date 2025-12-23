@@ -26,6 +26,8 @@ export function parseMotherboardSupport(value: string): MotherboardFormFactor[] 
     !lowered.includes('μ') &&
     !lowered.includes('e-atx') &&
     !lowered.includes('eatx') &&
+    !lowered.includes('extended-atx') &&
+    !lowered.includes('extended atx') &&
     !lowered.includes('flex')
   ) {
     result.push('ATX');
