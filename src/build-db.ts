@@ -15,6 +15,7 @@ import { parseMarkdownFile } from './parsers/markdown.js';
 import { transformToUniversal } from './transformers/universal.js';
 import { writeJsonDatabase } from './db/json-writer.js';
 import { getSourceFromPath } from './utils/source-utils.js';
+import { validateAndWarn } from './schema/validators.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,8 +24,16 @@ const __dirname = path.dirname(__filename);
 // DATABASE GENERATOR
 // ============================================================================
 
-function generateDatabase(resourcesDir: string): RackCase[] {
-  const products: RackCase[] = [];
+interface ProductProcessingResult {
+  valid: RackCase[];
+  invalid: Array<{ file: string; errors: string[] }>;
+  warnings: Array<{ file: string; warnings: string[] }>;
+}
+
+function generateDatabase(resourcesDir: string): ProductProcessingResult {
+  const valid: RackCase[] = [];
+  const invalid: Array<{ file: string; errors: string[] }> = [];
+  const warnings: Array<{ file: string; warnings: string[] }> = [];
   const sources = fs.readdirSync(resourcesDir);
 
   for (const source of sources) {
@@ -44,16 +53,39 @@ function generateDatabase(resourcesDir: string): RackCase[] {
         const parsed = parseMarkdownFile(filePath);
         const product = transformToUniversal(parsed, dataSource, filePath);
 
-        products.push(product);
-        console.log(`✓ ${product.name}`);
+        // Validate the product
+        const validationResult = validateAndWarn(product);
+
+        if (validationResult.valid && validationResult.data) {
+          valid.push(validationResult.data);
+          console.log(`✓ ${validationResult.data.name}`);
+
+          // Track warnings if any
+          if (validationResult.warnings.length > 0) {
+            warnings.push({
+              file,
+              warnings: validationResult.warnings,
+            });
+          }
+        } else {
+          invalid.push({
+            file,
+            errors: validationResult.errors,
+          });
+          console.error(`✗ Validation failed for ${file}`);
+        }
       } catch (error) {
         const message = error instanceof Error ? error.message : 'Unknown error';
         console.error(`✗ Error processing ${filePath}:`, message);
+        invalid.push({
+          file,
+          errors: [message],
+        });
       }
     }
   }
 
-  return products;
+  return { valid, invalid, warnings };
 }
 
 // ============================================================================
@@ -64,7 +96,31 @@ const resourcesDir = path.join(__dirname, '..', 'resources');
 const outputPath = path.join(__dirname, '..', 'data', 'products.json');
 
 console.log('🔍 Parsing markdown files...\n');
-const products = generateDatabase(resourcesDir);
+const result = generateDatabase(resourcesDir);
+const products = result.valid;
+
+// Display validation summary
+console.log(`\n✅ Valid products: ${result.valid.length}`);
+if (result.invalid.length > 0) {
+  console.log(`❌ Invalid products: ${result.invalid.length}`);
+  result.invalid.forEach(({ file, errors }) => {
+    console.error(`   ${file}:`);
+    errors.forEach((err) => console.error(`      - ${err}`));
+  });
+}
+
+if (result.warnings.length > 0) {
+  console.log(`\n⚠️  Products with warnings: ${result.warnings.length}`);
+  // Only show first few warnings to avoid clutter
+  const warningsToShow = result.warnings.slice(0, 5);
+  warningsToShow.forEach(({ file, warnings }) => {
+    console.warn(`   ${file}:`);
+    warnings.forEach((warn) => console.warn(`      - ${warn}`));
+  });
+  if (result.warnings.length > 5) {
+    console.warn(`   ... and ${result.warnings.length - 5} more`);
+  }
+}
 
 console.log('\n📊 Summary by source:');
 const bySource = products.reduce(

@@ -3,6 +3,10 @@
  *
  * This file defines the normalized/universal schema for all rack case products
  * across different sources (Inter-Tech, Sliger, SilverStone, In-Win, Yakkaroo, etc.)
+ *
+ * NOTE: Runtime validation is handled by Zod schemas in validators.ts.
+ * These TypeScript types are kept in sync with the Zod schemas.
+ * Future consideration: Use z.infer<> from validators.ts as single source of truth.
  */
 
 // ============================================================================
