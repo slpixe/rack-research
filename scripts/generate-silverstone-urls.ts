@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const resourcesDir = path.join(__dirname, '..', 'resources', 'silverstonetek.com');
-const baseUrl = 'https://silverstonetek.com/en/product/info';
+const baseUrl = 'https://www.silverstonetek.com/en/product/info/server-nas';
 
 // Get all markdown files
 const mdFiles = fs
@@ -24,9 +24,10 @@ const urlMappings: Record<string, string> = {};
 
 for (const file of mdFiles) {
   const baseName = path.basename(file, '.md');
-  // SilverStone URLs use the model name, sometimes with dashes replaced with underscores
-  // But we'll use the filename as-is since that's what we matched
-  urlMappings[baseName] = `${baseUrl}/${baseName}/`;
+  // SilverStone URLs use lowercase model name in server-nas category
+  // Format: https://www.silverstonetek.com/en/product/info/server-nas/{model-lowercase}/
+  const modelName = baseName.toLowerCase();
+  urlMappings[baseName] = `${baseUrl}/${modelName}/`;
 }
 
 // Save the mappings

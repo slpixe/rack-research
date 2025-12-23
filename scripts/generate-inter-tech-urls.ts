@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const resourcesDir = path.join(__dirname, '..', 'resources', 'inter-tech.de');
-const baseUrl = 'https://www.inter-tech.de/products/ipc/server-cases';
+const baseUrl = 'https://www.inter-tech.de/productdetails-152';
 
 // Get all markdown files (excluding instructions and SUMMARY)
 const mdFiles = fs
@@ -23,8 +23,10 @@ const urlMappings: Record<string, string> = {};
 
 for (const file of mdFiles) {
   const baseName = path.basename(file, '.md');
-  // Construct URL based on the filename
-  urlMappings[baseName] = `${baseUrl}/${baseName}`;
+  // Inter-Tech uses format: productdetails-152/{MODEL}_EN.html
+  // Model names are uppercase with periods as-is
+  const modelName = baseName.toUpperCase();
+  urlMappings[baseName] = `${baseUrl}/${modelName}_EN.html`;
 }
 
 // Save the mappings

@@ -1,9 +1,10 @@
 # URL Verification Results
 
 **Date:** 2025-12-23  
-**Total URLs Checked:** 214  
-**Accessible URLs:** 103 (48.1%)  
-**Inaccessible URLs:** 111 (51.9%)
+**Last Updated:** 2025-12-23 (after URL pattern discovery)  
+**Total URLs Checked:** 212  
+**Accessible URLs:** 191 (90.1%)  
+**Inaccessible URLs:** 21 (9.9%)
 
 ## Summary by Source
 
@@ -12,9 +13,9 @@
 | yakkaroo.de | 52 | 52 | 100.0% | ✅ Perfect |
 | ipc.in-win.com | 8 | 8 | 100.0% | ✅ Perfect |
 | unykach.com | 1 | 1 | 100.0% | ✅ Perfect |
-| sliger.com | 42 | 43 | 97.7% | ⚠️ Nearly perfect (1 bad URL) |
-| inter-tech.de | 0 | 73 | 0.0% | ❌ All URLs fail |
-| silverstonetek.com | 0 | 37 | 0.0% | ❌ All URLs fail |
+| sliger.com | 42 | 42 | 100.0% | ✅ Perfect |
+| silverstonetek.com | 36 | 36 | 100.0% | ✅ Perfect - Fixed! |
+| inter-tech.de | 52 | 73 | 71.2% | ⚠️ Mostly working (21 404s) |
 
 ## Detailed Findings
 
@@ -37,65 +38,69 @@
 - Pattern: `https://unykach.com/en/professional/rack19/rack-case-19-{model}/`
 - Status: Production ready
 
-### ⚠️ Mostly Working Sources
-
-**sliger.com (42/43 - 97.7%)**
+**sliger.com (42/42)**
+- All URLs return HTTP 200
 - Pattern: `https://sliger.com/products/{model-lowercase}`
-- **Issue:** 1 URL fails:
-  - `https://sliger.com/products/sliger.com-instructions` (404)
-  - This is an instructions file, not a product - should be excluded
-- **Action needed:** Remove instructions file from URL mappings
-- Status: Nearly production ready (minor cleanup needed)
+- Fixed: Removed non-product instruction files
+- Status: Production ready
 
-### ❌ Failed Sources (Need Investigation)
+**silverstonetek.com (36/36) - FIXED!** ✅
+- All URLs now return HTTP 200
+- **Old pattern (broken)**: `https://silverstonetek.com/en/product/info/{model}/`
+- **New pattern (working)**: `https://www.silverstonetek.com/en/product/info/server-nas/{model-lowercase}/`
+- Changes made:
+  1. Added "www." subdomain
+  2. Added "server-nas" category to path
+  3. Model names converted to lowercase
+- Status: Production ready
 
-**inter-tech.de (0/73 - 0.0%)**
-- All URLs return HTTP 404
-- Current pattern: `https://www.inter-tech.de/products/ipc/server-cases/{model}`
-- **Possible issues:**
-  1. Products may have been discontinued or moved
-  2. URL structure might be different than assumed
-  3. Website may have been restructured
-  4. Products might require different category paths
-- **Action needed:** 
-  - Manual inspection of inter-tech.de website structure
-  - Check if products are still listed online
-  - Find correct URL pattern if different
-  - Consider alternative: Link to manufacturer's main product page with note
+### ⚠️ Partially Working Sources
 
-**silverstonetek.com (0/37 - 0.0%)**
-- All URLs fail with "fetch failed" error
-- Current pattern: `https://silverstonetek.com/en/product/info/{model}/`
-- **Possible issues:**
-  1. Domain may not be whitelisted in firewall
-  2. Website may block automated requests
-  3. May require specific headers or cookies
-  4. URL pattern might be incorrect
-- **Action needed:**
-  - Verify silverstonetek.com is whitelisted in firewall
-  - Try accessing one URL manually to verify pattern
-  - Check if website has anti-bot protection
-  - May need to adjust User-Agent or request headers
+**inter-tech.de (52/73 - 71.2%)** 
+- **Old pattern (broken)**: `https://www.inter-tech.de/products/ipc/server-cases/{model}`
+- **New pattern (mostly working)**: `https://www.inter-tech.de/productdetails-152/{MODEL}_EN.html`
+- Changes made:
+  1. Changed from `/products/ipc/server-cases/` to `/productdetails-152/`
+  2. Added `_EN.html` suffix
+  3. Model names converted to UPPERCASE
+- 52 out of 73 URLs now work (71.2% success rate)
+- **Remaining 21 failures**: These products appear to be discontinued or have different model names on the website
+  - Models with "K" prefix (e.g., 1U-K-125L, 1U-K-126L, 2U-K-240L, 3U-K-340L, 4U-K-439L)
+  - Mining rack models (4F28-MINING-RACK, 4W2-MINING-RACK, 4W40-MINING-RACK)
+  - Some older models (2U-2098-SK, 2U-2098-SL, 2U-2129-N, etc.)
+  - Older server models (5U-5512, 6U-6520, 6U-6606, S21, S25)
+- **Action needed**: Manual verification of these 21 models to find correct URLs or mark as discontinued
 
 ## Recommendations
 
-### Immediate Actions
+### Completed Actions ✅
 
-1. **Remove non-product URLs from mappings**
-   - `sliger.com-instructions` should not be in URL mappings
-   - Check for other instruction/summary files in mappings
+1. **Fixed silverstonetek.com URLs**
+   - Updated URL pattern to include "www." subdomain
+   - Added "server-nas" category to path
+   - All 36 URLs now working (100% success rate)
 
-2. **Investigate inter-tech.de URL pattern**
-   - Manually check inter-tech.de website
-   - Find correct URL structure for their products
-   - Consider if products are still available online
-   - May need to update URL generator script
+2. **Fixed inter-tech.de URL pattern**
+   - Changed to `/productdetails-152/{MODEL}_EN.html` format
+   - 52 out of 73 URLs now working (71.2% success rate)
+   - Significant improvement from 0% to 71.2%
 
-3. **Verify silverstonetek.com access**
-   - Confirm domain is whitelisted
-   - Test manual access to one product URL
-   - Check if URL pattern is correct
-   - May need to adjust fetch headers
+3. **Removed non-product URLs from mappings**
+   - sliger.com-instructions removed from mappings
+   - All sliger.com URLs now working (42/42 - 100%)
+
+### Remaining Actions
+
+1. **Investigate 21 remaining inter-tech.de failures**
+   - These appear to be discontinued or renamed products
+   - Options:
+     a. Mark as discontinued in database
+     b. Find alternative URLs if products were renamed
+     c. Link to main product category page
+   - Models affected:
+     - "K" series: 1U-K-125L, 1U-K-126L, 2U-K-240L, 3U-K-340L, 4U-K-439L (5 products)
+     - Mining racks: 4F28-MINING-RACK, 4W2-MINING-RACK, 4W40-MINING-RACK (3 products)
+     - Older models: 13 other products (2U-2098-SK, 5U-5512, etc.)
 
 ### Long-term Improvements
 

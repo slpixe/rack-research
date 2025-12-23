@@ -1,0 +1,358 @@
+🔗 URL Verification Tool
+This will check if generated URLs are accessible.
+
+⏱️  This may take several minutes due to rate limiting...
+
+📋 Found 6 sources with URL mappings:
+   - inter-tech.de: 73 URLs
+   - ipc.in-win.com: 8 URLs
+   - silverstonetek.com: 36 URLs
+   - sliger.com: 42 URLs
+   - unykach.com: 1 URLs
+   - yakkaroo.de: 52 URLs
+
+🔍 Verifying inter-tech.de...
+  ✓ [200] https://www.inter-tech.de/productdetails-152/1.5U-1528-1_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/1.5U-1528L_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/1U-10240_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/1U-10248_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/1U-10255_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/1U-10265_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/1U-1404_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-152/1U-K-125L_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/1U-K-126L_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-20240_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-20248_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-20255_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-152/2U-2098-SK_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/2U-2098-SL_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/2U-2129-N_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2404L-S-ATA_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2404L_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2404S_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2406_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2408_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2412_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2504_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2724_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-152/2U-K-240L_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-30240_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-30248_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-30255_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-30765_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-152/3U-3098-S_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-3416_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-3508_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-K-340L_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-152/4F28-MINING-RACK_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-40240_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-40248_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-40255_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4088-S_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4098-S_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4129L_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4408_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4410_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4416_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4420_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4424_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4452-TFT_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4460-TFT_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4508_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-47045_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4708_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4724_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4736_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-K-439L_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-152/4W2-MINING-RACK_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/4W40-MINING-RACK_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/5U-5512_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/6U-6520_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/6U-6606_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-152/IP-40_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/IP-60_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/NAS-8_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-152/S21_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/S25_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-152/S31B_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/S34_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/S34N_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/S34T_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/S37_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/S38_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/SC-2100_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/SC-4004_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/SC-4100_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/SR-680_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/T-9_EN.html
+
+🔍 Verifying ipc.in-win.com...
+  ✓ [200] https://ipc.in-win.com/rackmount-chassis-iw-r400-01n
+  ✓ [200] https://ipc.in-win.com/rackmount-chassis-iw-r400-03n
+  ✓ [200] https://ipc.in-win.com/rackmount-chassis-iw-r400n
+  ✓ [200] https://ipc.in-win.com/rackmount-chassis-iw-rl400
+  ✓ [200] https://ipc.in-win.com/rackmount-chassis-iw-rn424-04
+  ✓ [200] https://ipc.in-win.com/rackmount-chassis-iw-rs424-07
+  ✓ [200] https://ipc.in-win.com/rackmount-chassis-iw-rs436-07
+  ✓ [200] https://ipc.in-win.com/rackmount-chassis-iw-rg650a
+
+🔍 Verifying silverstonetek.com...
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/alta-d1/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/cs01-hs/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/cs280/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/cs330/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/cs351/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/cs380/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/cs381/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/cs382/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/cs383/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/ds380/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm21-304/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm21-308/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm22-308/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm22-312/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm23-502-mini/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm23-502/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm31-mini/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm31/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm32/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm400/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm41-506/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm41-h08/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm42-502/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm43-320-rs/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm43-324-rs/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm44/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm45-360/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm46_502_i/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm47_502_i/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm4a/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm51/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm52/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm53-502/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm600/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/rm61_312/
+  ✓ [200] https://www.silverstonetek.com/en/product/info/server-nas/ws380-e/
+
+🔍 Verifying sliger.com...
+  ✓ [200] https://sliger.com/products/cx2130a
+  ✓ [200] https://sliger.com/products/cx2130c
+  ✓ [200] https://sliger.com/products/cx2130x
+  ✓ [200] https://sliger.com/products/cx2137a
+  ✓ [200] https://sliger.com/products/cx2137b
+  ✓ [200] https://sliger.com/products/cx2151a
+  ✓ [200] https://sliger.com/products/cx2151c
+  ✓ [200] https://sliger.com/products/cx2151x
+  ✓ [200] https://sliger.com/products/cx2177a
+  ✓ [200] https://sliger.com/products/cx2177c
+  ✓ [200] https://sliger.com/products/cx2177x
+  ✓ [200] https://sliger.com/products/cx3150a
+  ✓ [200] https://sliger.com/products/cx3150i
+  ✓ [200] https://sliger.com/products/cx3150x
+  ✓ [200] https://sliger.com/products/cx3151a
+  ✓ [200] https://sliger.com/products/cx3151i
+  ✓ [200] https://sliger.com/products/cx3151x
+  ✓ [200] https://sliger.com/products/cx3152a
+  ✓ [200] https://sliger.com/products/cx3152i
+  ✓ [200] https://sliger.com/products/cx3170a
+  ✓ [200] https://sliger.com/products/cx3170a_xl
+  ✓ [200] https://sliger.com/products/cx3170i_xl
+  ✓ [200] https://sliger.com/products/cx3171a
+  ✓ [200] https://sliger.com/products/cx3171a_xl
+  ✓ [200] https://sliger.com/products/cx3171i_xl
+  ✓ [200] https://sliger.com/products/cx3172a
+  ✓ [200] https://sliger.com/products/cx3172a_xl
+  ✓ [200] https://sliger.com/products/cx3172i_xl
+  ✓ [200] https://sliger.com/products/cx3701
+  ✓ [200] https://sliger.com/products/cx3702
+  ✓ [200] https://sliger.com/products/cx4150a
+  ✓ [200] https://sliger.com/products/cx4150e
+  ✓ [200] https://sliger.com/products/cx4150i
+  ✓ [200] https://sliger.com/products/cx4170a
+  ✓ [200] https://sliger.com/products/cx4170e
+  ✓ [200] https://sliger.com/products/cx4170i
+  ✓ [200] https://sliger.com/products/cx4200a
+  ✓ [200] https://sliger.com/products/cx4200e
+  ✓ [200] https://sliger.com/products/cx4200f
+  ✓ [200] https://sliger.com/products/cx4200i
+  ✓ [200] https://sliger.com/products/cx4712
+  ✓ [200] https://sliger.com/products/cx4713
+
+🔍 Verifying unykach.com...
+  ✓ [200] https://unykach.com/en/professional/rack19/rack-case-19-uk2130-2u600-uk51922/
+
+🔍 Verifying yakkaroo.de...
+  ✓ [200] https://www.yakkaroo.de/19-inch-13u-server-chassis-ipc-c1350-micro-atx-mini-itx
+  ✓ [200] https://www.yakkaroo.de/19-inch-1U-Supermicro-CSE-504-203B-200W-rack-mount-server-case
+  ✓ [200] https://www.yakkaroo.de/19-inch-1U-server-chassis-1U-K-125L-Atom-Mini-ITX
+  ✓ [200] https://www.yakkaroo.de/19-inch-1U-server-chassis-Chenbro-RM13604-4HDD-SAS-backplane
+  ✓ [200] https://www.yakkaroo.de/19-inch-1U-server-chassis-IPC-1U-10240-40cm
+  ✓ [200] https://www.yakkaroo.de/19-inch-1U-server-chassis-IPC-1U-10265-65cm
+  ✓ [200] https://www.yakkaroo.de/19-inch-1_5U-server-chassis-IPC-N1528R-mini-ITX-with-backplane
+  ✓ [200] https://www.yakkaroo.de/19-inch-1u-chenbro-rm14300-server-case
+  ✓ [200] https://www.yakkaroo.de/19-inch-1u-server-chassis-1u_k_126l-atom-mini-itx
+  ✓ [200] https://www.yakkaroo.de/19-inch-1u-supermicro-cse-505-203b-200w-25cm-rack-mount-server-case
+  ✓ [200] https://www.yakkaroo.de/19-inch-2U-server-chassis-Chenbro-RM24200-RM242
+  ✓ [200] https://www.yakkaroo.de/19-inch-2U-server-chassis-IPC-2U-20240-40cm
+  ✓ [200] https://www.yakkaroo.de/19-inch-2U-server-chassis-IPC-2U-20248-48cm
+  ✓ [200] https://www.yakkaroo.de/19-inch-2U-server-chassis-IPC-2U-20255-55cm
+  ✓ [200] https://www.yakkaroo.de/19-inch-2U-server-chassis-IPC-2U-2098-SK-50cm
+  ✓ [200] https://www.yakkaroo.de/19-inch-2U-server-chassis-IPC-2U-2098-SL-61cm
+  ✓ [200] https://www.yakkaroo.de/19-inch-2U-server-chassis-IPC-C238-38cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-2U-server-chassis-IPC-E238-38cm-short-front-lock
+  ✓ [200] https://www.yakkaroo.de/19-inch-2U-server-chassis-IPC-E266B-55cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-2U-server-chassis-IPC-G238-38cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-2u-server-chassis-chenbro-rm24100-l-usb3
+  ✓ [200] https://www.yakkaroo.de/19-inch-2u-server-chassis-chenbro-rm24100-l2-usb3-with-front-door
+  ✓ [200] https://www.yakkaroo.de/19-inch-2u-server-chassis-ipc-c236-36cm-short-front-access
+  ✓ [200] https://www.yakkaroo.de/19-inch-2u-server-chassis-ipc-e266lb-66cm-long
+  ✓ [200] https://www.yakkaroo.de/19-inch-2u-server-chassis-ipc-g225-25cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-2u-server-chassis-silverstone-rm23-502-mini
+  ✓ [200] https://www.yakkaroo.de/19-inch-3U-server-chassis-IPC-3U-30240-40cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-3U-server-chassis-IPC-3U-30248-48cm
+  ✓ [200] https://www.yakkaroo.de/19-inch-3U-server-chassis-IPC-3U-30255-55cm
+  ✓ [200] https://www.yakkaroo.de/19-inch-3U-server-chassis-IPC-3U-3098-53cm-length
+  ✓ [200] https://www.yakkaroo.de/19-inch-3U-server-chassis-IPC-C330-30cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-3U-server-chassis-IPC-C338-38cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-3U-server-chassis-IPC-E338-38cm-short-front-lock
+  ✓ [200] https://www.yakkaroo.de/19-inch-3U-server-chassis-IPC-G338-38cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-3U-server-chassis-IPC-G365-65cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-4U-ATX-rackmount-server-chassis-black
+  ✓ [200] https://www.yakkaroo.de/19-inch-4U-server-chassis-IPC-E450-45cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-4U-server-chassis-IPC-G438-38cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-4U-server-chassis-IPC-G438D-38cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-4u-server-chassis-ipc-c430b-gpu-30cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-4u-server-chassis-ipc-c440b-40cm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-4u-server-chassis-ipc-e420-front-access-355mm-short
+  ✓ [200] https://www.yakkaroo.de/19-inch-ATX-rack-mount-4U-server-case-with-six-full-height-drive-bays
+  ✓ [200] https://www.yakkaroo.de/19-inch-EATX-rack-mount-4U-server-case-IPC-4U-4129-N-very-long
+  ✓ [200] https://www.yakkaroo.de/19-inch-atx-rack-mount-3u-server-case-ipc_c335-33_5cm-depth
+  ✓ [200] https://www.yakkaroo.de/19-inch-atx-rack-mount-4u-mining-chassis-ipc-4w2-very-long
+  ✓ [200] https://www.yakkaroo.de/19-inch-e-atx-rack-mount-3u-server-case-ipc_e365-65cm-length
+  ✓ [200] https://www.yakkaroo.de/19-inch-eatx-rack-mount-4u-server-case-ipc-4129l
+  ✓ [200] https://www.yakkaroo.de/19-inch-mini-itx-rack-mount-1u-server-case-ipc-e125-25cm-depth-3-5-inch-drive-bay
+  ✓ [200] https://www.yakkaroo.de/19-inch-mini-itx-rackmount-1U-server-case-ipc-c125b-25cm-depth
+  ✓ [200] https://www.yakkaroo.de/19-inch-rack-mount-1u-server-case-ipc-c130b-mini-itx-micro-atx
+  ✓ [200] https://www.yakkaroo.de/19-inch-rack-mount-1u-server-case-ipc-c136b-mini-itx-micro-atx
+
+📊 Verification Summary
+
+════════════════════════════════════════════════════════════════════════════════
+⚠️ inter-tech.de             52/73 (71.2%)
+✅ ipc.in-win.com            8/8 (100.0%)
+✅ silverstonetek.com        36/36 (100.0%)
+✅ sliger.com                42/42 (100.0%)
+✅ unykach.com               1/1 (100.0%)
+✅ yakkaroo.de               52/52 (100.0%)
+════════════════════════════════════════════════════════════════════════════════
+
+📈 Overall: 191/212 URLs accessible (90.1%)
+
+❌ Inaccessible URLs:
+
+
+inter-tech.de:
+  - [404] https://www.inter-tech.de/productdetails-152/1U-K-125L_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/1U-K-126L_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/2U-2098-SK_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/2U-2098-SL_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/2U-2129-N_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/2U-K-240L_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/3U-3098-S_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/4F28-MINING-RACK_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/4U-4088-S_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/4U-4098-S_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/4U-4129L_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/4U-4452-TFT_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/4U-4460-TFT_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/4U-4708_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/4W2-MINING-RACK_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/4W40-MINING-RACK_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/5U-5512_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/6U-6520_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/6U-6606_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/S21_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/S25_EN.html
+
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+═
+
+💾 Detailed report saved to: /Users/slpixe/web/me/rack-research/url-verification-report.json
