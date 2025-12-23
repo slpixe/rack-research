@@ -12,8 +12,8 @@ This will check if generated URLs are accessible.
    - yakkaroo.de: 52 URLs
 
 🔍 Verifying inter-tech.de...
-  ✗ [404] https://www.inter-tech.de/productdetails-152/1.5U_1528-1_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/1.5U_1528L_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-145/1.5U-1528-1_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-145/1.5U-1528L_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-152/1U-10240_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-152/1U-10248_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-152/1U-10255_EN.html
@@ -28,8 +28,8 @@ This will check if generated URLs are accessible.
   ✓ [200] https://www.inter-tech.de/productdetails-151/2U_2098-SL_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-151/2U_2129-N_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-151/2U-2404L-S-ATA_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-151/2U_2404L_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-151/2U_2404S_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-145/2U-2404L_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-145/2U-2404S_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-151/2U-2406_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-151/2U-2408_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-151/2U-2412_EN.html
@@ -73,12 +73,12 @@ This will check if generated URLs are accessible.
   ✓ [200] https://www.inter-tech.de/productdetails-149/NAS-8_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-149/S-21_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-149/S-25_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-149/S-31B_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-149/S-34_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-149/S-34N_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-149/S-34T_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-149/S-37_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-149/S-38_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-138/S31B_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-138/S34_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-138/S34N_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-138/S34T_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-138/S37_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-138/S38_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-149/SC-2100_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-149/SC-4004_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-149/SC-4100_EN.html
@@ -237,7 +237,7 @@ This will check if generated URLs are accessible.
 📊 Verification Summary
 
 ════════════════════════════════════════════════════════════════════════════════
-⚠️ inter-tech.de             62/72 (86.1%)
+✅ inter-tech.de             72/72 (100.0%)
 ✅ ipc.in-win.com            8/8 (100.0%)
 ✅ silverstonetek.com        36/36 (100.0%)
 ✅ sliger.com                42/42 (100.0%)
@@ -245,22 +245,11 @@ This will check if generated URLs are accessible.
 ✅ yakkaroo.de               52/52 (100.0%)
 ════════════════════════════════════════════════════════════════════════════════
 
-📈 Overall: 201/211 URLs accessible (95.3%)
+📈 Overall: 211/211 URLs accessible (100.0%)
 
 ❌ Inaccessible URLs:
 
-
-inter-tech.de:
-  - [404] https://www.inter-tech.de/productdetails-152/1.5U_1528-1_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/1.5U_1528L_EN.html
-  - [404] https://www.inter-tech.de/productdetails-151/2U_2404L_EN.html
-  - [404] https://www.inter-tech.de/productdetails-151/2U_2404S_EN.html
-  - [404] https://www.inter-tech.de/productdetails-149/S-31B_EN.html
-  - [404] https://www.inter-tech.de/productdetails-149/S-34_EN.html
-  - [404] https://www.inter-tech.de/productdetails-149/S-34N_EN.html
-  - [404] https://www.inter-tech.de/productdetails-149/S-34T_EN.html
-  - [404] https://www.inter-tech.de/productdetails-149/S-37_EN.html
-  - [404] https://www.inter-tech.de/productdetails-149/S-38_EN.html
+  None! All URLs are accessible. 🎉
 
 ═
 ═

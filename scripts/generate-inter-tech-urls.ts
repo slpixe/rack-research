@@ -15,14 +15,18 @@ const resourcesDir = path.join(__dirname, '..', 'resources', 'inter-tech.de');
 // Different productdetails IDs based on rack unit size
 const productDetailsMap: Record<string, string> = {
   '1U': '152',
-  '1.5U': '152',
+  '1.5U': '145', // Discovered via testing - uses different ID than 1U
   '2U': '151',
   '3U': '150',
   '4U': '149',
   '5U': '148',
   '6U': '141', // Discovered via website navigation
   'MINING': '139', // Mining racks use separate ID
+  'S-SERIES': '138', // S-series storage servers use separate ID
 };
+
+// Special products that use productdetails-145 regardless of rack unit
+const specialProductsUsing145 = ['2u-2404l', '2u-2404s'];
 
 // Get all markdown files (excluding instructions and SUMMARY)
 const mdFiles = fs
@@ -46,16 +50,23 @@ for (const file of mdFiles) {
   // Extract rack unit size from filename (e.g., "1U", "2U", "3U", "4U")
   const rackUnitMatch = baseName.match(/^(\d+(?:\.\d+)?U)/i);
   const rackUnit = rackUnitMatch ? rackUnitMatch[1].toUpperCase() : '4U'; // Default to 4U
-  const productDetailsId = productDetailsMap[rackUnit] || '152';
+  
+  // Check if this is a special product that uses productdetails-145
+  let productDetailsId = specialProductsUsing145.includes(baseName.toLowerCase()) 
+    ? '145' 
+    : (productDetailsMap[rackUnit] || '152');
   
   // Convert model name for URL
   let modelName = baseName.toUpperCase();
   const afterRackUnit = baseName.slice(rackUnit.length); // Get everything after rack unit
   
   // Special cases
-  // 1.5U products keep hyphens: 1.5u-1528-1 -> 1.5U-1528-1
-  if (rackUnit === '1.5U') {
+  // 1.5U products and special 2U products (2404L, 2404S) keep hyphens and use productdetails-145
+  // 1.5u-1528-1 -> 1.5U-1528-1, 2u-2404l -> 2U-2404L
+  if (rackUnit === '1.5U' || specialProductsUsing145.includes(baseName.toLowerCase())) {
     modelName = baseName.toUpperCase();
+    urlMappings[baseName] = `https://www.inter-tech.de/productdetails-145/${modelName}_EN.html`;
+    continue;
   }
   // 4U-4460-TFT has no _EN suffix and special path
   else if (baseName === '4u-4460-tft') {
@@ -90,9 +101,18 @@ for (const file of mdFiles) {
     // Models like 2U-2098-SK, 4U-4452-TFT need underscore after rack unit
     modelName = `${rackUnit}_${afterRackUnit.slice(1).toUpperCase()}`;
   }
-  // S-series models need hyphens: s21 -> S-21
+  // S-series storage servers
   else if (baseName.match(/^s\d+[a-z]?$/i)) {
-    modelName = `S-${baseName.slice(1).toUpperCase()}`;
+    // S-21 and S-25 use productdetails-149 with hyphens
+    // S-31B, S-34, S-34N, S-34T, S-37, S-38 use productdetails-138 without hyphens
+    const sNumber = baseName.slice(1).toUpperCase();
+    if (baseName === 's21' || baseName === 's25') {
+      productDetailsId = '149';
+      modelName = `S-${sNumber}`; // With hyphen: S-21, S-25
+    } else {
+      productDetailsId = '138';
+      modelName = `S${sNumber}`; // No hyphen: S31B, S34, S34N, S34T, S37, S38
+    }
   }
   // 5U and 6U products don't have rack unit prefix in URL
   else if (rackUnit === '5U' || rackUnit === '6U') {
