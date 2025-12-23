@@ -4,7 +4,7 @@ This will check if generated URLs are accessible.
 ⏱️  This may take several minutes due to rate limiting...
 
 📋 Found 6 sources with URL mappings:
-   - inter-tech.de: 73 URLs
+   - inter-tech.de: 72 URLs
    - ipc.in-win.com: 8 URLs
    - silverstonetek.com: 36 URLs
    - sliger.com: 42 URLs
@@ -12,79 +12,78 @@ This will check if generated URLs are accessible.
    - yakkaroo.de: 52 URLs
 
 🔍 Verifying inter-tech.de...
-  ✓ [200] https://www.inter-tech.de/productdetails-152/1.5U-1528-1_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/1.5U-1528L_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-152/1.5U_1528-1_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-152/1.5U_1528L_EN.html 
   ✓ [200] https://www.inter-tech.de/productdetails-152/1U-10240_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-152/1U-10248_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-152/1U-10255_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-152/1U-10265_EN.html
   ✓ [200] https://www.inter-tech.de/productdetails-152/1U-1404_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-152/1U-K-125L_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/1U-K-126L_EN.html 
-  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-20240_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-20248_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-20255_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-152/2U-2098-SK_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/2U-2098-SL_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/2U-2129-N_EN.html 
-  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2404L-S-ATA_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2404L_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2404S_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2406_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2408_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2412_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2504_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/2U-2724_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-152/2U-K-240L_EN.html 
-  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-30240_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-30248_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-30255_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-30765_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-152/3U-3098-S_EN.html 
-  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-3416_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-3508_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/3U-K-340L_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-152/4F28-MINING-RACK_EN.html 
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-40240_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-40248_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-40255_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4088-S_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4098-S_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4129L_EN.html 
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4408_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4410_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4416_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4420_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4424_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4452-TFT_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4460-TFT_EN.html 
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4508_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-47045_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-152/4U-4708_EN.html 
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4724_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-4736_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/4U-K-439L_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-152/4W2-MINING-RACK_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/4W40-MINING-RACK_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/5U-5512_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/6U-6520_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/6U-6606_EN.html 
-  ✓ [200] https://www.inter-tech.de/productdetails-152/IP-40_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/IP-60_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/NAS-8_EN.html
-  ✗ [404] https://www.inter-tech.de/productdetails-152/S21_EN.html 
-  ✗ [404] https://www.inter-tech.de/productdetails-152/S25_EN.html 
-  ✓ [200] https://www.inter-tech.de/productdetails-152/S31B_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/S34_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/S34N_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/S34T_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/S37_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/S38_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/SC-2100_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/SC-4004_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/SC-4100_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/SR-680_EN.html
-  ✓ [200] https://www.inter-tech.de/productdetails-152/T-9_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/1U_K-125L_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-152/1U_K-126L_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U-20240_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U-20248_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U-20255_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U_2098-SK_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U_2098-SL_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U_2129-N_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U-2404L-S-ATA_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-151/2U_2404L_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-151/2U_2404S_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U-2406_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U-2408_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U-2412_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U-2504_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/2U-2724_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-151/IPC_K-240L_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-150/3U-30240_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-150/3U-30248_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-150/3U-30255_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-150/3U-30765_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-150/3U_3098-S_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-150/3U-3416_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-150/3U-3508_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-150/3U-K-340L_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-139/4F28_MINING-RACK_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-40240_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-40248_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-40255_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U_4088-S_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U_4098-S_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U_4129L_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-4408_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-4410_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-4416_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-4420_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-4424_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U_4452-TFT_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-4460-TFT.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-4508_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-47045_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-4724_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-4736_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/4U-K-439L_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-139/4W2_MINING-RACK_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-139/4W40_MINING-RACK_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-148/5512_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-141/6520_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-141/6606_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/IP-40_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/IP-60_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/NAS-8_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/S-21_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/S-25_EN.html
+  ✗ [404] https://www.inter-tech.de/productdetails-149/S-31B_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-149/S-34_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-149/S-34N_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-149/S-34T_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-149/S-37_EN.html 
+  ✗ [404] https://www.inter-tech.de/productdetails-149/S-38_EN.html 
+  ✓ [200] https://www.inter-tech.de/productdetails-149/SC-2100_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/SC-4004_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/SC-4100_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/SR-680_EN.html
+  ✓ [200] https://www.inter-tech.de/productdetails-149/T-9_EN.html
 
 🔍 Verifying ipc.in-win.com...
   ✓ [200] https://ipc.in-win.com/rackmount-chassis-iw-r400-01n
@@ -238,7 +237,7 @@ This will check if generated URLs are accessible.
 📊 Verification Summary
 
 ════════════════════════════════════════════════════════════════════════════════
-⚠️ inter-tech.de             52/73 (71.2%)
+⚠️ inter-tech.de             62/72 (86.1%)
 ✅ ipc.in-win.com            8/8 (100.0%)
 ✅ silverstonetek.com        36/36 (100.0%)
 ✅ sliger.com                42/42 (100.0%)
@@ -246,33 +245,22 @@ This will check if generated URLs are accessible.
 ✅ yakkaroo.de               52/52 (100.0%)
 ════════════════════════════════════════════════════════════════════════════════
 
-📈 Overall: 191/212 URLs accessible (90.1%)
+📈 Overall: 201/211 URLs accessible (95.3%)
 
 ❌ Inaccessible URLs:
 
 
 inter-tech.de:
-  - [404] https://www.inter-tech.de/productdetails-152/1U-K-125L_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/1U-K-126L_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/2U-2098-SK_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/2U-2098-SL_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/2U-2129-N_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/2U-K-240L_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/3U-3098-S_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/4F28-MINING-RACK_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/4U-4088-S_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/4U-4098-S_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/4U-4129L_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/4U-4452-TFT_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/4U-4460-TFT_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/4U-4708_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/4W2-MINING-RACK_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/4W40-MINING-RACK_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/5U-5512_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/6U-6520_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/6U-6606_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/S21_EN.html
-  - [404] https://www.inter-tech.de/productdetails-152/S25_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/1.5U_1528-1_EN.html
+  - [404] https://www.inter-tech.de/productdetails-152/1.5U_1528L_EN.html
+  - [404] https://www.inter-tech.de/productdetails-151/2U_2404L_EN.html
+  - [404] https://www.inter-tech.de/productdetails-151/2U_2404S_EN.html
+  - [404] https://www.inter-tech.de/productdetails-149/S-31B_EN.html
+  - [404] https://www.inter-tech.de/productdetails-149/S-34_EN.html
+  - [404] https://www.inter-tech.de/productdetails-149/S-34N_EN.html
+  - [404] https://www.inter-tech.de/productdetails-149/S-34T_EN.html
+  - [404] https://www.inter-tech.de/productdetails-149/S-37_EN.html
+  - [404] https://www.inter-tech.de/productdetails-149/S-38_EN.html
 
 ═
 ═
