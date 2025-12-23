@@ -185,7 +185,7 @@ export const RackCaseSchema = z.object({
 
   // === Source Metadata ===
   source: DataSourceSchema,
-  source_url: z.string(), // Allow empty for now, warn later
+  source_url: z.string(), // Allows empty string - data quality tracked in warnings
   scraped_at: z.string(),
   sku: z.string().optional(),
 
