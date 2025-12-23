@@ -47,3 +47,6 @@ test-results/
 
 # Debug files
 debug/
+
+# URL verification reports
+url-verification-report.json

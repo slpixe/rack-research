@@ -1,6 +1,6 @@
 # URL Extraction and Mapping
 
-This directory contains scripts for extracting and generating source URLs for product listings.
+This directory contains scripts for extracting, generating, and verifying source URLs for product listings.
 
 ## Scripts
 
@@ -24,6 +24,44 @@ npm run extract:urls
 **Coverage:**
 - yakkaroo.de: 52 URLs extracted
 - ipc.in-win.com: 7 URLs extracted
+
+### `verify-urls.ts`
+
+Verifies that generated URLs are accessible by making HTTP requests.
+
+**Usage:**
+```bash
+npm run verify:urls
+```
+
+**How it works:**
+1. Loads all URL mappings from `resources/*/url-mappings.json`
+2. Makes HTTP HEAD/GET requests to each URL
+3. Reports success/failure for each URL
+4. Generates a verification report with statistics
+5. Saves detailed results to `url-verification-report.json`
+
+**Features:**
+- Rate limiting (500ms delay between requests)
+- Timeout protection (10s per request)
+- Fallback to GET if HEAD fails
+- Detailed error reporting
+- Summary statistics by source
+
+**Example output:**
+```
+📊 Verification Summary
+
+════════════════════════════════════════════════════════════════════════════════
+✅ yakkaroo.de               52/52 (100.0%)
+⚠️  sliger.com               40/43 (93.0%)
+✅ inter-tech.de             73/73 (100.0%)
+════════════════════════════════════════════════════════════════════════════════
+
+📈 Overall: 165/168 URLs accessible (98.2%)
+```
+
+**Note:** This script requires internet access to external sites. In sandboxed CI/CD environments without internet access, verification must be run manually in a local development environment.
 
 ### `generate-inter-tech-urls.ts`
 
@@ -152,3 +190,41 @@ npx tsx scripts/generate-silverstone-urls.ts
 # Rebuild database
 npm run build:db
 ```
+
+## Verifying URL Correctness
+
+After generating or updating URL mappings, verify they are accessible:
+
+```bash
+npm run verify:urls
+```
+
+This will check all URLs and generate a report showing which are accessible and which need investigation.
+
+**Important Notes:**
+- URL verification requires internet access to external websites
+- In CI/CD or sandboxed environments without internet, run verification locally
+- The script includes rate limiting to be respectful to servers
+- Failed URLs may indicate:
+  - Incorrect URL pattern or format
+  - Product discontinued or moved
+  - Website temporary downtime
+  - Firewall/access restrictions
+
+### Manual URL Verification
+
+If automated verification is not available, you can manually verify URLs:
+
+1. Check a sample of generated URLs in a browser
+2. Look for patterns in failures (e.g., all from one source)
+3. Compare generated URLs with URLs in HTML files or markdown sources
+4. Verify URL patterns against vendor website structure
+
+### Common URL Pattern Issues
+
+- **Case sensitivity**: Some sites require lowercase (e.g., sliger.com)
+- **Special characters**: Underscores vs dashes in model names
+- **Path structure**: Extra subdirectories or missing segments
+- **Trailing slashes**: Some sites require them, others don't
+
+If you find incorrect URLs, update the generator scripts and regenerate the mappings.
