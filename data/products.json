@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-12-22T23:31:23.690Z",
-  "total_products": 236,
+  "generated_at": "2025-12-23T02:26:41.821Z",
+  "total_products": 219,
   "sources": [
     "inter-tech.de",
     "ipc.in-win.com",
@@ -17,7 +17,7 @@
       "name": "IPC 1.5U-1528-1",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "1.5U",
@@ -88,7 +88,7 @@
       "name": "IPC 1.5U-1528L",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "1.5U",
@@ -143,7 +143,7 @@
       "name": "IPC 1U-10240",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "1U",
@@ -217,7 +217,7 @@
       "name": "IPC 1U-10248",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "1U",
@@ -292,7 +292,7 @@
       "name": "IPC 1U-10255",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "1U",
@@ -366,7 +366,7 @@
       "name": "IPC 1U-10265",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "1U",
@@ -441,7 +441,7 @@
       "name": "IPC 1U-1404",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "1U",
@@ -496,7 +496,7 @@
       "name": "IPC 1U-K-125L",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "1U",
@@ -567,7 +567,7 @@
       "name": "IPC 1U K-126L",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "1U",
@@ -638,7 +638,7 @@
       "name": "IPC 2U-20240",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -696,7 +696,7 @@
       "name": "IPC 2U-20248",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -753,7 +753,7 @@
       "name": "IPC 2U-20255",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -810,7 +810,7 @@
       "name": "IPC 2U 2098-SK",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -867,7 +867,7 @@
       "name": "IPC 2U 2098-SL",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -924,7 +924,7 @@
       "name": "IPC 2U 2129-N",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -983,7 +983,7 @@
       "name": "2U-2404L S-ATA",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -1051,7 +1051,7 @@
       "name": "IPC 2U-2404L",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -1125,7 +1125,7 @@
       "name": "2U-2404S",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -1197,7 +1197,7 @@
       "name": "IPC 2U-2406",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -1283,7 +1283,7 @@
       "name": "IPC 2U-2408",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -1361,7 +1361,7 @@
       "name": "IPC 2U-2412",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -1439,7 +1439,7 @@
       "name": "2U-2504",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -1517,7 +1517,7 @@
       "name": "2U-2724",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -1590,7 +1590,7 @@
       "name": "IPC 2U-K-240L",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -1648,7 +1648,7 @@
       "name": "IPC 3U-30240",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -1706,7 +1706,7 @@
       "name": "IPC 3U-30248",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -1764,7 +1764,7 @@
       "name": "IPC 3U-30255",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -1817,7 +1817,7 @@
       "name": "3U-30765",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -1878,7 +1878,7 @@
       "name": "IPC 3U 3098-S",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -1935,7 +1935,7 @@
       "name": "IPC 3U-3416",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -2000,7 +2000,7 @@
       "name": "3U-3508",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -2065,7 +2065,7 @@
       "name": "3U-K-340L",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -2124,7 +2124,7 @@
       "name": "IPC 4F28 MINING-RACK",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2186,7 +2186,7 @@
       "name": "IPC 4U-40240",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2243,7 +2243,7 @@
       "name": "IPC 4U-40248",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2301,7 +2301,7 @@
       "name": "IPC 4U-40255",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2361,7 +2361,7 @@
       "name": "IPC 4U 4088-S",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2418,7 +2418,7 @@
       "name": "IPC 4U 4098-S",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2475,7 +2475,7 @@
       "name": "IPC 4U-4129L",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2534,7 +2534,7 @@
       "name": "4U-4408",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2610,7 +2610,7 @@
       "name": "4U-4410",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2698,7 +2698,7 @@
       "name": "4U-4416",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2786,7 +2786,7 @@
       "name": "4U-4420",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2868,7 +2868,7 @@
       "name": "4U-4424",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -2950,7 +2950,7 @@
       "name": "IPC 4U 4452-TFT",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3007,7 +3007,7 @@
       "name": "4U-4460 TFT",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3064,7 +3064,7 @@
       "name": "4U-4508",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3132,7 +3132,7 @@
       "name": "4U-47045",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3189,7 +3189,7 @@
       "name": "4U-4708",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3258,7 +3258,7 @@
       "name": "4U-4724",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3327,7 +3327,7 @@
       "name": "4U-4736",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3394,7 +3394,7 @@
       "name": "4U-K-439L",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3447,7 +3447,7 @@
       "name": "IPC 4W2 MINING-RACK",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3502,7 +3502,7 @@
       "name": "IPC 4W40 MINING-RACK",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3557,7 +3557,7 @@
       "name": "5U-5512",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "5U",
@@ -3637,7 +3637,7 @@
       "name": "6U-6520",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "6U",
@@ -3701,7 +3701,7 @@
       "name": "6U-6606",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "6U",
@@ -3786,7 +3786,7 @@
       "name": "IP-40",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3842,7 +3842,7 @@
       "name": "IP-60",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3898,7 +3898,7 @@
       "name": "NAS-8",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -3960,7 +3960,7 @@
       "name": "S21",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4013,7 +4013,7 @@
       "name": "S25",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4079,7 +4079,7 @@
       "name": "S31B",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4145,7 +4145,7 @@
       "name": "S34",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4198,7 +4198,7 @@
       "name": "S34N",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4264,7 +4264,7 @@
       "name": "S34T",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4330,7 +4330,7 @@
       "name": "S37",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4385,7 +4385,7 @@
       "name": "S38",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4440,7 +4440,7 @@
       "name": "SC-2100",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4502,7 +4502,7 @@
       "name": "SC-4004",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4564,7 +4564,7 @@
       "name": "SC-4100",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4627,7 +4627,7 @@
       "name": "IPC SR-680",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -4680,7 +4680,7 @@
       "name": "IPC T-9",
       "source": "inter-tech.de",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -5313,7 +5313,7 @@
       "name": "IW-RG650A",
       "source": "ipc.in-win.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -6063,7 +6063,7 @@
       "name": "ALTA D1",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -6120,445 +6120,13 @@
       "features": []
     },
     {
-      "id": "silverstonetek.com-sst-cs01-hs",
-      "model": "SST-CS01-HS",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 210.5,
-        "height_mm": 322,
-        "depth_mm": 210,
-        "weight_kg": 4.289,
-        "volume_liters": null
-      },
-      "material": "Aluminum outer shell, steel body",
-      "motherboard_support": [
-        "Mini-ITX"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 68
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [
-        {
-          "size": "2.5\"",
-          "quantity": 1,
-          "hot_swap": false,
-          "internal": true
-        }
-      ],
-      "total_25_bays": 1,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 1,
-      "has_full_height_slots": false,
-      "gpu_support": {
-        "max_length_mm": 190,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "SFX-L"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
-      "id": "silverstonetek.com-sst-cs280",
-      "model": "SST-CS280",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 221.5,
-        "height_mm": 176.7,
-        "depth_mm": 301,
-        "weight_kg": null,
-        "volume_liters": null
-      },
-      "material": "Aluminum + SECC + Plastic",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Mini-DTX"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 65
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [
-        {
-          "size": "2.5\"",
-          "quantity": 1,
-          "hot_swap": false,
-          "internal": true
-        }
-      ],
-      "total_25_bays": 1,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 2,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 112,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
-      "id": "silverstonetek.com-sst-cs330b",
-      "model": "SST-CS330B",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 210,
-        "height_mm": 374,
-        "depth_mm": 385,
-        "weight_kg": 6.05,
-        "volume_liters": null
-      },
-      "material": "Aluminum front panel, steel body",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Mini-DTX",
-        "Micro-ATX"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 165
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 4,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 336,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
-      "id": "silverstonetek.com-sst-cs351",
-      "model": "SST-CS351",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 265,
-        "height_mm": 209,
-        "depth_mm": 411,
-        "weight_kg": null,
-        "volume_liters": null
-      },
-      "material": "Plastic front panel, galvanized steel body",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Mini-DTX",
-        "Micro-ATX"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 82
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 0,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 368,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
-      "id": "silverstonetek.com-sst-cs380",
-      "model": "SST-CS380",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 215.3,
-        "height_mm": 426.5,
-        "depth_mm": 487.5,
-        "weight_kg": 7,
-        "volume_liters": null
-      },
-      "material": "Plastic front door, steel body",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Micro-ATX"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 146
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 7,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 241,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
-      "id": "silverstonetek.com-sst-cs381",
-      "model": "SST-CS381",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 400,
-        "height_mm": 225,
-        "depth_mm": 316,
-        "weight_kg": null,
-        "volume_liters": null
-      },
-      "material": "Plastic and metal mesh front panel, galvanized steel body",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Mini-DTX",
-        "Micro-ATX"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 57
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 4,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 7,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "SFX-L"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
-      "id": "silverstonetek.com-sst-cs382",
-      "model": "SST-CS382",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 217,
-        "height_mm": 405,
-        "depth_mm": 451,
-        "weight_kg": null,
-        "volume_liters": null
-      },
-      "material": "Plastic front door, galvanized steel body",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Mini-DTX",
-        "Micro-ATX"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 168
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 0,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 369,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
       "id": "silverstonetek.com-sst-cs383",
       "model": "SST-CS383",
       "brand": "SilverStone",
       "name": "CS383",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -6615,79 +6183,13 @@
       "features": []
     },
     {
-      "id": "silverstonetek.com-sst-ds380b",
-      "model": "SST-DS380B",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 211,
-        "height_mm": 285,
-        "depth_mm": 360,
-        "weight_kg": null,
-        "volume_liters": null
-      },
-      "material": "Aluminum front door, SECC body",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Mini-DTX"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 57
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [
-        {
-          "size": "2.5\"",
-          "quantity": 1,
-          "hot_swap": false,
-          "internal": true
-        }
-      ],
-      "total_25_bays": 1,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 2,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 279,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "SFX-L"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
       "id": "silverstonetek.com-sst-rm21-304",
       "model": "SST-RM21-304",
       "brand": "SilverStone",
       "name": "RM21-304",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -6747,7 +6249,7 @@
       "name": "RM21-308",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -6807,7 +6309,7 @@
       "name": "RM22-308",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -6868,7 +6370,7 @@
       "name": "RM22-312",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -6923,73 +6425,13 @@
       "features": []
     },
     {
-      "id": "silverstonetek.com-sst-rm23-502-mini",
-      "model": "SST-RM23-502-MINI",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "2U",
-      "dimensions": {
-        "width_mm": 430,
-        "height_mm": 88.5,
-        "depth_mm": 400,
-        "weight_kg": 4.8,
-        "volume_liters": null
-      },
-      "motherboard_support": [
-        "Mini-ITX",
-        "Micro-ATX"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 65
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 4,
-      "has_full_height_slots": false,
-      "gpu_support": {
-        "max_length_mm": null,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "2U Redundant",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
       "id": "silverstonetek.com-sst-rm23-502",
       "model": "SST-RM23-502",
       "brand": "SilverStone",
       "name": "RM23-502",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -7048,7 +6490,7 @@
       "name": "RM31-MINI",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -7109,7 +6551,7 @@
       "name": "RM31",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -7173,7 +6615,7 @@
       "name": "RM32",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -7237,7 +6679,7 @@
       "name": "RM400",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -7319,7 +6761,7 @@
       "name": "RM41-506",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -7401,7 +6843,7 @@
       "name": "RM41-H08",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -7464,7 +6906,7 @@
       "name": "RM42-502",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -7529,7 +6971,7 @@
       "name": "RM43-320-RS",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -7593,7 +7035,7 @@
       "name": "RM43-324-RS",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -7651,78 +7093,13 @@
       "features": []
     },
     {
-      "id": "silverstonetek.com-sst-rm44",
-      "model": "SST-RM44",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 440,
-        "height_mm": 176,
-        "depth_mm": 468,
-        "weight_kg": 9.2,
-        "volume_liters": null
-      },
-      "material": "Steel",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Micro-ATX",
-        "E-ATX",
-        "SSI-CEB",
-        "SSI-EEB"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 137
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 8,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 424,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "2U Redundant",
-          "Mini Redundant",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
       "id": "silverstonetek.com-sst-rm45-360",
       "model": "SST-RM45-360",
       "brand": "SilverStone",
       "name": "RM45-360",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -7781,145 +7158,13 @@
       "features": []
     },
     {
-      "id": "silverstonetek.com-sst-rm46-502-i",
-      "model": "SST-RM46-502-I",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 440,
-        "height_mm": 176,
-        "depth_mm": 456,
-        "weight_kg": null,
-        "volume_liters": null
-      },
-      "material": "Steel",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Micro-ATX",
-        "E-ATX",
-        "SSI-CEB",
-        "SSI-EEB"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 132
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 0,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 437,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "2U Redundant",
-          "Mini Redundant",
-          "CRPS",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
-      "id": "silverstonetek.com-sst-rm47-502-i",
-      "model": "SST-RM47-502-I",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 440,
-        "height_mm": 176,
-        "depth_mm": 456,
-        "weight_kg": null,
-        "volume_liters": null
-      },
-      "material": "Steel",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Micro-ATX",
-        "E-ATX",
-        "SSI-CEB",
-        "SSI-EEB"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 114
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 0,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 437,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "2U Redundant",
-          "Mini Redundant",
-          "CRPS",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
       "id": "silverstonetek.com-sst-rm4a",
       "model": "SST-RM4A",
       "brand": "SilverStone",
       "name": "RM4A",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -7976,145 +7221,13 @@
       "features": []
     },
     {
-      "id": "silverstonetek.com-sst-rm51",
-      "model": "SST-RM51",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "5U",
-      "dimensions": {
-        "width_mm": 440,
-        "height_mm": 220,
-        "depth_mm": 530,
-        "weight_kg": 10.6,
-        "volume_liters": null
-      },
-      "material": "Steel",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Micro-ATX",
-        "E-ATX",
-        "SSI-CEB",
-        "SSI-EEB"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 181
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 8,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 455,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "SFX",
-          "2U Redundant",
-          "Mini Redundant",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
-      "id": "silverstonetek.com-sst-rm52",
-      "model": "SST-RM52",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "5U",
-      "dimensions": {
-        "width_mm": 440,
-        "height_mm": 220,
-        "depth_mm": 605,
-        "weight_kg": 11.45,
-        "volume_liters": null
-      },
-      "material": "Steel",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Micro-ATX",
-        "E-ATX",
-        "SSI-CEB",
-        "SSI-EEB"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 181
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 8,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 512,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "SFX",
-          "2U Redundant",
-          "Mini Redundant",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
       "id": "silverstonetek.com-sst-rm53-502",
       "model": "SST-RM53-502",
       "brand": "SilverStone",
       "name": "RM53-502",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "5U",
@@ -8175,143 +7288,13 @@
       "features": []
     },
     {
-      "id": "silverstonetek.com-sst-rm600",
-      "model": "SST-RM600",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 438,
-        "height_mm": 265,
-        "depth_mm": 522,
-        "weight_kg": null,
-        "volume_liters": null
-      },
-      "material": "Steel",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Micro-ATX",
-        "E-ATX",
-        "SSI-CEB",
-        "SSI-EEB"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 132
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 0,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 340,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "2U Redundant",
-          "Mini Redundant",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
-      "id": "silverstonetek.com-sst-rm61-312",
-      "model": "SST-RM61-312",
-      "brand": "SilverStone",
-      "name": "",
-      "source": "silverstonetek.com",
-      "source_url": "",
-      "scraped_at": "2025-12-22",
-      "price": null,
-      "availability": "unknown",
-      "rack_units": "4U",
-      "dimensions": {
-        "width_mm": 438,
-        "height_mm": 265,
-        "depth_mm": 522,
-        "weight_kg": null,
-        "volume_liters": null
-      },
-      "material": "Steel",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Micro-ATX",
-        "E-ATX",
-        "SSI-CEB",
-        "SSI-EEB"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": 132
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [],
-      "total_25_bays": 0,
-      "total_35_bays": 0,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 0,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": 340,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "ATX",
-          "2U Redundant",
-          "Mini Redundant",
-          "PS2"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
-    },
-    {
       "id": "silverstonetek.com-sst-ws380-e",
       "model": "SST-WS380-E",
       "brand": "SilverStone",
       "name": "WS380-E",
       "source": "silverstonetek.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -8546,7 +7529,7 @@
       "name": "CX2137a",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -8607,7 +7590,7 @@
       "name": "CX2137b",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -8837,7 +7820,7 @@
       "name": "CX2177a",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -8897,7 +7880,7 @@
       "name": "CX2177c 17\" 2U | 2x External 3.5\" Bays | EATX | FlexATX PSU",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -8958,7 +7941,7 @@
       "name": "CX2177x 17\" 2U | Internal 3.5\" HDD Cage | EATX | FlexATX PSU",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -9019,7 +8002,7 @@
       "name": "CX3150a",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -9080,7 +8063,7 @@
       "name": "CX3150i",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 229,
         "currency": "USD"
@@ -9151,7 +8134,7 @@
       "name": "CX3150x",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 229,
         "currency": "USD"
@@ -9215,7 +8198,7 @@
       "name": "CX3151a",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 289,
         "currency": "USD"
@@ -9286,7 +8269,7 @@
       "name": "CX3151i",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -9352,7 +8335,7 @@
       "name": "CX3151x",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -9424,7 +8407,7 @@
       "name": "CX3152a",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -9490,7 +8473,7 @@
       "name": "CX3152i",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -9543,7 +8526,7 @@
       "name": "CX3170a",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -9596,7 +8579,7 @@
       "name": "CX3170a XL",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 259,
         "currency": "USD"
@@ -9692,7 +8675,7 @@
       "name": "CX3170i XL",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 269,
         "currency": "USD"
@@ -9764,7 +8747,7 @@
       "name": "Sliger CX3171a",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 319,
         "currency": "USD"
@@ -9820,7 +8803,7 @@
       "name": "Sliger CX3171a XL",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 329,
         "currency": "USD"
@@ -9876,7 +8859,7 @@
       "name": "Sliger CX3171i XL",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 339,
         "currency": "USD"
@@ -9932,7 +8915,7 @@
       "name": "Sliger CX3172a",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -10000,7 +8983,7 @@
       "name": "Sliger CX3172a XL",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -10069,7 +9052,7 @@
       "name": "Sliger CX3172i XL",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "4U",
@@ -10138,7 +9121,7 @@
       "name": "CX3701",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -10202,7 +9185,7 @@
       "name": "CX3702",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "3U",
@@ -10428,7 +9411,7 @@
       "name": "CX4170a",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 249,
         "currency": "USD"
@@ -10507,7 +9490,7 @@
       "name": "CX4170e",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 279,
         "currency": "USD"
@@ -10580,7 +9563,7 @@
       "name": "CX4170i",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 269,
         "currency": "USD"
@@ -10659,7 +9642,7 @@
       "name": "CX4200a",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 289,
         "currency": "USD"
@@ -10744,7 +9727,7 @@
       "name": "Sliger CX4200e",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 299,
         "currency": "USD"
@@ -10817,7 +9800,7 @@
       "name": "Sliger CX4200f",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 309,
         "currency": "USD"
@@ -10890,7 +9873,7 @@
       "name": "CX4200i",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 299,
         "currency": "USD"
@@ -10975,7 +9958,7 @@
       "name": "Sliger CX4712",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 439,
         "currency": "USD"
@@ -11047,7 +10030,7 @@
       "name": "Sliger CX4713",
       "source": "sliger.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": {
         "amount": 459,
         "currency": "USD"
@@ -11233,7 +10216,7 @@
       "name": "UK2130 2U600 UK51922",
       "source": "unykach.com",
       "source_url": "",
-      "scraped_at": "2025-12-22",
+      "scraped_at": "2025-12-23",
       "price": null,
       "availability": "unknown",
       "rack_units": "2U",
@@ -11677,76 +10660,6 @@
       },
       "features": [],
       "description": "4U 19\" rackmount server chassis (600mm depth) designed for high-end workstations, professional rendering, and compute-intensive tasks. Features 3x 120mm PWM fans included, USB-C support, support for large format GPUs including NVIDIA RTX 4090/5090, and liquid cooling up to 360mm. Includes expansion card retention system and 10-year warranty."
-    },
-    {
-      "id": "yakkaroo.de-ipc-c1350",
-      "model": "IPC-C1350",
-      "brand": "Various",
-      "name": "19-inch micro-ATX rack-mount 1.3U server case - IPC-C1350 - 50,8cm length",
-      "source": "yakkaroo.de",
-      "source_url": "https://www.yakkaroo.de/19-inch-13u-server-chassis-ipc-c1350-micro-atx-mini-itx",
-      "scraped_at": "2025-12-22",
-      "sku": "**",
-      "price": {
-        "amount": 99,
-        "currency": "EUR"
-      },
-      "availability": "unknown",
-      "rack_units": "1.3U",
-      "dimensions": {
-        "width_mm": null,
-        "height_mm": null,
-        "depth_mm": null,
-        "weight_kg": null,
-        "volume_liters": null
-      },
-      "color": "Front: black / body: black",
-      "motherboard_support": [
-        "Mini-ITX",
-        "Micro-ATX"
-      ],
-      "cpu_cooler": {
-        "max_height_mm": null
-      },
-      "fan_mounts": [],
-      "radiator_support": [],
-      "drive_bays": [
-        {
-          "size": "3.5\"",
-          "quantity": 3,
-          "hot_swap": false,
-          "internal": true
-        }
-      ],
-      "total_25_bays": 0,
-      "total_35_bays": 3,
-      "total_525_bays": 0,
-      "has_hot_swap": false,
-      "expansion_slots": [],
-      "total_pcie_slots": 0,
-      "has_full_height_slots": true,
-      "gpu_support": {
-        "max_length_mm": null,
-        "max_height_mm": null
-      },
-      "psu_support": {
-        "types": [
-          "1U"
-        ],
-        "max_length_mm": null
-      },
-      "psu_included": false,
-      "front_io": {
-        "usb_type_a_2_0": 0,
-        "usb_type_a_3_0": 0,
-        "usb_type_a_3_1": 0,
-        "usb_type_c": 0,
-        "audio_jack": false,
-        "mic_jack": false,
-        "power_button": true,
-        "reset_button": false
-      },
-      "features": []
     },
     {
       "id": "yakkaroo.de-supermicro-superchassis-cse-504-203b",

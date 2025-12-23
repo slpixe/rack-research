@@ -6,7 +6,6 @@
  */
 
 import type {
-  RackCase,
   RackUnits,
   MotherboardFormFactor,
   PSUType,
