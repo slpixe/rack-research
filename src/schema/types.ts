@@ -1,6 +1,6 @@
 /**
  * Universal Rack Case Schema
- * 
+ *
  * This file defines the normalized/universal schema for all rack case products
  * across different sources (Inter-Tech, Sliger, SilverStone, In-Win, Yakkaroo, etc.)
  */
@@ -9,9 +9,23 @@
 // ENUMS - Standardized values for filtering
 // ============================================================================
 
-export type RackUnits = '1U' | '1.5U' | '2U' | '3U' | '4U' | '5U' | '6U' | '7U' | '8U' | '9U' | '10U' | '11U' | '12U' | '13U';
+export type RackUnits =
+  | '1U'
+  | '1.5U'
+  | '2U'
+  | '3U'
+  | '4U'
+  | '5U'
+  | '6U'
+  | '7U'
+  | '8U'
+  | '9U'
+  | '10U'
+  | '11U'
+  | '12U'
+  | '13U';
 
-export type MotherboardFormFactor = 
+export type MotherboardFormFactor =
   | 'Mini-ITX'
   | 'Mini-DTX'
   | 'FlexATX'
@@ -22,7 +36,7 @@ export type MotherboardFormFactor =
   | 'SSI-EEB'
   | 'EEB';
 
-export type PSUType = 
+export type PSUType =
   | 'ATX'
   | 'SFX'
   | 'SFX-L'
@@ -40,9 +54,15 @@ export type CoolingType = 'Air' | 'AIO' | 'Custom Loop';
 
 export type Currency = 'USD' | 'EUR' | 'GBP';
 
-export type AvailabilityStatus = 'in-stock' | 'out-of-stock' | 'pre-order' | 'discontinued' | 'contact-for-quote' | 'unknown';
+export type AvailabilityStatus =
+  | 'in-stock'
+  | 'out-of-stock'
+  | 'pre-order'
+  | 'discontinued'
+  | 'contact-for-quote'
+  | 'unknown';
 
-export type DataSource = 
+export type DataSource =
   | 'inter-tech.de'
   | 'sliger.com'
   | 'silverstonetek.com'
@@ -160,18 +180,18 @@ export interface RackCase {
   brand: string;
   /** Product name/title */
   name: string;
-  
+
   // === Source Metadata ===
   source: DataSource;
   source_url: string;
   scraped_at: string;
   /** Original SKU if available */
   sku?: string;
-  
+
   // === Pricing & Availability ===
   price: Price | null;
   availability: AvailabilityStatus;
-  
+
   // === Physical Dimensions ===
   rack_units: RackUnits;
   dimensions: Dimensions;
@@ -179,12 +199,12 @@ export interface RackCase {
   material?: string;
   /** Color/finish */
   color?: string;
-  
+
   // === Motherboard Compatibility ===
   motherboard_support: MotherboardFormFactor[];
   /** Max motherboard dimensions if specified (e.g., "305mm x 345mm") */
   motherboard_max_dimensions?: string;
-  
+
   // === Cooling ===
   cpu_cooler: CPUCoolerSupport;
   fan_mounts: FanMount[];
@@ -196,7 +216,7 @@ export interface RackCase {
     bottom: boolean;
     psu: boolean;
   };
-  
+
   // === Storage ===
   drive_bays: DriveBay[];
   /** Total 2.5" drive capacity */
@@ -208,30 +228,30 @@ export interface RackCase {
   /** Hot-swap support */
   has_hot_swap: boolean;
   storage_backplane?: StorageBackplane;
-  
+
   // === Expansion ===
   expansion_slots: ExpansionSlot[];
   /** Total PCIe slots */
   total_pcie_slots: number;
   /** Whether has full-height slots */
   has_full_height_slots: boolean;
-  
+
   // === GPU ===
   gpu_support: GPUSupport;
-  
+
   // === Power Supply ===
   psu_support: PSUSupport;
   /** Whether PSU is included */
   psu_included: boolean;
-  
+
   // === Front Panel I/O ===
   front_io: FrontIO;
-  
+
   // === Features & Extras ===
   features: string[];
   /** Full description/overview */
   description?: string;
-  
+
   // === Raw Data (for debugging/reference) ===
   _raw?: Record<string, unknown>;
 }
@@ -262,14 +282,14 @@ export interface FilterableFields {
   total_35_bays_min: number;
   total_525_bays_min: number;
   total_pcie_slots_min: number;
-  
+
   // Enum selections
   rack_units: RackUnits[];
   motherboard_support: MotherboardFormFactor[];
   psu_types: PSUType[];
   sources: DataSource[];
   availability: AvailabilityStatus[];
-  
+
   // Boolean filters
   has_hot_swap: boolean | null;
   has_full_height_slots: boolean | null;
@@ -277,7 +297,7 @@ export interface FilterableFields {
   psu_included: boolean | null;
 }
 
-export type SortableFields = 
+export type SortableFields =
   | 'price'
   | 'depth_mm'
   | 'width_mm'
