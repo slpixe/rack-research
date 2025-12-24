@@ -9,6 +9,8 @@
     "scrape:yakkaroo:download": "node scrapers/yakkaroo/1-download-html.js",
     "scrape:yakkaroo:parse": "node scrapers/yakkaroo/2-parse-specs.js",
     "build:db": "tsx src/build-db.ts",
+    "extract:urls": "tsx scripts/extract-urls.ts",
+    "verify:urls": "tsx scripts/verify-urls.ts",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/ scrapers/",
     "lint:fix": "eslint src/ scrapers/ --fix",
