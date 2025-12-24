@@ -77,6 +77,7 @@ function analyzeProducts(): QualityReport {
   
   const fieldCompleteness: Record<string, FieldStats> = {};
   const bySource: Record<string, SourceReport> = {};
+  const sourceCompletenessSum: Record<string, number> = {};
   const lowQualityProducts: LowQualityProduct[] = [];
   
   // Initialize field stats
@@ -88,7 +89,8 @@ function analyzeProducts(): QualityReport {
   for (const product of products) {
     const source = product.source;
     if (!bySource[source]) {
-      bySource[source] = { count: 0, avgCompleteness: 0, missingFields: {}, totalCompleteness: 0 };
+      bySource[source] = { count: 0, avgCompleteness: 0, missingFields: {} };
+      sourceCompletenessSum[source] = 0;
     }
     bySource[source].count++;
     
@@ -113,7 +115,7 @@ function analyzeProducts(): QualityReport {
     const completeness = (filledCount / fieldsToCheck.length) * 100;
     
     // Add to source total completeness for average calculation
-    bySource[source].totalCompleteness += completeness;
+    sourceCompletenessSum[source] += completeness;
     
     if (completeness < 50) {
       lowQualityProducts.push({
@@ -136,10 +138,8 @@ function analyzeProducts(): QualityReport {
   for (const source of Object.keys(bySource)) {
     const report = bySource[source];
     report.avgCompleteness = report.count > 0 
-      ? Math.round(report.totalCompleteness / report.count) 
+      ? Math.round(sourceCompletenessSum[source] / report.count) 
       : 0;
-    // Clean up temporary property
-    delete (report as any).totalCompleteness;
   }
   
   return {
