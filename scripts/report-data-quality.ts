@@ -37,25 +37,42 @@ interface LowQualityProduct {
 }
 
 function analyzeProducts(): QualityReport {
-  const db = JSON.parse(fs.readFileSync('data/products.json', 'utf-8'));
+  let db;
+  try {
+    const fileContent = fs.readFileSync('data/products.json', 'utf-8');
+    db = JSON.parse(fileContent);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+      console.error('Error: data/products.json not found. Please run data generation first.');
+      process.exit(1);
+    }
+    console.error('Error: Failed to parse data/products.json. The file may be corrupted.');
+    process.exit(1);
+  }
+  
   const products = db.products;
+  
+  if (!products || !Array.isArray(products)) {
+    console.error('Error: Invalid products.json format. Expected products array.');
+    process.exit(1);
+  }
   
   // Fields to check
   const fieldsToCheck = [
-    { path: 'source_url', required: true },
-    { path: 'price.amount', required: false },
-    { path: 'dimensions.width_mm', required: true },
-    { path: 'dimensions.height_mm', required: true },
-    { path: 'dimensions.depth_mm', required: true },
-    { path: 'dimensions.weight_kg', required: false },
-    { path: 'motherboard_support', required: true, isArray: true },
-    { path: 'cpu_cooler.max_height_mm', required: false },
-    { path: 'gpu_support.max_length_mm', required: false },
-    { path: 'psu_support.types', required: true, isArray: true },
-    { path: 'total_25_bays', required: false, minValue: 0 },
-    { path: 'total_35_bays', required: false, minValue: 0 },
-    { path: 'drive_bays', required: false, isArray: true },
-    { path: 'fan_mounts', required: false, isArray: true },
+    { path: 'source_url' },
+    { path: 'price.amount' },
+    { path: 'dimensions.width_mm' },
+    { path: 'dimensions.height_mm' },
+    { path: 'dimensions.depth_mm' },
+    { path: 'dimensions.weight_kg' },
+    { path: 'motherboard_support', isArray: true },
+    { path: 'cpu_cooler.max_height_mm' },
+    { path: 'gpu_support.max_length_mm' },
+    { path: 'psu_support.types', isArray: true },
+    { path: 'total_25_bays', minValue: 0 },
+    { path: 'total_35_bays', minValue: 0 },
+    { path: 'drive_bays', isArray: true },
+    { path: 'fan_mounts', isArray: true },
   ];
   
   const fieldCompleteness: Record<string, FieldStats> = {};
