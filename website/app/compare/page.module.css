@@ -1,0 +1,23 @@
+.container {
+  text-align: center;
+  padding: var(--spacing-2xl);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.description {
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-xl);
+}
+
+.placeholder {
+  background: var(--color-card-bg);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  color: var(--color-muted);
+}

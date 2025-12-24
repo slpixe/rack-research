@@ -28,6 +28,12 @@ dist/
 build/
 *.tsbuildinfo
 
+# Next.js
+.next/
+out/
+website/.next/
+website/out/
+
 # Temporary files
 tmp/
 temp/
