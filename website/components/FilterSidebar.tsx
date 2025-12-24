@@ -20,19 +20,18 @@ export function FilterSidebar({ rackUnits, sources, brands }: FilterSidebarProps
     selectedRackUnits.length > 0 || selectedSources.length > 0 || selectedBrands.length > 0
 
   const toggleFilter = (key: string, value: string) => {
-    const currentKey = key === 'rack_units' ? 'rack_units' : key === 'source' ? 'source' : 'brand'
-    const current =
-      key === 'rack_units'
-        ? selectedRackUnits
-        : key === 'source'
-          ? selectedSources
-          : selectedBrands
+    const selectedMap: Record<string, string[]> = {
+      rack_units: selectedRackUnits,
+      source: selectedSources,
+      brand: selectedBrands,
+    }
+    const current = selectedMap[key] || []
 
     const updated = current.includes(value)
       ? current.filter(v => v !== value)
       : [...current, value]
 
-    updateFilters({ [currentKey]: updated })
+    updateFilters({ [key]: updated })
   }
 
   return (
