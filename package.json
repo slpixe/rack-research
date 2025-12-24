@@ -11,6 +11,7 @@
     "build:db": "tsx src/build-db.ts",
     "extract:urls": "tsx scripts/extract-urls.ts",
     "verify:urls": "tsx scripts/verify-urls.ts",
+    "report:quality": "tsx scripts/report-data-quality.ts",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/ scrapers/",
     "lint:fix": "eslint src/ scrapers/ --fix",
