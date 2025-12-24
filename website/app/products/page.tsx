@@ -2,47 +2,11 @@ import Link from 'next/link'
 import { getAllProducts, getRackUnits, getSources, getBrands } from '@/lib/db'
 import styles from './page.module.css'
 
-interface SearchParams {
-  rack_units?: string
-  source?: string
-  brand?: string
-  depth_min?: string
-  depth_max?: string
-}
-
-export default async function ProductsPage({
-  searchParams,
-}: {
-  searchParams: Promise<SearchParams>
-}) {
-  const params = await searchParams
+// For static export, we show all products without server-side filtering
+// TODO: Implement client-side filtering with URL state
+export default function ProductsPage() {
   const allProducts = getAllProducts()
-
-  // Apply filters
-  let filtered = allProducts
-
-  if (params.rack_units) {
-    const units = params.rack_units.split(',')
-    filtered = filtered.filter(p => units.includes(p.rack_units))
-  }
-
-  if (params.source) {
-    filtered = filtered.filter(p => p.source === params.source)
-  }
-
-  if (params.brand) {
-    filtered = filtered.filter(p => p.brand === params.brand)
-  }
-
-  if (params.depth_min) {
-    const min = parseInt(params.depth_min)
-    filtered = filtered.filter(p => p.dimensions.depth_mm && p.dimensions.depth_mm >= min)
-  }
-
-  if (params.depth_max) {
-    const max = parseInt(params.depth_max)
-    filtered = filtered.filter(p => p.dimensions.depth_mm && p.dimensions.depth_mm <= max)
-  }
+  const filtered = allProducts
 
   const rackUnits = getRackUnits()
   const sources = getSources()
