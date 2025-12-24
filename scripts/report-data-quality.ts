@@ -150,11 +150,16 @@ function analyzeProducts(): QualityReport {
   };
 }
 
-function getNestedValue(obj: any, path: string): any {
-  return path.split('.').reduce((o, k) => o?.[k], obj);
+function getNestedValue(obj: Record<string, unknown>, path: string): unknown {
+  return path.split('.').reduce((o, k) => {
+    if (o && typeof o === 'object' && k in o) {
+      return (o as Record<string, unknown>)[k];
+    }
+    return undefined;
+  }, obj as unknown);
 }
 
-function isFieldFilled(value: any, field: { isArray?: boolean; minValue?: number }): boolean {
+function isFieldFilled(value: unknown, field: { isArray?: boolean; minValue?: number }): boolean {
   if (value === null || value === undefined || value === '') return false;
   if (field.isArray && Array.isArray(value)) return value.length > 0;
   if (typeof value === 'number' && field.minValue !== undefined) return value >= field.minValue;
