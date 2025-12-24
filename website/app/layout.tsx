@@ -22,7 +22,7 @@ export default function RootLayout({
               📦 Rack Research
             </Link>
             <nav className={styles.nav}>
-              <Link href="/products" className={styles.navLink}>
+              <Link href="/" className={styles.navLink}>
                 Products
               </Link>
               <Link href="/compare" className={styles.navLink}>
