@@ -28,6 +28,12 @@ dist/
 build/
 *.tsbuildinfo
 
+# Next.js
+.next/
+out/
+website/.next/
+website/out/
+
 # Temporary files
 tmp/
 temp/
@@ -39,6 +45,7 @@ Thumbs.db
 
 # Playwright
 .playwright/
+.playwright-mcp/
 playwright-report/
 test-results/
 

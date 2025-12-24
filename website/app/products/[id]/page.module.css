@@ -1,0 +1,134 @@
+.breadcrumb {
+  margin-bottom: var(--spacing-lg);
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.breadcrumbLink {
+  color: var(--color-muted);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-foreground);
+}
+
+.header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.brand {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-xs);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--color-muted);
+}
+
+.tags {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-md);
+}
+
+.tag {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.875rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.section {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.specList {
+  list-style: none;
+}
+
+.specItem {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.specItem:last-child {
+  border-bottom: none;
+}
+
+.specLabel {
+  color: var(--color-muted);
+}
+
+.specValue {
+  font-weight: 500;
+  text-align: right;
+}
+
+.featureList {
+  list-style: none;
+}
+
+.featureItem {
+  padding: var(--spacing-xs) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.featureItem::before {
+  content: '✓';
+  color: var(--color-primary);
+}
+
+.actions {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.externalLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: var(--color-primary);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: background 0.15s ease;
+}
+
+.externalLink:hover {
+  background: var(--color-primary-hover);
+  text-decoration: none;
+}
