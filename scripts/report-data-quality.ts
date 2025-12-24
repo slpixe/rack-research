@@ -88,7 +88,7 @@ function analyzeProducts(): QualityReport {
   for (const product of products) {
     const source = product.source;
     if (!bySource[source]) {
-      bySource[source] = { count: 0, avgCompleteness: 0, missingFields: {} };
+      bySource[source] = { count: 0, avgCompleteness: 0, missingFields: {}, totalCompleteness: 0 };
     }
     bySource[source].count++;
     
@@ -112,6 +112,9 @@ function analyzeProducts(): QualityReport {
     
     const completeness = (filledCount / fieldsToCheck.length) * 100;
     
+    // Add to source total completeness for average calculation
+    bySource[source].totalCompleteness += completeness;
+    
     if (completeness < 50) {
       lowQualityProducts.push({
         id: product.id,
@@ -132,26 +135,11 @@ function analyzeProducts(): QualityReport {
   // Calculate avg completeness per source
   for (const source of Object.keys(bySource)) {
     const report = bySource[source];
-    let totalCompleteness = 0;
-    let productCount = 0;
-    
-    for (const product of products) {
-      if (product.source === source) {
-        let filledCount = 0;
-        for (const field of fieldsToCheck) {
-          const value = getNestedValue(product, field.path);
-          if (isFieldFilled(value, field)) {
-            filledCount++;
-          }
-        }
-        totalCompleteness += (filledCount / fieldsToCheck.length) * 100;
-        productCount++;
-      }
-    }
-    
-    report.avgCompleteness = productCount > 0 
-      ? Math.round(totalCompleteness / productCount) 
+    report.avgCompleteness = report.count > 0 
+      ? Math.round(report.totalCompleteness / report.count) 
       : 0;
+    // Clean up temporary property
+    delete (report as any).totalCompleteness;
   }
   
   return {
