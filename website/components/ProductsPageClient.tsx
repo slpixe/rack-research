@@ -22,7 +22,12 @@ function ProductsPageContent({
 }: ProductsPageClientProps) {
   return (
     <div className={styles.container}>
-      <FilterSidebar rackUnits={rackUnits} sources={sources} brands={brands} />
+      <FilterSidebar 
+        rackUnits={rackUnits} 
+        sources={sources} 
+        brands={brands} 
+        allProducts={products}
+      />
       <div className={styles.content}>
         <FilterChips />
         <ProductGrid products={products} />

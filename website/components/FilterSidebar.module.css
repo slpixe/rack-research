@@ -30,6 +30,26 @@
   align-items: center;
   gap: var(--spacing-sm);
   cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.filterLabel:has(input:disabled) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.filterText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  gap: var(--spacing-sm);
+}
+
+.filterCount {
+  color: var(--color-muted);
+  font-size: 0.813rem;
+  font-weight: 400;
 }
 
 .filterLabel input {
