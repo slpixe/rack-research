@@ -23,7 +23,8 @@
     "format:check": "prettier --check 'pipeline/src/**/*.ts'",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "test:e2e": "npm run test:e2e --prefix website"
   },
   "keywords": [
     "rack-mount",
