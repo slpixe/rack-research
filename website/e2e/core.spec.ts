@@ -91,9 +91,7 @@ test.describe('Core Functionality', () => {
     // "Inter-Tech" is a common brand in the data
     await searchInput.pressSequentially('Inter-Tech', { delay: 50 });
     
-    // Wait for debounce (300ms) and filtering
-    await page.waitForTimeout(1000);
-    
+    // Use toPass to wait for the debounce (300ms) and filtering to complete
     await expect(async () => {
       const searchCountText = await page.locator('h1 span').textContent();
       const searchCount = parseInt(searchCountText?.replace(/[()]/g, '') || '0');
@@ -103,8 +101,8 @@ test.describe('Core Functionality', () => {
     
     // Clear search
     await searchInput.fill('');
-    await page.waitForTimeout(1000);
     
+    // Again, use toPass to wait for the restoration
     await expect(async () => {
       const restoredCountText = await page.locator('h1 span').textContent();
       const restoredCount = parseInt(restoredCountText?.replace(/[()]/g, '') || '0');
