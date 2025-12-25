@@ -1,0 +1,108 @@
+'use client'
+
+import { useState, useEffect, useRef } from 'react'
+import { useProductFilters } from '@/lib/hooks/useProductFilters'
+import { useDebounce } from '@/lib/hooks/useDebounce'
+import styles from './SearchBar.module.css'
+
+export function SearchBar() {
+  const inputRef = useRef<HTMLInputElement>(null)
+  const { filters, updateFilters } = useProductFilters()
+  const [query, setQuery] = useState(filters.q || '')
+  const [isMac, setIsMac] = useState(false)
+  const debouncedQuery = useDebounce(query, 300)
+  
+  // Track if the last change was from typing (vs external URL change)
+  const isTypingRef = useRef(false)
+  // Track the last intentional query value to prevent stale debounced updates
+  const lastIntentionalQueryRef = useRef(filters.q || '')
+
+  // Detect platform for keyboard shortcut display
+  useEffect(() => {
+    setIsMac(navigator.platform.toUpperCase().indexOf('MAC') >= 0)
+  }, [])
+
+  // Sync URL to state when filters change externally
+  useEffect(() => {
+    const urlQuery = filters.q || ''
+    // If URL changed but not from our typing, update immediately
+    if (urlQuery !== query && !isTypingRef.current) {
+      setQuery(urlQuery)
+      lastIntentionalQueryRef.current = urlQuery
+    }
+    isTypingRef.current = false
+  }, [filters.q, query])
+
+  // Update URL when debounced query changes
+  useEffect(() => {
+    // Only update if:
+    // 1. The debounced query is different from the URL query, AND
+    // 2. The debounced query matches the last intentional query value
+    // This prevents stale debounced values from being applied after external clears
+    if (debouncedQuery !== (filters.q || '') && debouncedQuery === lastIntentionalQueryRef.current) {
+      updateFilters({ q: debouncedQuery || null })
+    }
+  }, [debouncedQuery, filters.q, updateFilters])
+
+  // Keyboard shortcut (Cmd+K / Ctrl+K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault()
+        inputRef.current?.focus()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
+  const handleClear = () => {
+    setQuery('')
+    isTypingRef.current = false
+    updateFilters({ q: null })
+    inputRef.current?.focus()
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    isTypingRef.current = true
+    const newValue = e.target.value
+    setQuery(newValue)
+    lastIntentionalQueryRef.current = newValue
+  }
+
+  const shortcutHint = isMac ? '⌘K' : 'Ctrl+K'
+
+  return (
+    <div className={styles.searchBar}>
+      <svg
+        className={styles.searchIcon}
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.3-4.3" />
+      </svg>
+      <input
+        ref={inputRef}
+        type="search"
+        placeholder={`Search products... (${shortcutHint})`}
+        value={query}
+        onChange={handleChange}
+        className={styles.input}
+      />
+      {query && (
+        <button onClick={handleClear} className={styles.clear} aria-label="Clear search">
+          ×
+        </button>
+      )}
+    </div>
+  )
+}

@@ -19,6 +19,7 @@ export function FilterSidebar({ rackUnits, sources, brands, allProducts }: Filte
   const selectedRackUnits = filters.rack_units?.split(',').filter(Boolean) || []
   const selectedSources = filters.source?.split(',').filter(Boolean) || []
   const selectedBrands = filters.brand?.split(',').filter(Boolean) || []
+  const searchQuery = filters.q || undefined
 
   // Calculate filter counts based on current selections
   const filterCounts = useMemo(() => {
@@ -26,8 +27,9 @@ export function FilterSidebar({ rackUnits, sources, brands, allProducts }: Filte
       rack_units: selectedRackUnits,
       source: selectedSources,
       brand: selectedBrands,
+      q: searchQuery,
     })
-  }, [allProducts, selectedRackUnits, selectedSources, selectedBrands])
+  }, [allProducts, selectedRackUnits, selectedSources, selectedBrands, searchQuery])
 
   const hasActiveFilters =
     selectedRackUnits.length > 0 || selectedSources.length > 0 || selectedBrands.length > 0

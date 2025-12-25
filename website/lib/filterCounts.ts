@@ -10,6 +10,27 @@ export interface ActiveFilters {
   rack_units: string[]
   source: string[]
   brand: string[]
+  q?: string
+}
+
+/**
+ * Check if a product matches the search query
+ */
+function matchesSearchQuery(product: RackCase, query?: string): boolean {
+  if (!query || query.trim() === '') return true
+  
+  const searchLower = query.toLowerCase()
+  const searchableFields = [
+    product.name,
+    product.brand,
+    product.source,
+    product.rack_units,
+    ...(product.motherboard_support || []),
+  ].filter(Boolean)
+  
+  return searchableFields.some(field => 
+    field?.toLowerCase().includes(searchLower)
+  )
 }
 
 /**
@@ -34,39 +55,42 @@ export function calculateFilterCounts(
   // For each filter category, apply filters from OTHER categories only
   // This shows "how many results will I get if I toggle this filter"
   
-  // Calculate rack_units counts (apply source + brand filters only)
+  // Calculate rack_units counts (apply source + brand + search filters only)
   const filteredForRackUnits = allProducts.filter(product => {
     const matchesSource = activeFilters.source.length === 0 || 
       activeFilters.source.includes(product.source)
     const matchesBrand = activeFilters.brand.length === 0 || 
       activeFilters.brand.includes(product.brand)
-    return matchesSource && matchesBrand
+    const matchesSearch = matchesSearchQuery(product, activeFilters.q)
+    return matchesSource && matchesBrand && matchesSearch
   })
   
   filteredForRackUnits.forEach(product => {
     counts.rack_units[product.rack_units] = (counts.rack_units[product.rack_units] || 0) + 1
   })
 
-  // Calculate source counts (apply rack_units + brand filters only)
+  // Calculate source counts (apply rack_units + brand + search filters only)
   const filteredForSource = allProducts.filter(product => {
     const matchesRackUnits = activeFilters.rack_units.length === 0 || 
       activeFilters.rack_units.includes(product.rack_units)
     const matchesBrand = activeFilters.brand.length === 0 || 
       activeFilters.brand.includes(product.brand)
-    return matchesRackUnits && matchesBrand
+    const matchesSearch = matchesSearchQuery(product, activeFilters.q)
+    return matchesRackUnits && matchesBrand && matchesSearch
   })
   
   filteredForSource.forEach(product => {
     counts.source[product.source] = (counts.source[product.source] || 0) + 1
   })
 
-  // Calculate brand counts (apply rack_units + source filters only)
+  // Calculate brand counts (apply rack_units + source + search filters only)
   const filteredForBrand = allProducts.filter(product => {
     const matchesRackUnits = activeFilters.rack_units.length === 0 || 
       activeFilters.rack_units.includes(product.rack_units)
     const matchesSource = activeFilters.source.length === 0 || 
       activeFilters.source.includes(product.source)
-    return matchesRackUnits && matchesSource
+    const matchesSearch = matchesSearchQuery(product, activeFilters.q)
+    return matchesRackUnits && matchesSource && matchesSearch
   })
   
   filteredForBrand.forEach(product => {
@@ -90,6 +114,7 @@ export function getFilteredProductCount(
       activeFilters.source.includes(product.source)
     const matchesBrand = activeFilters.brand.length === 0 || 
       activeFilters.brand.includes(product.brand)
-    return matchesRackUnits && matchesSource && matchesBrand
+    const matchesSearch = matchesSearchQuery(product, activeFilters.q)
+    return matchesRackUnits && matchesSource && matchesBrand && matchesSearch
   }).length
 }

@@ -7,6 +7,7 @@ const filterLabels: Record<string, string> = {
   rack_units: 'Size',
   source: 'Source',
   brand: 'Brand',
+  q: 'Search',
 }
 
 export function FilterChips() {
@@ -14,6 +15,10 @@ export function FilterChips() {
 
   const chips = Object.entries(filters).flatMap(([key, value]) => {
     if (!value) return []
+    // Search query is a single value, not comma-separated
+    if (key === 'q') {
+      return [{ key, value, label: filterLabels[key] || key }]
+    }
     const values = value.split(',').filter(Boolean)
     return values.map((v: string) => ({ key, value: v, label: filterLabels[key] || key }))
   })
@@ -21,6 +26,12 @@ export function FilterChips() {
   if (chips.length === 0) return null
 
   const removeChip = (key: string, value: string) => {
+    // Search query is a single value, not comma-separated
+    if (key === 'q') {
+      updateFilters({ q: null })
+      return
+    }
+    
     const currentValue = filters[key as keyof typeof filters]
     if (!currentValue) return
 

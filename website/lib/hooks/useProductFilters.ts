@@ -7,6 +7,7 @@ export interface ProductFilters {
   rack_units?: string
   source?: string
   brand?: string
+  q?: string
 }
 
 export function useProductFilters() {

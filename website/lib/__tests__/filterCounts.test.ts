@@ -253,4 +253,66 @@ describe('Filter Counts', () => {
       expect(count).toBe(0)
     })
   })
+
+  describe('with search query', () => {
+    it('filters by search query across all categories', () => {
+      const counts = calculateFilterCounts(mockProducts, {
+        rack_units: [],
+        source: [],
+        brand: [],
+        q: 'BrandX',
+      })
+
+      // Should only show products from BrandX (Products A and B)
+      expect(counts.rack_units['1U']).toBe(1) // Product A
+      expect(counts.rack_units['2U']).toBe(1) // Product B
+      expect(counts.rack_units['3U']).toBeUndefined()
+    })
+
+    it('combines search with other filters', () => {
+      const counts = calculateFilterCounts(mockProducts, {
+        rack_units: ['2U'],
+        source: [],
+        brand: [],
+        q: 'BrandX',
+      })
+
+      // With 2U selected and searching for BrandX, should only affect other categories
+      expect(counts.source['sliger.com']).toBe(1) // Product B matches both 2U and BrandX
+      expect(counts.source['inter-tech.de']).toBeUndefined() // Product C is 2U but not BrandX
+    })
+
+    it('returns correct product count with search', () => {
+      const count = getFilteredProductCount(mockProducts, {
+        rack_units: [],
+        source: [],
+        brand: [],
+        q: 'Product A',
+      })
+
+      expect(count).toBe(1) // Only Product A
+    })
+
+    it('search is case-insensitive', () => {
+      const count = getFilteredProductCount(mockProducts, {
+        rack_units: [],
+        source: [],
+        brand: [],
+        q: 'brandy',
+      })
+
+      expect(count).toBe(1) // Product D (BrandY)
+    })
+
+    it('searches across multiple fields', () => {
+      const count = getFilteredProductCount(mockProducts, {
+        rack_units: [],
+        source: [],
+        brand: [],
+        q: 'sliger',
+      })
+
+      expect(count).toBe(1) // Product B (source: sliger.com)
+    })
+  })
 })

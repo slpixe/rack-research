@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useProductFilters } from '@/lib/hooks/useProductFilters'
+import { searchProducts, highlightMatches } from '@/lib/search'
 import type { RackCase } from '@/lib/types'
 import styles from './ProductGrid.module.css'
 
@@ -15,10 +16,12 @@ export function ProductGrid({ products }: ProductGridProps) {
   const selectedRackUnits = filters.rack_units?.split(',').filter(Boolean) || []
   const selectedSources = filters.source?.split(',').filter(Boolean) || []
   const selectedBrands = filters.brand?.split(',').filter(Boolean) || []
+  const searchQuery = filters.q || ''
+
+  // Apply search filter first
+  let filtered = searchQuery ? searchProducts(products, searchQuery) : products
 
   // Apply filters client-side
-  let filtered = products
-
   if (selectedRackUnits.length > 0) {
     filtered = filtered.filter(p => selectedRackUnits.includes(p.rack_units))
   }
@@ -31,6 +34,11 @@ export function ProductGrid({ products }: ProductGridProps) {
     filtered = filtered.filter(p => selectedBrands.includes(p.brand))
   }
 
+  const renderHighlightedText = (text: string) => {
+    if (!searchQuery) return text
+    return <span dangerouslySetInnerHTML={{ __html: highlightMatches(text, searchQuery) }} />
+  }
+
   return (
     <>
       <div className={styles.header}>
@@ -41,7 +49,7 @@ export function ProductGrid({ products }: ProductGridProps) {
 
       {filtered.length === 0 ? (
         <div className={styles.emptyState}>
-          <p>No products found matching your filters.</p>
+          <p>No products found{searchQuery ? ` for "${searchQuery}"` : ' matching your filters'}.</p>
         </div>
       ) : (
         <div className={styles.grid}>
@@ -52,8 +60,8 @@ export function ProductGrid({ products }: ProductGridProps) {
               className={styles.cardLink}
             >
               <article className={styles.card}>
-                <div className={styles.cardBrand}>{product.brand}</div>
-                <h2 className={styles.cardName}>{product.name}</h2>
+                <div className={styles.cardBrand}>{renderHighlightedText(product.brand)}</div>
+                <h2 className={styles.cardName}>{renderHighlightedText(product.name)}</h2>
                 <div className={styles.cardMeta}>
                   <span className={styles.cardTag}>{product.rack_units}</span>
                   {product.has_hot_swap && (
