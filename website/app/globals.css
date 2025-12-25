@@ -62,3 +62,17 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Search highlight */
+mark {
+  background-color: rgba(0, 112, 243, 0.2);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  mark {
+    background-color: rgba(50, 145, 255, 0.3);
+  }
+}

@@ -3,6 +3,7 @@
 import { Suspense } from 'react'
 import { FilterSidebar } from './FilterSidebar'
 import { FilterChips } from './FilterChips'
+import { SearchBar } from './SearchBar'
 import { ProductGrid } from './ProductGrid'
 import type { RackCase } from '@/lib/types'
 import styles from './ProductsPage.module.css'
@@ -29,6 +30,7 @@ function ProductsPageContent({
         allProducts={products}
       />
       <div className={styles.content}>
+        <SearchBar />
         <FilterChips />
         <ProductGrid products={products} />
       </div>
