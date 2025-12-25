@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebarFallback {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.sidebarSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.loadingBar {
+  height: 1rem;
+  background: var(--color-card-bg);
+  border-radius: var(--radius-sm);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.gridFallback {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.cardFallback {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebarFallback {
+    width: 100%;
+  }
+
+  .gridFallback {
+    grid-template-columns: 1fr;
+  }
+}
