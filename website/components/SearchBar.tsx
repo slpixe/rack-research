@@ -11,6 +11,11 @@ export function SearchBar() {
   const [query, setQuery] = useState(filters.q || '')
   const [isMac, setIsMac] = useState(false)
   const debouncedQuery = useDebounce(query, 300)
+  
+  // Track if the last change was from typing (vs external URL change)
+  const isTypingRef = useRef(false)
+  // Track the last intentional query value to prevent stale debounced updates
+  const lastIntentionalQueryRef = useRef(filters.q || '')
 
   // Detect platform for keyboard shortcut display
   useEffect(() => {
@@ -19,12 +24,22 @@ export function SearchBar() {
 
   // Sync URL to state when filters change externally
   useEffect(() => {
-    setQuery(filters.q || '')
-  }, [filters.q])
+    const urlQuery = filters.q || ''
+    // If URL changed but not from our typing, update immediately
+    if (urlQuery !== query && !isTypingRef.current) {
+      setQuery(urlQuery)
+      lastIntentionalQueryRef.current = urlQuery
+    }
+    isTypingRef.current = false
+  }, [filters.q, query])
 
   // Update URL when debounced query changes
   useEffect(() => {
-    if (debouncedQuery !== (filters.q || '')) {
+    // Only update if:
+    // 1. The debounced query is different from the URL query, AND
+    // 2. The debounced query matches the last intentional query value
+    // This prevents stale debounced values from being applied after external clears
+    if (debouncedQuery !== (filters.q || '') && debouncedQuery === lastIntentionalQueryRef.current) {
       updateFilters({ q: debouncedQuery || null })
     }
   }, [debouncedQuery, filters.q, updateFilters])
@@ -44,8 +59,16 @@ export function SearchBar() {
 
   const handleClear = () => {
     setQuery('')
+    isTypingRef.current = false
     updateFilters({ q: null })
     inputRef.current?.focus()
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    isTypingRef.current = true
+    const newValue = e.target.value
+    setQuery(newValue)
+    lastIntentionalQueryRef.current = newValue
   }
 
   const shortcutHint = isMac ? '⌘K' : 'Ctrl+K'
@@ -72,7 +95,7 @@ export function SearchBar() {
         type="search"
         placeholder={`Search products... (${shortcutHint})`}
         value={query}
-        onChange={e => setQuery(e.target.value)}
+        onChange={handleChange}
         className={styles.input}
       />
       {query && (
