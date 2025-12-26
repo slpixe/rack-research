@@ -63,6 +63,11 @@ export function RangeSlider({
   const maxInputRef = useRef<HTMLInputElement>(null);
 
   // Sync local state with prop changes (when not dragging)
+  // NOTE: eslint-disable is intentional here. This pattern is safe because:
+  // 1. We use functional setState which prevents unnecessary renders
+  // 2. The guard condition (isDragging) prevents updates during user interaction
+  // 3. We only update if the value actually changed (prev !== next check)
+  // This prevents infinite loops while keeping local state in sync with props
   useEffect(() => {
     if (!isDragging) {
       // eslint-disable-next-line react-hooks/set-state-in-effect

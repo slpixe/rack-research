@@ -25,6 +25,10 @@ export function SearchBarV2({ value, onChange }: SearchBarV2Props) {
   }, []);
 
   // Sync external value to local state
+  // NOTE: exhaustive-deps is disabled intentionally. Including 'localValue' would cause:
+  // 1. The effect to run every time we update localValue internally
+  // 2. Unnecessary re-synchronization when localValue is already correct
+  // We only want this effect to run when the external 'value' prop changes
   useEffect(() => {
     if (value !== localValue) {
       setLocalValue(value);
