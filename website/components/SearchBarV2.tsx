@@ -26,16 +26,17 @@ export function SearchBarV2({ value, onChange }: SearchBarV2Props) {
 
   // Sync external value to local state
   useEffect(() => {
-    if (value !== localValue && !isTypingRef.current) {
+    if (value !== localValue) {
       setLocalValue(value);
+      // When value comes from outside, we're not typing
+      isTypingRef.current = false;
     }
-    isTypingRef.current = false;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
   // Propagate debounced value
   useEffect(() => {
-    if (debouncedValue !== value) {
+    if (isTypingRef.current && debouncedValue !== value) {
       onChange(debouncedValue);
     }
   }, [debouncedValue, value, onChange]);
