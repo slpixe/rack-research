@@ -13,17 +13,17 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - uses: actions/checkout@v5
+    - uses: actions/setup-node@v5
       with:
         node-version: lts/*
         cache: 'npm'
     
     - name: Install root dependencies
-      run: npm install
+      run: npm ci
       
     - name: Install website dependencies
-      run: npm install
+      run: npm ci
       working-directory: website
       
     - name: Install Playwright Browsers
