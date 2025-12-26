@@ -16,9 +16,9 @@ interface FilterSidebarProps {
 export function FilterSidebar({ rackUnits, sources, brands, allProducts }: FilterSidebarProps) {
   const { filters, updateFilters, clearAllFilters } = useProductFilters()
 
-  const selectedRackUnits = filters.rack_units?.split(',').filter(Boolean) || []
-  const selectedSources = filters.source?.split(',').filter(Boolean) || []
-  const selectedBrands = filters.brand?.split(',').filter(Boolean) || []
+  const selectedRackUnits = useMemo(() => filters.rack_units?.split(',').filter(Boolean) || [], [filters.rack_units])
+  const selectedSources = useMemo(() => filters.source?.split(',').filter(Boolean) || [], [filters.source])
+  const selectedBrands = useMemo(() => filters.brand?.split(',').filter(Boolean) || [], [filters.brand])
   const searchQuery = filters.q || undefined
 
   // Calculate filter counts based on current selections

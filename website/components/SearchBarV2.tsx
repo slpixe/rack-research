@@ -20,7 +20,8 @@ export function SearchBarV2({ value, onChange }: SearchBarV2Props) {
 
   // Detect platform for keyboard shortcut display
   useEffect(() => {
-    setIsMac(navigator.platform.toUpperCase().indexOf('MAC') >= 0);
+    const isMacPlatform = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+    setIsMac(isMacPlatform);
   }, []);
 
   // Sync external value to local state
@@ -29,7 +30,8 @@ export function SearchBarV2({ value, onChange }: SearchBarV2Props) {
       setLocalValue(value);
     }
     isTypingRef.current = false;
-  }, [value, localValue]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value]);
 
   // Propagate debounced value
   useEffect(() => {

@@ -19,7 +19,8 @@ export function SearchBar() {
 
   // Detect platform for keyboard shortcut display
   useEffect(() => {
-    setIsMac(navigator.platform.toUpperCase().indexOf('MAC') >= 0)
+    const isMacPlatform = navigator.platform.toUpperCase().indexOf('MAC') >= 0
+    setIsMac(isMacPlatform)
   }, [])
 
   // Sync URL to state when filters change externally
@@ -31,7 +32,8 @@ export function SearchBar() {
       lastIntentionalQueryRef.current = urlQuery
     }
     isTypingRef.current = false
-  }, [filters.q, query])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filters.q])
 
   // Update URL when debounced query changes
   useEffect(() => {
