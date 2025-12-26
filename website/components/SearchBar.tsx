@@ -19,10 +19,15 @@ export function SearchBar() {
 
   // Detect platform for keyboard shortcut display
   useEffect(() => {
-    setIsMac(navigator.platform.toUpperCase().indexOf('MAC') >= 0)
+    const isMacPlatform = navigator.platform.toUpperCase().indexOf('MAC') >= 0
+    setIsMac(isMacPlatform)
   }, [])
 
   // Sync URL to state when filters change externally
+  // NOTE: exhaustive-deps is disabled intentionally. Including 'query' would cause:
+  // 1. The effect to run on every keystroke (when query updates)
+  // 2. Infinite loops as it tries to sync state that's already in sync
+  // We only want this effect to run when filters.q (URL) changes, not when local query changes
   useEffect(() => {
     const urlQuery = filters.q || ''
     // If URL changed but not from our typing, update immediately
@@ -31,7 +36,8 @@ export function SearchBar() {
       lastIntentionalQueryRef.current = urlQuery
     }
     isTypingRef.current = false
-  }, [filters.q, query])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filters.q])
 
   // Update URL when debounced query changes
   useEffect(() => {

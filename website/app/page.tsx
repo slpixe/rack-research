@@ -1,18 +1,8 @@
-import { getAllProducts, getRackUnits, getSources, getBrands } from '@/lib/db'
-import { ProductsPageClient } from '@/components/ProductsPageClient'
+import { getAllProducts } from '@/lib/db'
+import { ProductsPageClientV2 } from '@/components/ProductsPageClientV2'
 
 export default function HomePage() {
   const products = getAllProducts()
-  const rackUnits = getRackUnits()
-  const sources = getSources()
-  const brands = getBrands()
 
-  return (
-    <ProductsPageClient
-      products={products}
-      rackUnits={rackUnits}
-      sources={sources}
-      brands={brands}
-    />
-  )
+  return <ProductsPageClientV2 products={products} />
 }
