@@ -93,6 +93,12 @@
   color: var(--color-muted);
 }
 
+.emptyHint {
+  margin-top: var(--spacing-sm);
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
