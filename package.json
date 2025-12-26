@@ -17,14 +17,17 @@
     "report:quality": "tsx --tsconfig pipeline/tsconfig.json pipeline/scripts/report-data-quality.ts",
     "typecheck": "tsc --project pipeline/tsconfig.json --noEmit",
     "typecheck:web": "tsc --project website/tsconfig.json --noEmit",
-    "lint": "eslint pipeline/src/ pipeline/scrapers/",
-    "lint:fix": "eslint pipeline/src/ pipeline/scrapers/ --fix",
+    "lint": "npm run lint:pipeline && npm run lint:web",
+    "lint:pipeline": "eslint pipeline/src/ pipeline/scrapers/ pipeline/scripts/",
+    "lint:web": "npm run lint --prefix website",
+    "lint:fix": "npm run lint:pipeline -- --fix && npm run lint:web -- --fix",
     "format": "prettier --write 'pipeline/src/**/*.ts'",
     "format:check": "prettier --check 'pipeline/src/**/*.ts'",
     "test": "vitest",
     "test:run": "vitest run",
     "test:ui": "vitest --ui",
-    "test:e2e": "npm run test:e2e --prefix website"
+    "test:e2e": "npm run test:e2e --prefix website",
+    "test:e2e:ui": "npm run test:e2e:ui --prefix website"
   },
   "keywords": [
     "rack-mount",
