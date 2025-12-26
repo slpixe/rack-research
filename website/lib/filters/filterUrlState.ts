@@ -60,10 +60,14 @@ function serializeFilterState(state: FilterState): string | null {
       return state.selected.length > 0 ? state.selected.join(',') : null;
 
     case 'range':
-      if (state.min == null && state.max == null) return null;
+      if (state.min == null && state.max == null && state.includeNull) return null;
       const minStr = state.min != null ? String(state.min) : '';
       const maxStr = state.max != null ? String(state.max) : '';
-      return `${minStr}-${maxStr}`;
+      let result = `${minStr}-${maxStr}`;
+      if (!state.includeNull) {
+        result += '_nn';
+      }
+      return result;
 
     case 'boolean':
       return state.value !== null ? String(state.value) : null;
@@ -130,7 +134,15 @@ function deserializeFilterState(
     }
 
     case 'range': {
-      const match = value.match(/^(-?\d*\.?\d*)?-(-?\d*\.?\d*)?$/);
+      let valueToParse = value;
+      let includeNull = true;
+
+      if (value.endsWith('_nn')) {
+        includeNull = false;
+        valueToParse = value.slice(0, -3);
+      }
+
+      const match = valueToParse.match(/^(-?\d*\.?\d*)?-(-?\d*\.?\d*)?$/);
       if (!match) return null;
 
       const [, minStr, maxStr] = match;
@@ -143,7 +155,7 @@ function deserializeFilterState(
         type: 'range',
         min,
         max,
-        includeNull: baseState.includeNull,
+        includeNull,
       };
     }
 
@@ -204,12 +216,20 @@ export function getFilterSummary(
         }
         break;
       case 'range':
-        if (state.min != null || state.max != null) {
-          const rangeStr = state.min != null && state.max != null
-            ? `${state.min}-${state.max}`
-            : state.min != null
-            ? `≥${state.min}`
-            : `≤${state.max}`;
+        if (state.min != null || state.max != null || !state.includeNull) {
+          let rangeStr = '';
+          if (state.min != null || state.max != null) {
+            rangeStr = state.min != null && state.max != null
+              ? `${state.min}-${state.max}`
+              : state.min != null
+              ? `≥${state.min}`
+              : `≤${state.max}`;
+          }
+
+          if (!state.includeNull) {
+            rangeStr = rangeStr ? `${rangeStr} (specified only)` : 'Specified only';
+          }
+
           parts.push(`${config.label}: ${rangeStr}`);
         }
         break;
