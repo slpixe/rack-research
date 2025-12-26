@@ -33,6 +33,8 @@ build/
 out/
 website/.next/
 website/out/
+next-env.d.ts
+website/next-env.d.ts
 
 # Temporary files
 tmp/
