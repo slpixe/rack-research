@@ -31,11 +31,17 @@ export function SearchBar() {
   useEffect(() => {
     const urlQuery = filters.q || ''
     // If URL changed but not from our typing, update immediately
-    if (urlQuery !== query && !isTypingRef.current) {
-      setQuery(urlQuery)
-      lastIntentionalQueryRef.current = urlQuery
+    if (urlQuery !== query) {
+      if (!isTypingRef.current) {
+        setQuery(urlQuery)
+        lastIntentionalQueryRef.current = urlQuery
+      }
+      // If we are typing, we ignore the URL update and keep isTypingRef true
+      // to protect against lagging URL updates overwriting our state
+    } else {
+      // Only reset typing flag when we are fully in sync
+      isTypingRef.current = false
     }
-    isTypingRef.current = false
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters.q])
 
@@ -77,6 +83,10 @@ export function SearchBar() {
     lastIntentionalQueryRef.current = newValue
   }
 
+  const handleBlur = () => {
+    isTypingRef.current = false
+  }
+
   const shortcutHint = isMac ? '⌘K' : 'Ctrl+K'
 
   return (
@@ -102,6 +112,7 @@ export function SearchBar() {
         placeholder={`Search products... (${shortcutHint})`}
         value={query}
         onChange={handleChange}
+        onBlur={handleBlur}
         className={styles.input}
       />
       {query && (

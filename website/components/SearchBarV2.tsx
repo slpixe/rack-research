@@ -31,8 +31,13 @@ export function SearchBarV2({ value, onChange }: SearchBarV2Props) {
   // We only want this effect to run when the external 'value' prop changes
   useEffect(() => {
     if (value !== localValue) {
-      setLocalValue(value);
-      // When value comes from outside, we're not typing
+      if (!isTypingRef.current) {
+        setLocalValue(value);
+      }
+      // If we are typing, we ignore the external value update and keep isTypingRef true
+      // to protect against lagging URL updates overwriting our state
+    } else {
+      // Only reset typing flag when we are fully in sync
       isTypingRef.current = false;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -70,6 +75,10 @@ export function SearchBarV2({ value, onChange }: SearchBarV2Props) {
     setLocalValue(e.target.value);
   };
 
+  const handleBlur = () => {
+    isTypingRef.current = false;
+  };
+
   const shortcutHint = isMac ? '⌘K' : 'Ctrl+K';
 
   return (
@@ -95,6 +104,7 @@ export function SearchBarV2({ value, onChange }: SearchBarV2Props) {
         placeholder={`Search products... (${shortcutHint})`}
         value={localValue}
         onChange={handleChange}
+        onBlur={handleBlur}
         className={styles.input}
       />
       {localValue && (
