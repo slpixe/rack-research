@@ -8,11 +8,14 @@ This directory contains project documentation, reports, and research materials.
 
 - **[initial-question.md](initial-question.md)** - The original research question and project goals
 - **[scraping-approach-comparison.md](scraping-approach-comparison.md)** - Detailed comparison of AI vs Scripted scraping methods
+- **[data-schema-architecture.md](data-schema-architecture.md)** - Technical details of the product data schema
+- **[filterable-properties.md](filterable-properties.md)** - List of properties used for product filtering
 
 ### Reports
 
 - **[yakkaroo-completion-report.md](yakkaroo-completion-report.md)** - Complete report on yakkaroo.de scraping (52 products)
 - **[project-reorganization.md](project-reorganization.md)** - Summary of project structure reorganization
+- **[url-verification-results.md](url-verification-results.md)** - Results of the URL verification process across all vendors
 
 ## Quick Links
 

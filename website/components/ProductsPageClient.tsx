@@ -1,49 +1,56 @@
-'use client'
+'use client';
 
-import { Suspense } from 'react'
-import { FilterSidebar } from './FilterSidebar'
-import { FilterChips } from './FilterChips'
-import { SearchBar } from './SearchBar'
-import { ProductGrid } from './ProductGrid'
-import type { RackCase } from '@/lib/types'
-import styles from './ProductsPage.module.css'
+import { Suspense } from 'react';
+import { FilterSidebar } from './FilterSidebar';
+import { FilterChips } from './FilterChips';
+import { SearchBar } from './SearchBar';
+import { ProductGrid } from './ProductGrid';
+import { useFilters } from '@/lib/hooks/useFilters';
+import type { RackCase } from '@/lib/types';
+import styles from './ProductsPage.module.css';
 
-interface ProductsPageClientProps {
-  products: RackCase[]
-  rackUnits: string[]
-  sources: string[]
-  brands: string[]
+interface ProductsPageProps {
+  products: RackCase[];
 }
 
-function ProductsPageContent({
-  products,
-  rackUnits,
-  sources,
-  brands,
-}: ProductsPageClientProps) {
+function ProductsPageContent({ products }: ProductsPageProps) {
+  const {
+    filtersState,
+    searchQuery,
+    filteredProducts,
+    updateFilters,
+    updateSearchQuery,
+    clearAllFilters,
+    hasActiveFilters,
+  } = useFilters({ products });
+
   return (
     <div className={styles.container}>
-      <FilterSidebar 
-        rackUnits={rackUnits} 
-        sources={sources} 
-        brands={brands} 
+      <FilterSidebar
         allProducts={products}
+        filtersState={filtersState}
+        onFiltersChange={updateFilters}
+        searchQuery={searchQuery}
+        onSearchQueryChange={updateSearchQuery}
+        onClearAll={clearAllFilters}
       />
       <div className={styles.content}>
-        <SearchBar />
-        <FilterChips />
-        <ProductGrid products={products} />
+        <ProductGrid
+          products={filteredProducts}
+          searchQuery={searchQuery}
+          hasActiveFilters={hasActiveFilters}
+        />
       </div>
     </div>
-  )
+  );
 }
 
-export function ProductsPageClient(props: ProductsPageClientProps) {
+export function ProductsPageClient(props: ProductsPageProps) {
   return (
     <Suspense fallback={<ProductsPageFallback />}>
       <ProductsPageContent {...props} />
     </Suspense>
-  )
+  );
 }
 
 function ProductsPageFallback() {
@@ -69,5 +76,5 @@ function ProductsPageFallback() {
         </div>
       </div>
     </div>
-  )
+  );
 }

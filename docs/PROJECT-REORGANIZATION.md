@@ -62,7 +62,7 @@ npm run scrape:yakkaroo:parse    # Stage 2 only
 ### 5. Created Documentation ✅
 
 **New Documentation Files:**
-- `SCRAPING-APPROACH-COMPARISON.md` - Detailed comparison of methods
+- `scraping-approach-comparison.md` - Detailed comparison of methods
 - `scrapers/README.md` - How to create new scrapers
 - `scrapers/yakkaroo/README.md` - Yakkaroo-specific docs
 - Updated main `README.md` - Project overview

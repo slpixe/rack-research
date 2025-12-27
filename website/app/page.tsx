@@ -1,8 +1,8 @@
 import { getAllProducts } from '@/lib/db'
-import { ProductsPageClientV2 } from '@/components/ProductsPageClientV2'
+import { ProductsPageClient } from '@/components/ProductsPageClient'
 
 export default function HomePage() {
   const products = getAllProducts()
 
-  return <ProductsPageClientV2 products={products} />
+  return <ProductsPageClient products={products} />
 }

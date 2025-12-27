@@ -1,93 +1,85 @@
-'use client'
+'use client';
 
-import { useState, useEffect, useRef } from 'react'
-import { useProductFilters } from '@/lib/hooks/useProductFilters'
-import { useDebounce } from '@/lib/hooks/useDebounce'
-import styles from './SearchBar.module.css'
+import { useState, useEffect, useRef } from 'react';
+import { useDebounce } from '@/lib/hooks/useDebounce';
+import styles from './SearchBar.module.css';
 
-export function SearchBar() {
-  const inputRef = useRef<HTMLInputElement>(null)
-  const { filters, updateFilters } = useProductFilters()
-  const [query, setQuery] = useState(filters.q || '')
-  const [isMac, setIsMac] = useState(false)
-  const debouncedQuery = useDebounce(query, 300)
-  
-  // Track if the last change was from typing (vs external URL change)
-  const isTypingRef = useRef(false)
-  // Track the last intentional query value to prevent stale debounced updates
-  const lastIntentionalQueryRef = useRef(filters.q || '')
+interface SearchBarProps {
+  value: string;
+  onChange: (value: string) => void;
+}
+
+export function SearchBar({ value, onChange }: SearchBarProps) {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [localValue, setLocalValue] = useState(value);
+  const [isMac, setIsMac] = useState(false);
+  const debouncedValue = useDebounce(localValue, 300);
+
+  // Track if the last change was from typing
+  const isTypingRef = useRef(false);
 
   // Detect platform for keyboard shortcut display
   useEffect(() => {
-    const isMacPlatform = navigator.platform.toUpperCase().indexOf('MAC') >= 0
-    setIsMac(isMacPlatform)
-  }, [])
+    const isMacPlatform = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+    setIsMac(isMacPlatform);
+  }, []);
 
-  // Sync URL to state when filters change externally
-  // NOTE: exhaustive-deps is disabled intentionally. Including 'query' would cause:
-  // 1. The effect to run on every keystroke (when query updates)
-  // 2. Infinite loops as it tries to sync state that's already in sync
-  // We only want this effect to run when filters.q (URL) changes, not when local query changes
+  // Sync external value to local state
+  // NOTE: exhaustive-deps is disabled intentionally. Including 'localValue' would cause:
+  // 1. The effect to run every time we update localValue internally
+  // 2. Unnecessary re-synchronization when localValue is already correct
+  // We only want this effect to run when the external 'value' prop changes
   useEffect(() => {
-    const urlQuery = filters.q || ''
-    // If URL changed but not from our typing, update immediately
-    if (urlQuery !== query) {
+    if (value !== localValue) {
       if (!isTypingRef.current) {
-        setQuery(urlQuery)
-        lastIntentionalQueryRef.current = urlQuery
+        setLocalValue(value);
       }
-      // If we are typing, we ignore the URL update and keep isTypingRef true
+      // If we are typing, we ignore the external value update and keep isTypingRef true
       // to protect against lagging URL updates overwriting our state
     } else {
       // Only reset typing flag when we are fully in sync
-      isTypingRef.current = false
+      isTypingRef.current = false;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filters.q])
+  }, [value]);
 
-  // Update URL when debounced query changes
+  // Propagate debounced value
   useEffect(() => {
-    // Only update if:
-    // 1. The debounced query is different from the URL query, AND
-    // 2. The debounced query matches the last intentional query value
-    // This prevents stale debounced values from being applied after external clears
-    if (debouncedQuery !== (filters.q || '') && debouncedQuery === lastIntentionalQueryRef.current) {
-      updateFilters({ q: debouncedQuery || null })
+    if (isTypingRef.current && debouncedValue !== value) {
+      onChange(debouncedValue);
     }
-  }, [debouncedQuery, filters.q, updateFilters])
+  }, [debouncedValue, value, onChange]);
 
   // Keyboard shortcut (Cmd+K / Ctrl+K)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault()
-        inputRef.current?.focus()
+        e.preventDefault();
+        inputRef.current?.focus();
       }
-    }
+    };
 
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [])
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const handleClear = () => {
-    setQuery('')
-    isTypingRef.current = false
-    updateFilters({ q: null })
-    inputRef.current?.focus()
-  }
+    setLocalValue('');
+    isTypingRef.current = false;
+    onChange('');
+    inputRef.current?.focus();
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    isTypingRef.current = true
-    const newValue = e.target.value
-    setQuery(newValue)
-    lastIntentionalQueryRef.current = newValue
-  }
+    isTypingRef.current = true;
+    setLocalValue(e.target.value);
+  };
 
   const handleBlur = () => {
-    isTypingRef.current = false
-  }
+    isTypingRef.current = false;
+  };
 
-  const shortcutHint = isMac ? '⌘K' : 'Ctrl+K'
+  const shortcutHint = isMac ? '⌘K' : 'Ctrl+K';
 
   return (
     <div className={styles.searchBar}>
@@ -110,16 +102,16 @@ export function SearchBar() {
         ref={inputRef}
         type="search"
         placeholder={`Search products... (${shortcutHint})`}
-        value={query}
+        value={localValue}
         onChange={handleChange}
         onBlur={handleBlur}
         className={styles.input}
       />
-      {query && (
+      {localValue && (
         <button onClick={handleClear} className={styles.clear} aria-label="Clear search">
           ×
         </button>
       )}
     </div>
-  )
+  );
 }

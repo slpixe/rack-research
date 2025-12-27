@@ -32,7 +32,7 @@ scrapers/
 - **Speed**: Slower (~2 hours for 50 products)
 - **Cost**: $5-10 in tokens
 
-See [SCRAPING-APPROACH-COMPARISON.md](../SCRAPING-APPROACH-COMPARISON.md) for detailed comparison.
+See [scraping-approach-comparison.md](../../docs/scraping-approach-comparison.md) for detailed comparison.
 
 ## Common Utilities
 
@@ -225,6 +225,6 @@ When a site's HTML structure changes:
 
 For questions or issues:
 1. Check vendor-specific README
-2. Review [SCRAPING-APPROACH-COMPARISON.md](../SCRAPING-APPROACH-COMPARISON.md)
+2. Review [scraping-approach-comparison.md](../../docs/scraping-approach-comparison.md)
 3. Inspect HTML structure manually
 4. Test with curl or browser DevTools
