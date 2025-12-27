@@ -31,19 +31,10 @@ function ProductsPageContent({ products }: ProductsPageV2Props) {
         filtersState={filtersState}
         onFiltersChange={updateFilters}
         searchQuery={searchQuery}
+        onSearchQueryChange={updateSearchQuery}
         onClearAll={clearAllFilters}
       />
       <div className={styles.content}>
-        <SearchBarV2
-          value={searchQuery}
-          onChange={updateSearchQuery}
-        />
-        <FilterChipsV2
-          filtersState={filtersState}
-          onFiltersChange={updateFilters}
-          searchQuery={searchQuery}
-          onSearchChange={updateSearchQuery}
-        />
         <ProductGridV2
           products={filteredProducts}
           searchQuery={searchQuery}

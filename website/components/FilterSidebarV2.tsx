@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from 'react';
 import { RangeSlider } from './RangeSlider';
+import { SearchBarV2 } from './SearchBarV2';
+import { FilterChipsV2 } from './FilterChipsV2';
 import type { RackCase } from '@/lib/types';
 import {
   FILTER_CONFIGS,
@@ -28,6 +30,7 @@ interface FilterSidebarV2Props {
   filtersState: FiltersState;
   onFiltersChange: (newState: FiltersState) => void;
   searchQuery?: string;
+  onSearchQueryChange: (query: string) => void;
   onClearAll: () => void;
 }
 
@@ -36,6 +39,7 @@ export function FilterSidebarV2({
   filtersState,
   onFiltersChange,
   searchQuery,
+  onSearchQueryChange,
   onClearAll,
 }: FilterSidebarV2Props) {
   // Build filter registry from data (memoized)
@@ -338,6 +342,19 @@ export function FilterSidebarV2({
             Clear all
           </button>
         )}
+      </div>
+
+      <div className={styles.searchSection}>
+        <SearchBarV2
+          value={searchQuery || ''}
+          onChange={onSearchQueryChange}
+        />
+        <FilterChipsV2
+          filtersState={filtersState}
+          onFiltersChange={onFiltersChange}
+          searchQuery={searchQuery || ''}
+          onSearchChange={onSearchQueryChange}
+        />
       </div>
 
       <div className={styles.categories}>

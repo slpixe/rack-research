@@ -1,12 +1,14 @@
 .sidebar {
   width: 280px;
   min-width: 280px;
-  background-color: var(--bg-secondary);
-  border-right: 1px solid var(--border-color);
+  background-color: var(--color-card-bg);
+  border-right: 1px solid var(--color-border);
   overflow-y: auto;
-  max-height: calc(100vh - 4rem);
   position: sticky;
-  top: 4rem;
+  top: 80px;
+  max-height: calc(100vh - 80px);
+  align-self: flex-start;
+  flex-shrink: 0;
 }
 
 .header {
@@ -14,10 +16,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
-  background-color: var(--bg-secondary);
+  background-color: var(--color-card-bg);
   z-index: 10;
 }
 
@@ -41,6 +43,12 @@
 
 .clearAllButton:hover {
   background-color: var(--bg-hover);
+}
+
+/* Search section */
+.searchSection {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* Categories */

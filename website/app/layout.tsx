@@ -43,9 +43,6 @@ export default function RootLayout({
           <main className={styles.main}>
             {children}
           </main>
-          <footer className={styles.footer}>
-            Rack Research — Open source server chassis database
-          </footer>
         </ThemeProvider>
       </body>
     </html>
