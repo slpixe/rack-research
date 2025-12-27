@@ -133,6 +133,8 @@ export function FilterChips({
     }
   };
 
+  if (chips.length === 0) return null;
+
   return (
     <div className={styles.chips}>
       {chips.map(chip => (

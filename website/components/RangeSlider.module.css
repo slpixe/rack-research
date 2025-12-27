@@ -50,7 +50,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background-color: var(--border-color);
+  background-color: var(--color-border);
   border-radius: 2px;
 }
 
@@ -141,7 +141,7 @@
   max-width: 5rem;
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--color-border);
   border-radius: 0.25rem;
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -193,7 +193,7 @@
   color: var(--text-secondary);
   margin-top: 0.25rem;
   padding-top: 0.25rem;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--color-border);
 }
 
 .statCount {
