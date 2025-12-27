@@ -4,13 +4,17 @@
   z-index: 100;
   background-color: var(--color-card-bg);
   border-bottom: 1px solid var(--color-border);
-  padding: var(--spacing-md) 0.75rem;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
 }
 
 .headerInner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 0.75rem;
 }
 
 .logo {
