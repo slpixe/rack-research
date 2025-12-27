@@ -195,23 +195,6 @@
   accent-color: var(--color-primary);
 }
 
-/* Show more button */
-.showMoreButton {
-  font-size: 0.75rem;
-  color: var(--color-primary);
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.25rem 0;
-  margin-top: 0.5rem;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.showMoreButton:hover {
-  text-decoration: none;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .sidebar {

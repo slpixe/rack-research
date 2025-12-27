@@ -56,9 +56,6 @@ export function FilterSidebar({
     new Set(['basic', 'pricing', 'dimensions', 'compatibility', 'storage'])
   );
 
-  // Track which "More filters" sections are expanded
-  const [showAdvanced, setShowAdvanced] = useState(false);
-
   const toggleCategory = (category: FilterCategory) => {
     setExpandedCategories(prev => {
       const next = new Set(prev);
@@ -278,8 +275,6 @@ export function FilterSidebar({
   // Render a category section
   const renderCategory = (category: FilterCategory, filters: FilterConfig[]) => {
     const isExpanded = expandedCategories.has(category);
-    const defaultFilters = filters.filter(f => f.defaultVisible);
-    const advancedFilters = filters.filter(f => !f.defaultVisible);
 
     // Check if any filters in this category have data
     const hasVisibleFilters = filters.some(f => {
@@ -314,19 +309,7 @@ export function FilterSidebar({
 
         {isExpanded && (
           <div className={styles.categoryContent}>
-            {defaultFilters.map(filter => renderFilter(filter))}
-
-            {advancedFilters.length > 0 && (
-              <>
-                {showAdvanced && advancedFilters.map(filter => renderFilter(filter))}
-                <button
-                  className={styles.showMoreButton}
-                  onClick={() => setShowAdvanced(!showAdvanced)}
-                >
-                  {showAdvanced ? 'Show less' : `Show ${advancedFilters.length} more`}
-                </button>
-              </>
-            )}
+            {filters.map(filter => renderFilter(filter))}
           </div>
         )}
       </div>
