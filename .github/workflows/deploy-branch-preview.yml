@@ -1,0 +1,95 @@
+name: Deploy Branch Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+# Sets permissions to allow deployment
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Install website dependencies
+        run: npm ci
+        working-directory: website
+
+      - name: Extract branch name
+        id: extract_branch
+        run: |
+          # Get branch name and sanitize it for use in URLs
+          BRANCH_NAME="${GITHUB_HEAD_REF}"
+          # Replace special characters with hyphens and convert to lowercase
+          SAFE_BRANCH_NAME=$(echo "$BRANCH_NAME" | sed 's/[^a-zA-Z0-9-]/-/g' | tr '[:upper:]' '[:lower:]')
+          echo "branch_name=$SAFE_BRANCH_NAME" >> $GITHUB_OUTPUT
+          echo "Deploying branch: $SAFE_BRANCH_NAME"
+
+      - name: Update Next.js config for branch deployment
+        run: |
+          # Update basePath for the branch preview
+          sed -i "s|basePath: process.env.NODE_ENV === 'production' ? '/rack-research' : '',|basePath: process.env.NODE_ENV === 'production' ? '/rack-research/preview/${{ steps.extract_branch.outputs.branch_name }}' : '',|g" website/next.config.ts
+          cat website/next.config.ts
+
+      - name: Build website
+        run: npm run build
+
+      - name: Deploy to GitHub Pages (branch preview)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./website/out
+          destination_dir: preview/${{ steps.extract_branch.outputs.branch_name }}
+          keep_files: true
+
+      - name: Comment PR with preview URL
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branchName = '${{ steps.extract_branch.outputs.branch_name }}';
+            const previewUrl = `https://${{ github.repository_owner }}.github.io/rack-research/preview/${branchName}/`;
+            const commentBody = `🚀 Preview deployment ready!\n\n**Preview URL:** ${previewUrl}\n\nThis preview will be updated automatically with each new commit to this PR.`;
+            
+            // Check if we already posted a comment
+            const { data: comments } = await github.rest.issues.listComments({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            
+            const existingComment = comments.find(comment => 
+              comment.user.login === 'github-actions[bot]' && 
+              comment.body.includes('Preview deployment ready!')
+            );
+            
+            if (existingComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                comment_id: existingComment.id,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: commentBody
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: commentBody
+              });
+            }

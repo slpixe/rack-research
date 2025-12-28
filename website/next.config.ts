@@ -4,8 +4,9 @@ const nextConfig: NextConfig = {
   output: 'export',
   
   // For GitHub Pages deployment at subdomain (e.g., rack-research.example.com)
-  // If deploying to a path like github.io/rack-research, uncomment basePath:
-  // basePath: '/rack-research',
+  // basePath is only used for production builds (GitHub Pages deployment)
+  // In development, we don't use basePath to keep localhost URLs simple
+  basePath: process.env.NODE_ENV === 'production' ? '/rack-research' : '',
   
   // Generate trailing slashes for cleaner static URLs
   trailingSlash: true,
