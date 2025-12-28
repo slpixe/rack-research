@@ -1,0 +1,45 @@
+name: Cleanup Branch Preview
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Extract branch name
+        id: extract_branch
+        run: |
+          # Get branch name and sanitize it for use in URLs
+          BRANCH_NAME="${GITHUB_HEAD_REF}"
+          # Replace special characters with hyphens and convert to lowercase
+          SAFE_BRANCH_NAME=$(echo "$BRANCH_NAME" | sed 's/[^a-zA-Z0-9-]/-/g' | tr '[:upper:]' '[:lower:]')
+          echo "branch_name=$SAFE_BRANCH_NAME" >> $GITHUB_OUTPUT
+
+      - name: Remove branch preview directory
+        run: |
+          if [ -d "preview/${{ steps.extract_branch.outputs.branch_name }}" ]; then
+            rm -rf "preview/${{ steps.extract_branch.outputs.branch_name }}"
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add preview/
+            # Only commit if there are changes
+            if ! git diff --staged --quiet; then
+              git commit -m "Remove preview for branch ${{ steps.extract_branch.outputs.branch_name }}"
+              git push origin gh-pages
+              echo "Removed preview directory for branch: ${{ steps.extract_branch.outputs.branch_name }}"
+            else
+              echo "No changes to commit"
+            fi
+          else
+            echo "No preview directory found for branch: ${{ steps.extract_branch.outputs.branch_name }}"
+          fi
