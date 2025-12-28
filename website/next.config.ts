@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   
   // For GitHub Pages deployment at subdomain (e.g., rack-research.example.com)
   // If deploying to a path like github.io/rack-research, uncomment basePath:
-  // basePath: '/rack-research',
+  basePath: '/rack-research',
   
   // Generate trailing slashes for cleaner static URLs
   trailingSlash: true,
