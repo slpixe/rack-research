@@ -41,8 +41,8 @@ jobs:
 
       - name: Update Next.js config for branch deployment
         run: |
-          # Update basePath for the branch
-          sed -i "s|basePath: '/rack-research',|basePath: '/rack-research/preview/${{ steps.extract_branch.outputs.branch_name }}',|g" website/next.config.ts
+          # Update basePath for the branch preview
+          sed -i "s|basePath: process.env.NODE_ENV === 'production' ? '/rack-research' : '',|basePath: process.env.NODE_ENV === 'production' ? '/rack-research/preview/${{ steps.extract_branch.outputs.branch_name }}' : '',|g" website/next.config.ts
           cat website/next.config.ts
 
       - name: Build website
