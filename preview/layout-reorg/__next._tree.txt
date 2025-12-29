@@ -1,3 +1,0 @@
-:HL["/rack-research/preview/layout-reorg/_next/static/chunks/9202e87bcba30ada.css","style"]
-:HL["/rack-research/preview/layout-reorg/_next/static/chunks/973bed435b856223.css","style"]
-0:{"buildId":"fhuLzgyGHaPYrmemjyOYd","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
