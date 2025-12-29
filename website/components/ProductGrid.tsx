@@ -1,59 +1,47 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
-import { useProductFilters } from '@/lib/hooks/useProductFilters'
-import { searchProducts, highlightMatches } from '@/lib/search'
-import type { RackCase } from '@/lib/types'
-import styles from './ProductGrid.module.css'
+import Link from 'next/link';
+import { highlightMatches } from '@/lib/search';
+import type { RackCase } from '@/lib/types';
+import styles from './ProductGrid.module.css';
 
 interface ProductGridProps {
-  products: RackCase[]
+  products: RackCase[];
+  searchQuery?: string;
+  hasActiveFilters: boolean;
 }
 
-export function ProductGrid({ products }: ProductGridProps) {
-  const { filters } = useProductFilters()
-
-  const selectedRackUnits = filters.rack_units?.split(',').filter(Boolean) || []
-  const selectedSources = filters.source?.split(',').filter(Boolean) || []
-  const selectedBrands = filters.brand?.split(',').filter(Boolean) || []
-  const searchQuery = filters.q || ''
-
-  // Apply search filter first
-  let filtered = searchQuery ? searchProducts(products, searchQuery) : products
-
-  // Apply filters client-side
-  if (selectedRackUnits.length > 0) {
-    filtered = filtered.filter(p => selectedRackUnits.includes(p.rack_units))
-  }
-
-  if (selectedSources.length > 0) {
-    filtered = filtered.filter(p => selectedSources.includes(p.source))
-  }
-
-  if (selectedBrands.length > 0) {
-    filtered = filtered.filter(p => selectedBrands.includes(p.brand))
-  }
-
+export function ProductGrid({
+  products,
+  searchQuery = '',
+  hasActiveFilters,
+}: ProductGridProps) {
   const renderHighlightedText = (text: string) => {
-    if (!searchQuery) return text
-    return <span dangerouslySetInnerHTML={{ __html: highlightMatches(text, searchQuery) }} />
-  }
+    if (!searchQuery) return text;
+    return <span dangerouslySetInnerHTML={{ __html: highlightMatches(text, searchQuery) }} />;
+  };
 
   return (
     <>
       <div className={styles.header}>
         <h1 className={styles.title}>
-          Products <span className={styles.count}>({filtered.length})</span>
+          Products <span className={styles.count}>({products.length})</span>
         </h1>
       </div>
 
-      {filtered.length === 0 ? (
+      {products.length === 0 ? (
         <div className={styles.emptyState}>
-          <p>No products found{searchQuery ? ` for "${searchQuery}"` : ' matching your filters'}.</p>
+          <p>
+            No products found
+            {searchQuery ? ` for "${searchQuery}"` : hasActiveFilters ? ' matching your filters' : ''}.
+          </p>
+          {hasActiveFilters && (
+            <p className={styles.emptyHint}>Try adjusting your filters or search terms.</p>
+          )}
         </div>
       ) : (
         <div className={styles.grid}>
-          {filtered.map(product => (
+          {products.map(product => (
             <Link
               key={product.id}
               href={`/products/${product.id}`}
@@ -72,6 +60,11 @@ export function ProductGrid({ products }: ProductGridProps) {
                       {product.motherboard_support[product.motherboard_support.length - 1]}
                     </span>
                   )}
+                  {product.psu_support?.types?.[0] && (
+                    <span className={styles.cardTag}>
+                      {product.psu_support.types[0]} PSU
+                    </span>
+                  )}
                 </div>
                 <div className={styles.cardSpecs}>
                   {product.dimensions.depth_mm && (
@@ -82,10 +75,15 @@ export function ProductGrid({ products }: ProductGridProps) {
                   <div className={styles.cardSpec}>
                     Storage: {product.total_35_bays}× 3.5&quot; / {product.total_25_bays}× 2.5&quot;
                   </div>
+                  {product.gpu_support?.max_length_mm && (
+                    <div className={styles.cardSpec}>
+                      GPU: up to {product.gpu_support.max_length_mm}mm
+                    </div>
+                  )}
                 </div>
                 {product.price?.amount && (
                   <div className={styles.cardPrice}>
-                    {product.price.currency === 'EUR' ? '€' : '$'}
+                    {product.price.currency === 'EUR' ? '€' : product.price.currency === 'GBP' ? '£' : '$'}
                     {product.price.amount.toFixed(2)}
                   </div>
                 )}
@@ -95,5 +93,5 @@ export function ProductGrid({ products }: ProductGridProps) {
         </div>
       )}
     </>
-  )
+  );
 }

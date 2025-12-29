@@ -32,8 +32,6 @@ export interface BaseFilterConfig {
   type: FilterType;
   /** Priority for display order (lower = higher priority) */
   priority: number;
-  /** Whether this filter should be shown by default */
-  defaultVisible: boolean;
   /** Description/tooltip text */
   description?: string;
 }
@@ -140,7 +138,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'basic',
     type: 'checkbox',
     priority: 1,
-    defaultVisible: true,
     propertyPath: 'rack_units',
     isArray: false,
     sortOptions: 'custom',
@@ -153,7 +150,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'basic',
     type: 'checkbox',
     priority: 2,
-    defaultVisible: true,
     propertyPath: 'brand',
     isArray: false,
     sortOptions: 'alphabetical',
@@ -164,7 +160,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'basic',
     type: 'checkbox',
     priority: 3,
-    defaultVisible: true,
     propertyPath: 'source',
     isArray: false,
     sortOptions: 'alphabetical',
@@ -178,7 +173,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'pricing',
     type: 'range',
     priority: 10,
-    defaultVisible: true,
     propertyPath: 'price.amount',
     unit: '',
     step: 10,
@@ -193,7 +187,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'pricing',
     type: 'checkbox',
     priority: 11,
-    defaultVisible: true,
     propertyPath: 'availability',
     isArray: false,
     predefinedOptions: ['in-stock', 'out-of-stock', 'pre-order', 'discontinued', 'contact-for-quote', 'unknown'],
@@ -206,7 +199,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'dimensions',
     type: 'range',
     priority: 20,
-    defaultVisible: true,
     propertyPath: 'dimensions.depth_mm',
     unit: 'mm',
     step: 10,
@@ -219,7 +211,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'dimensions',
     type: 'range',
     priority: 21,
-    defaultVisible: false,
     propertyPath: 'dimensions.width_mm',
     unit: 'mm',
     step: 5,
@@ -232,7 +223,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'dimensions',
     type: 'range',
     priority: 22,
-    defaultVisible: false,
     propertyPath: 'dimensions.height_mm',
     unit: 'mm',
     step: 5,
@@ -245,7 +235,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'dimensions',
     type: 'range',
     priority: 23,
-    defaultVisible: false,
     propertyPath: 'dimensions.weight_kg',
     unit: 'kg',
     step: 0.5,
@@ -260,7 +249,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'compatibility',
     type: 'checkbox',
     priority: 30,
-    defaultVisible: true,
     propertyPath: 'motherboard_support',
     isArray: true,
     sortOptions: 'custom',
@@ -273,7 +261,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'compatibility',
     type: 'checkbox',
     priority: 31,
-    defaultVisible: true,
     propertyPath: 'psu_support.types',
     isArray: true,
     sortOptions: 'custom',
@@ -286,7 +273,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'compatibility',
     type: 'boolean',
     priority: 32,
-    defaultVisible: true,
     propertyPath: 'psu_included',
     trueLabel: 'Yes',
     falseLabel: 'No',
@@ -297,7 +283,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'compatibility',
     type: 'range',
     priority: 33,
-    defaultVisible: false,
     propertyPath: 'psu_support.max_length_mm',
     unit: 'mm',
     step: 10,
@@ -311,7 +296,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'storage',
     type: 'range',
     priority: 40,
-    defaultVisible: true,
     propertyPath: 'total_35_bays',
     unit: '',
     step: 1,
@@ -324,7 +308,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'storage',
     type: 'range',
     priority: 41,
-    defaultVisible: true,
     propertyPath: 'total_25_bays',
     unit: '',
     step: 1,
@@ -337,7 +320,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'storage',
     type: 'range',
     priority: 42,
-    defaultVisible: false,
     propertyPath: 'total_525_bays',
     unit: '',
     step: 1,
@@ -350,7 +332,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'storage',
     type: 'boolean',
     priority: 43,
-    defaultVisible: true,
     propertyPath: 'has_hot_swap',
     trueLabel: 'Hot-swap capable',
     falseLabel: 'No hot-swap',
@@ -364,7 +345,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'expansion',
     type: 'range',
     priority: 50,
-    defaultVisible: true,
     propertyPath: 'total_pcie_slots',
     unit: '',
     step: 1,
@@ -377,7 +357,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'expansion',
     type: 'boolean',
     priority: 51,
-    defaultVisible: true,
     propertyPath: 'has_full_height_slots',
     trueLabel: 'Full-height supported',
     falseLabel: 'Low-profile only',
@@ -389,7 +368,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'expansion',
     type: 'range',
     priority: 52,
-    defaultVisible: true,
     propertyPath: 'gpu_support.max_length_mm',
     unit: 'mm',
     step: 10,
@@ -402,7 +380,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'expansion',
     type: 'range',
     priority: 53,
-    defaultVisible: false,
     propertyPath: 'gpu_support.max_height_mm',
     unit: 'mm',
     step: 5,
@@ -416,7 +393,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'cooling',
     type: 'range',
     priority: 60,
-    defaultVisible: true,
     propertyPath: 'cpu_cooler.max_height_mm',
     unit: 'mm',
     step: 5,
@@ -429,7 +405,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'cooling',
     type: 'boolean',
     priority: 61,
-    defaultVisible: true,
     propertyPath: 'radiator_support',
     trueLabel: 'Has radiator mounts',
     falseLabel: 'No radiator support',
@@ -443,7 +418,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'io',
     type: 'range',
     priority: 70,
-    defaultVisible: false,
     propertyPath: 'front_io.usb_type_c',
     unit: '',
     step: 1,
@@ -456,7 +430,6 @@ export const FILTER_CONFIGS: FilterConfig[] = [
     category: 'io',
     type: 'range',
     priority: 71,
-    defaultVisible: false,
     propertyPath: 'front_io.usb_type_a_3_0',
     unit: '',
     step: 1,
@@ -493,13 +466,6 @@ export function getFilterConfig(id: string): FilterConfig | undefined {
  */
 export function getFiltersByCategory(category: FilterCategory): FilterConfig[] {
   return FILTER_CONFIGS.filter(f => f.category === category).sort((a, b) => a.priority - b.priority);
-}
-
-/**
- * Get all visible filters by default
- */
-export function getDefaultVisibleFilters(): FilterConfig[] {
-  return FILTER_CONFIGS.filter(f => f.defaultVisible).sort((a, b) => a.priority - b.priority);
 }
 
 /**

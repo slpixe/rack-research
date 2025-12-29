@@ -24,7 +24,6 @@ export {
   FILTER_CATEGORY_ORDER,
   getFilterConfig,
   getFiltersByCategory,
-  getDefaultVisibleFilters,
   getFiltersGroupedByCategory,
   getNestedValue,
 } from './filterConfig';
