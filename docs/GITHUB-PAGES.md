@@ -60,7 +60,8 @@ python -m http.server 8000
 ### deploy-pages.yml
 - **Trigger**: Push to `main` branch or manual workflow dispatch
 - **Action**: Builds and deploys the main site to GitHub Pages root
-- **Deployment**: Uses GitHub's official pages deployment action
+- **Deployment**: Uses peaceiris/actions-gh-pages to push to gh-pages branch
+- **Important**: Uses `keep_files: true` and `exclude_assets: 'preview/**'` to preserve existing preview deployments
 
 ### deploy-branch-preview.yml
 - **Trigger**: Pull request opened, synchronized, or reopened
