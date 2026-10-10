@@ -15,10 +15,8 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "baseUrl": ".",
-    "paths": {
-      "@data/*": ["../data/*"]
-    }
+
+    "paths": {"@data/*":["./../data/*"],"*":["././*"]}
   },
   "include": ["src/**/*", "scripts/**/*", "scrapers/**/*"],
   "exclude": ["node_modules", "dist"]
