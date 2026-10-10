@@ -56,8 +56,9 @@
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.7.4",
     "tsx": "^4.7.0",
-    "typescript": "^5.3.0",
-    "vitest": "^4.0.16"
+    "typescript": "npm:@typescript/typescript6@6.0.2",
+    "vitest": "^4.0.16",
+    "@typescript/native": "npm:typescript@7.0.2"
   },
   "engines": {
     "node": ">=22.0.0"
